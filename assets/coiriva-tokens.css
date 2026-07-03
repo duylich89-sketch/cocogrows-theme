@@ -1,0 +1,15 @@
+:root{
+--color-primary:#2F6B3F;
+--color-forest:#1F4D32;
+--color-cta:#D89A3D;
+--color-brown:#8B5E3C;
+--color-bg:#FAF7EF;
+--color-leaf:#DCE8D2;
+--color-text:#1F2A22;
+--radius-button:14px;
+--radius-card:18px;
+--radius-section:24px;
+--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;
+--shadow-card:0 8px 24px rgba(0,0,0,.06);
+--shadow-hover:0 16px 40px rgba(0,0,0,.12);
+}
