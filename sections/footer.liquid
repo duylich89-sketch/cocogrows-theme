@@ -447,6 +447,9 @@
         {% unless section.settings.branding_text == blank %}
           <small class="copyright__content">{{ section.settings.branding_text }}</small>
         {% endunless %}
+        <span class="coiriva-build-badge" aria-label="Performance Build v1.3.7 TEST">
+          <small>Performance Build</small> v1.3.7 TEST
+        </span>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}

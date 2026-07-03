@@ -415,6 +415,65 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 
+    {%- comment -%} Coiriva/Cocogrows v1.3.7 CSS Engine TEST marker. Remove in RELEASE build. {%- endcomment -%}
+    <style id="coiriva-v137-css-engine-test">
+      :root {
+        --coiriva-build-accent: 14, 159, 79;
+        --coiriva-build-accent-dark: 10, 107, 58;
+        --coiriva-build-accent-soft: 234, 247, 239;
+        --color-base-accent-1: var(--coiriva-build-accent);
+        --color-base-accent-2: var(--coiriva-build-accent-dark);
+        --color-base-outline-button-labels: var(--coiriva-build-accent);
+        --gradient-base-accent-1: linear-gradient(90deg, #0a7f3e 0%, #0e9f4f 100%);
+        --gradient-base-accent-2: linear-gradient(90deg, #0a6b3a 0%, #0e9f4f 100%);
+      }
+      .color-accent-1,
+      .color-accent-2 {
+        --color-background: var(--coiriva-build-accent);
+        --gradient-background: linear-gradient(90deg, #0a7f3e 0%, #0e9f4f 100%);
+      }
+      .button,
+      .shopify-payment-button__button,
+      .product-form__submit,
+      .cart__checkout-button,
+      .newsletter-form__button {
+        --color-button: var(--coiriva-build-accent);
+        --color-button-text: 255, 255, 255;
+      }
+      .header__active-menu-item,
+      .list-menu__item--active,
+      .badge,
+      .price__badge-sale {
+        background-color: rgb(var(--coiriva-build-accent)) !important;
+        border-color: rgb(var(--coiriva-build-accent)) !important;
+        color: #fff !important;
+      }
+      .link:hover,
+      .header__menu-item:hover,
+      .icon-bar-card .material-symbols-outlined,
+      .footer a:hover {
+        color: rgb(var(--coiriva-build-accent)) !important;
+      }
+      .coiriva-build-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        margin-top: 1rem;
+        padding: .8rem 1.2rem;
+        border: 1px solid rgba(var(--coiriva-build-accent), .35);
+        border-radius: 10px;
+        background: rgba(var(--coiriva-build-accent-soft), .95);
+        color: rgb(var(--coiriva-build-accent-dark));
+        font-weight: 700;
+        letter-spacing: .02em;
+      }
+      .coiriva-build-badge small { font-weight: 600; opacity: .8; }
+      @media screen and (max-width: 749px) {
+        .coiriva-build-badge { justify-content: center; width: 100%; }
+      }
+    </style>
+
+
     {%- if request.page_type == 'product' and product.featured_image -%}
       <link
         rel="preload"
