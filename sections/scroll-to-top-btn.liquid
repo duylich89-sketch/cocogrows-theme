@@ -1,17 +1,17 @@
-{% style %}
-  .scroll-to-top-btn-{{ section.id }} {
-    --offset-x: {{ section.settings.offset_x | divided_by: 10.0 }}rem;
-    --offset-y: {{ section.settings.offset_y | divided_by: 10.0 }}rem;
-  }
-  @media screen and (max-width: 749px) {
-    .scroll-to-top-btn-{{ section.id }} {
-      --offset-x: {{ section.settings.offset_x | times: 0.75 | divided_by: 10.0 }}rem;
-      --offset-y: {{ section.settings.offset_y | times: 0.75 | divided_by: 10.0 }}rem;
-    }
-  }
-{% endstyle %}
-
 {% if section.settings.enable_scroll_btn %}
+  {% style %}
+    .scroll-to-top-btn-{{ section.id }} {
+      --offset-x: {{ section.settings.offset_x | divided_by: 10.0 }}rem;
+      --offset-y: {{ section.settings.offset_y | divided_by: 10.0 }}rem;
+    }
+    @media screen and (max-width: 749px) {
+      .scroll-to-top-btn-{{ section.id }} {
+        --offset-x: {{ section.settings.offset_x | times: 0.75 | divided_by: 10.0 }}rem;
+        --offset-y: {{ section.settings.offset_y | times: 0.75 | divided_by: 10.0 }}rem;
+      }
+    }
+  {% endstyle %}
+
   <button
     class="floating-btn scroll-to-top-btn scroll-to-top-btn-{{ section.settings.position }} scroll-to-top-btn-{{ section.id }} color-{{ section.settings.color_scheme }}"
     onclick="handleScrollToTop()"

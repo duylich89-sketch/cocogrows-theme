@@ -1,17 +1,17 @@
-{% style %}
-  .music-player-{{ section.id }} {
-    --offset-x: {{ section.settings.offset_x | divided_by: 10.0 }}rem;
-    --offset-y: {{ section.settings.offset_y | divided_by: 10.0 }}rem;
-  }
-  @media screen and (max-width: 749px) {
-    .music-player-{{ section.id }} {
-      --offset-x: {{ section.settings.offset_x | times: 0.75 | divided_by: 10.0 }}rem;
-      --offset-y: {{ section.settings.offset_y | times: 0.75 | divided_by: 10.0 }}rem;
-    }
-  }
-{% endstyle %}
-
 {% if section.settings.enabled %}
+  {% style %}
+    .music-player-{{ section.id }} {
+      --offset-x: {{ section.settings.offset_x | divided_by: 10.0 }}rem;
+      --offset-y: {{ section.settings.offset_y | divided_by: 10.0 }}rem;
+    }
+    @media screen and (max-width: 749px) {
+      .music-player-{{ section.id }} {
+        --offset-x: {{ section.settings.offset_x | times: 0.75 | divided_by: 10.0 }}rem;
+        --offset-y: {{ section.settings.offset_y | times: 0.75 | divided_by: 10.0 }}rem;
+      }
+    }
+  {% endstyle %}
+
   <div class="floating-btn music-player music-player-{{ section.settings.position }} music-player-{{ section.id }}">
     <audio
       loop
