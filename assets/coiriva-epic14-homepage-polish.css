@@ -1,0 +1,303 @@
+/* =========================================================
+   COIRIVA ULTIMATE — EPIC 1.4 HOMEPAGE POLISH
+   Scope: visual polish across Hero, Benefits, How It Works,
+   Before/After and homepage flow. No product/cart logic changes.
+   ========================================================= */
+
+body.coiriva-template-index{
+  background:
+    radial-gradient(circle at 10% 0%, rgba(220,232,210,.52), transparent 28rem),
+    radial-gradient(circle at 92% 18%, rgba(216,154,61,.10), transparent 24rem),
+    var(--coiriva-color-bg, #FAF7EF);
+}
+
+body.coiriva-template-index main#MainContent{
+  background:linear-gradient(180deg, rgba(250,247,239,.88) 0%, #fff 45%, rgba(250,247,239,.82) 100%);
+}
+
+/* Smooth section rhythm */
+body.coiriva-template-index .shopify-section + .shopify-section{
+  position:relative;
+}
+
+body.coiriva-template-index .coiriva-hero-premium,
+body.coiriva-template-index .coiriva-benefits,
+body.coiriva-template-index .coiriva-how{
+  isolation:isolate;
+}
+
+/* Hero polish */
+body.coiriva-template-index .coiriva-hero-premium{
+  background:
+    radial-gradient(circle at 14% 10%, rgba(220,232,210,.96), transparent 26rem),
+    radial-gradient(circle at 88% 72%, rgba(216,154,61,.16), transparent 28rem),
+    linear-gradient(135deg, #fffaf0 0%, #eef7e9 54%, #ffffff 100%);
+}
+
+body.coiriva-template-index .coiriva-hero-premium::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:20px;
+  width:min(1180px, calc(100% - 32px));
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg, transparent, rgba(47,107,63,.18), transparent);
+  pointer-events:none;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .banner__box,
+body.coiriva-template-index .coiriva-hero-premium .slideshow__text-wrapper .banner__box{
+  max-width:620px;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .banner__heading,
+body.coiriva-template-index .coiriva-hero-premium h1,
+body.coiriva-template-index .coiriva-hero-premium h2{
+  text-wrap:balance;
+  letter-spacing:-.055em !important;
+  filter:drop-shadow(0 10px 22px rgba(31,77,50,.08));
+}
+
+body.coiriva-template-index .coiriva-hero-premium .banner__text,
+body.coiriva-template-index .coiriva-hero-premium .slideshow__text .banner__text{
+  max-width:560px;
+  color:rgba(31,42,34,.74) !important;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .button,
+body.coiriva-template-index .coiriva-hero-premium .banner__buttons .button{
+  min-height:54px;
+  padding-inline:26px;
+  border-radius:var(--coiriva-radius-md, 14px) !important;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media{
+  transform:translateZ(0);
+  transition:transform .5s ease, box-shadow .5s ease;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media:hover{
+  transform:translateY(-3px);
+  box-shadow:0 38px 90px rgba(31,77,50,.22);
+}
+
+body.coiriva-template-index .coiriva-hero-premium img{
+  transform:scale(1.012);
+}
+
+/* Trust strip polish */
+body.coiriva-template-index .coiriva-garden-strip{
+  background:linear-gradient(90deg, var(--coiriva-color-primary-dark,#1F4D32), var(--coiriva-color-primary,#2F6B3F));
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(31,77,50,.12);
+}
+
+body.coiriva-template-index .coiriva-garden-strip span{
+  position:relative;
+}
+
+body.coiriva-template-index .coiriva-garden-strip span:not(:last-child)::after{
+  content:'•';
+  opacity:.48;
+  margin-left:14px;
+}
+
+/* Benefits polish */
+body.coiriva-template-index .coiriva-benefits{
+  background:
+    radial-gradient(circle at 90% 12%, rgba(220,232,210,.7), transparent 22rem),
+    linear-gradient(180deg, #fff 0%, var(--coiriva-color-bg,#FAF7EF) 100%);
+  padding-block:clamp(64px, 7vw, 112px);
+}
+
+body.coiriva-template-index .coiriva-benefits::before{
+  opacity:.55;
+  border-radius:32px;
+}
+
+body.coiriva-template-index .coiriva-benefits__header,
+body.coiriva-template-index .coiriva-how__header{
+  position:relative;
+}
+
+body.coiriva-template-index .coiriva-benefits__header::after,
+body.coiriva-template-index .coiriva-how__header::after{
+  content:'🌿';
+  display:inline-grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  margin-top:22px;
+  border-radius:50%;
+  background:rgba(47,107,63,.09);
+  border:1px solid rgba(47,107,63,.12);
+  font-size:20px;
+}
+
+body.coiriva-template-index .coiriva-benefits__title,
+body.coiriva-template-index .coiriva-how__title{
+  text-wrap:balance;
+}
+
+body.coiriva-template-index .coiriva-benefits__card{
+  backdrop-filter:blur(12px);
+  background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.82));
+  border-color:rgba(47,107,63,.13);
+}
+
+body.coiriva-template-index .coiriva-benefits__card::before{
+  content:'';
+  position:absolute;
+  inset:0 0 auto 0;
+  height:4px;
+  background:linear-gradient(90deg, var(--coiriva-color-primary,#2F6B3F), var(--coiriva-color-cta,#D89A3D));
+  opacity:.72;
+}
+
+body.coiriva-template-index .coiriva-benefits__card-title,
+body.coiriva-template-index .coiriva-how__step-title{
+  letter-spacing:-.03em;
+}
+
+body.coiriva-template-index .coiriva-benefits__chip,
+body.coiriva-template-index .coiriva-expand__chip{
+  box-shadow:0 6px 16px rgba(31,42,34,.04);
+}
+
+/* How it works polish */
+body.coiriva-template-index .coiriva-how{
+  background:
+    radial-gradient(circle at 10% 6%, rgba(220,232,210,.86), transparent 23rem),
+    radial-gradient(circle at 90% 80%, rgba(139,94,60,.10), transparent 28rem),
+    linear-gradient(180deg, var(--coiriva-color-bg,#FAF7EF) 0%, #fff 100%);
+}
+
+body.coiriva-template-index .coiriva-how__steps{
+  position:relative;
+}
+
+@media screen and (min-width: 990px){
+  body.coiriva-template-index .coiriva-how__steps::before{
+    content:'';
+    position:absolute;
+    top:52px;
+    left:10%;
+    right:10%;
+    height:2px;
+    background:linear-gradient(90deg, transparent, rgba(47,107,63,.22), transparent);
+    z-index:0;
+  }
+  body.coiriva-template-index .coiriva-how__step{
+    z-index:1;
+  }
+}
+
+body.coiriva-template-index .coiriva-how__step{
+  background:rgba(255,255,255,.9);
+}
+
+body.coiriva-template-index .coiriva-how__icon,
+body.coiriva-template-index .coiriva-benefits__icon{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65), 0 10px 22px rgba(47,107,63,.08);
+}
+
+/* Before / After polish */
+body.coiriva-template-index .coiriva-expand{
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(47,107,63,.14);
+  box-shadow:0 20px 54px rgba(31,42,34,.08);
+}
+
+body.coiriva-template-index .coiriva-expand::before{
+  content:'';
+  position:absolute;
+  inset:-40% auto auto -18%;
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  background:rgba(220,232,210,.56);
+  pointer-events:none;
+}
+
+body.coiriva-template-index .coiriva-expand__panel{
+  box-shadow:0 12px 30px rgba(31,42,34,.04);
+}
+
+body.coiriva-template-index .coiriva-expand__brick{
+  animation:coirivaBrickFloat 4.2s ease-in-out infinite;
+}
+
+body.coiriva-template-index .coiriva-expand__coir{
+  animation:coirivaCoirGrow 4.8s ease-in-out infinite;
+}
+
+body.coiriva-template-index .coiriva-expand__arrow{
+  animation:coirivaArrowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes coirivaBrickFloat{
+  0%,100%{transform:rotate(-4deg) translateY(0)}
+  50%{transform:rotate(-2deg) translateY(-7px)}
+}
+
+@keyframes coirivaCoirGrow{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.045)}
+}
+
+@keyframes coirivaArrowPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+}
+
+/* Mobile polish */
+@media screen and (max-width: 749px){
+  body.coiriva-template-index .coiriva-garden-strip{
+    display:flex;
+    gap:12px;
+    overflow:auto;
+    white-space:nowrap;
+    justify-content:flex-start;
+    padding-inline:14px;
+    scrollbar-width:none;
+  }
+  body.coiriva-template-index .coiriva-garden-strip::-webkit-scrollbar{display:none}
+
+  body.coiriva-template-index .coiriva-hero-premium .slideshow.banner{
+    min-height:unset !important;
+  }
+  body.coiriva-template-index .coiriva-hero-premium .banner__buttons{
+    gap:10px;
+  }
+  body.coiriva-template-index .coiriva-benefits__header::after,
+  body.coiriva-template-index .coiriva-how__header::after{
+    margin-top:16px;
+  }
+  body.coiriva-template-index .coiriva-benefits,
+  body.coiriva-template-index .coiriva-how{
+    padding-block:48px;
+  }
+  body.coiriva-template-index .coiriva-expand__arrow{
+    animation:none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.coiriva-template-index .coiriva-expand__brick,
+  body.coiriva-template-index .coiriva-expand__coir,
+  body.coiriva-template-index .coiriva-expand__arrow{
+    animation:none !important;
+  }
+  body.coiriva-template-index *{
+    scroll-behavior:auto !important;
+  }
+}
+
+/* Source verification */
+html::after{
+  content:'Coiriva Epic 1.4 Homepage Polish';
+  display:none;
+}
