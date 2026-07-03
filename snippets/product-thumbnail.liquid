@@ -30,6 +30,13 @@
     assign lazy = 'lazy'
   endunless
 
+  assign media_loading = 'lazy'
+  assign media_fetchpriority = 'auto'
+  if lazy_load == false and position == 1
+    assign media_loading = 'eager'
+    assign media_fetchpriority = 'high'
+  endif
+
   assign desktop_columns = 1
   if desktop_layout == 'columns' and media_count > 1
     assign desktop_columns = 2
@@ -76,6 +83,7 @@
         src="{{ section.settings.trust_badge | image_url }}"
         alt="{{ section.settings.trust_badge.alt | escape }}"
         loading="lazy"
+        decoding="async"
         width="auto"
         height="auto"
       >
@@ -86,7 +94,9 @@
       <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
       <div class="product__media media">
         {{ media.preview_image | image_url: width: 1946 | image_tag:
-          loading: lazy,
+          loading: media_loading,
+          fetchpriority: media_fetchpriority,
+          decoding: 'async',
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
         }}
@@ -180,7 +190,9 @@
       {% else %}
         {{ media.preview_image | image_url: width: 1946 | image_tag:
           class: image_class,
-          loading: lazy,
+          loading: media_loading,
+          fetchpriority: media_fetchpriority,
+          decoding: 'async',
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
         }}
@@ -210,7 +222,8 @@
         {%- endif -%}
       </span>
       {{ media.preview_image | image_url: width: 1946 | image_tag:
-        loading: lazy,
+        loading: 'lazy',
+        decoding: 'async',
         sizes: sizes,
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
