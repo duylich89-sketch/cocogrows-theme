@@ -1,0 +1,128 @@
+/* Coiriva Ultimate - Sprint 3 Garden CRO System */
+:root{
+  --coiriva-leaf:#2e6b3f;
+  --coiriva-leaf-dark:#1f4f2e;
+  --coiriva-moss:#8fb768;
+  --coiriva-coir:#8b5e3c;
+  --coiriva-soil:#3a2a1d;
+  --coiriva-cream:#faf7ef;
+  --coiriva-sand:#eadbc6;
+  --coiriva-soft:#eef6e8;
+}
+html{scroll-behavior:smooth;}
+body.gradient{
+  background:
+    radial-gradient(circle at 8% 8%, rgba(143,183,104,.16), transparent 26rem),
+    radial-gradient(circle at 92% 18%, rgba(139,94,60,.12), transparent 30rem),
+    linear-gradient(180deg, #fffdf8 0%, var(--coiriva-cream) 60%, #f5efe4 100%) !important;
+}
+.header-wrapper,
+.shopify-section-header-sticky,
+.section-header{
+  border-bottom:1px solid rgba(46,107,63,.14) !important;
+  box-shadow:0 10px 34px rgba(31,79,46,.06) !important;
+}
+.announcement-bar,
+.announcement-bar-section,
+.utility-bar{
+  background:linear-gradient(90deg,var(--coiriva-leaf-dark),var(--coiriva-leaf),var(--coiriva-coir)) !important;
+  color:#fff !important;
+}
+.button,.shopify-payment-button__button,button[name="add"],.product-form__submit,.cart__checkout-button,
+.button--primary,.quantity-break,.section-atc-button{
+  background:linear-gradient(135deg,var(--coiriva-leaf),var(--coiriva-leaf-dark)) !important;
+  color:#fff !important;
+  border-color:rgba(31,79,46,.85) !important;
+  border-radius:14px !important;
+  box-shadow:0 12px 24px rgba(31,79,46,.18) !important;
+  transition:transform .18s ease, box-shadow .18s ease, filter .18s ease !important;
+}
+.button:hover,.product-form__submit:hover,.cart__checkout-button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 16px 30px rgba(31,79,46,.24) !important;
+  filter:saturate(1.06);
+}
+a,.link,.header__menu-item:hover,.header__active-menu-item{color:var(--coiriva-leaf) !important;}
+.card,.contains-card .card,.product__info-container,.collapsible-content-wrapper-narrow,.product-media-container,
+.quantity-breaks-container,.variant-picker-wrapper,.product-form__input--pill input[type=radio]+label{
+  border-radius:18px !important;
+}
+.product__info-container,.quantity-breaks-container,.variant-picker-wrapper,.card--card,
+.quick-add-modal__content-info,.drawer__inner{
+  background:rgba(255,255,255,.82) !important;
+  border:1px solid rgba(46,107,63,.12) !important;
+  box-shadow:0 18px 45px rgba(58,42,29,.07) !important;
+}
+.title,.h0,.h1,.h2,.h3,h1,h2,h3{color:#203223 !important;letter-spacing:-.02em;}
+.title strong,.h1 strong,.h2 strong{color:var(--coiriva-leaf);}
+.badge,.price__badge-sale,.product__tax,.caption-with-letter-spacing{
+  border-radius:999px !important;
+}
+.badge,.price__badge-sale{
+  background:var(--coiriva-soft) !important;
+  color:var(--coiriva-leaf-dark) !important;
+  border-color:rgba(46,107,63,.2) !important;
+}
+.media,.global-media-settings,.slideshow__media,.banner__media{
+  border-radius:22px !important;
+  overflow:hidden;
+}
+.banner__box,.slideshow__text.banner__box{
+  background:rgba(255,253,248,.88) !important;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(46,107,63,.16) !important;
+  border-radius:24px !important;
+  box-shadow:0 22px 60px rgba(58,42,29,.12) !important;
+}
+.coiriva-sprint3-bar{
+  background:linear-gradient(90deg,#f7efe2,#eef6e8,#f7efe2);
+  border-bottom:1px solid rgba(46,107,63,.16);
+  color:#213423;
+  font-size:13px;
+}
+.coiriva-sprint3-inner{
+  max-width:var(--page-width,1200px);
+  margin:0 auto;
+  padding:9px 18px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.coiriva-sprint3-item{display:inline-flex;gap:6px;align-items:center;font-weight:700;}
+.coiriva-sprint3-item span{color:var(--coiriva-leaf);}
+.coiriva-sprint3-badge{
+  position:fixed;
+  right:12px;
+  bottom:12px;
+  z-index:2147483000;
+  background:rgba(31,79,46,.92);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+  pointer-events:none;
+}
+/* Garden cards */
+.comparison-table,.icon-bar,.results,.testimonials,.contact-form,.collage-wrapper{
+  position:relative;
+}
+.comparison-table:before,.icon-bar:before,.results:before{
+  content:'🌿';
+  position:absolute;
+  top:12px;
+  right:24px;
+  opacity:.25;
+  font-size:34px;
+  transform:rotate(-12deg);
+}
+@media(max-width:749px){
+  .coiriva-sprint3-inner{gap:8px;justify-content:flex-start;overflow:auto;white-space:nowrap;flex-wrap:nowrap;}
+  .coiriva-sprint3-badge{font-size:10px;padding:6px 10px;}
+  .banner__box,.slideshow__text.banner__box{border-radius:18px !important;}
+}
