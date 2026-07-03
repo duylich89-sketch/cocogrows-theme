@@ -414,7 +414,7 @@
     </noscript>
 
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'coiriva-sprint4-micro1.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-sprint4-micro2.css' | asset_url | stylesheet_tag }}
 
     {%- if request.page_type == 'product' and product.featured_image -%}
       <link
@@ -451,7 +451,7 @@
     </script>
   </head>
 
-  <!-- Coiriva Ultimate Sprint 4 Micro 1: Garden Premium Visual Layer -->
+  <!-- Coiriva Ultimate Sprint 4 Micro 2: Hero + Product Premium Layer -->
   <body class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
@@ -618,6 +618,6 @@
         })
       </script>
     {% endif %}
-    <div class="coiriva-sprint4-marker">SPRINT 4 · MICRO 1</div>
+    <div class="coiriva-sprint4-marker">SPRINT 4 · MICRO 2</div>
   </body>
 </html>
