@@ -414,7 +414,7 @@
     </noscript>
 
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'coiriva-sprint3.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'coiriva-sprint4-micro1.css' | asset_url | stylesheet_tag }}
 
     {%- if request.page_type == 'product' and product.featured_image -%}
       <link
@@ -451,14 +451,19 @@
     </script>
   </head>
 
-  <!-- Coiriva Ultimate Sprint 3 Garden CRO -->
+  <!-- Coiriva Ultimate Sprint 4 Micro 1: Garden Premium Visual Layer -->
   <body class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     {% sections 'header-group' %}
-    {% render 'coiriva-sprint3-system' %}
+
+    <div class="coiriva-garden-strip" aria-label="Coiriva garden trust bar">
+      <span>Premium garden coir</span>
+      <span>Expands into rich soil</span>
+      <span>Fast US shipping</span>
+    </div>
     
     {%- if settings.cart_type == 'drawer' -%}
       {%- section 'cart-drawer' -%}
@@ -613,5 +618,6 @@
         })
       </script>
     {% endif %}
+    <div class="coiriva-sprint4-marker">SPRINT 4 · MICRO 1</div>
   </body>
 </html>

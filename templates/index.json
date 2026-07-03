@@ -7,11 +7,11 @@
           "type": "slide",
           "settings": {
             "image_overlay_opacity": 0,
-            "heading": "Grow Bigger. Water Less. Start With Better Roots.",
+            "heading": "Grow Stronger Plants With Premium Coco Coir",
             "title_highlight_color": "#2E6B3F",
             "heading_size": "h1",
-            "subheading": "Premium coco coir bricks that expand into a clean, airy growing medium for vegetables, herbs, flowers and potted plants.",
-            "button_label": "Shop Coco Coir Bricks",
+            "subheading": "Clean, compressed coconut coir bricks that expand into a rich, airy growing medium for healthier roots.",
+            "button_label": "Shop Coco Coir",
             "link": "",
             "button_style_secondary": false,
             "atc_button_label": "",
@@ -23,11 +23,11 @@
             "color_scheme": "background-1",
             "transparent_container_color": "white",
             "text_alignment_mobile": "center",
-            "custom_colors_background": "#FAF7EF",
+            "custom_colors_background": "#FAF8F2",
             "custom_gradient_background": "",
-            "custom_colors_text": "#203223",
+            "custom_colors_text": "#223126",
             "custom_colors_solid_button_background": "#2E6B3F",
-            "custom_colors_solid_button_text": "#FFFFFF",
+            "custom_colors_solid_button_text": "#ffffff",
             "custom_colors_outline_button": "#2E6B3F"
           }
         }
@@ -38,14 +38,14 @@
       "settings": {
         "visibility": "always-display",
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "medium",
         "slider_visual": "dots",
         "desktop_pagination_position": "over",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
         "mobile_pagination_position": "under",
-        "accessibility_info": "Premium coco coir bricks for healthier roots, stronger plants and easier home gardening"
+        "accessibility_info": "Cocogrows premium coco coir for healthier plant roots"
       }
     },
     "d2d3417b-e92f-428c-b221-5bceffb552be": {
@@ -54,7 +54,7 @@
         "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-1": {
           "type": "row",
           "settings": {
-            "benefit": "Lightweight & compact to store",
+            "benefit": "Expands with water",
             "us": true,
             "others": false
           }
@@ -62,7 +62,7 @@
         "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-2": {
           "type": "row",
           "settings": {
-            "benefit": "Expands fast with water",
+            "benefit": "Helps roots breathe",
             "us": true,
             "others": false
           }
@@ -70,7 +70,7 @@
         "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-3": {
           "type": "row",
           "settings": {
-            "benefit": "Supports oxygen flow around roots",
+            "benefit": "Holds moisture longer",
             "us": true,
             "others": false
           }
@@ -84,10 +84,10 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Coco Coir That Makes Gardening Easier",
+        "title": "Why Gardeners Choose Cocogrows",
         "title_highlight_color": "#2E6B3F",
         "heading_size": "h1",
-        "text": "<p>Designed for home gardeners who want cleaner handling, better moisture control and healthier root growth.</p>",
+        "text": "<p>A cleaner, lighter and more root-friendly growing medium for home gardens, raised beds and potted plants.</p>",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
@@ -97,7 +97,7 @@
         "color_scheme": "background-1",
         "layout": "table_second",
         "style": "centered",
-        "us_label": "Cocogrows Coir",
+        "us_label": "Cocogrows",
         "us_label_size": 18,
         "logo_width": 90,
         "mobile_logo_width": 60,
@@ -121,13 +121,13 @@
         "minimalistic_border_opacity": 16,
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#FAF7EF",
+        "custom_colors_background": "#FAF8F2",
         "custom_gradient_background": "",
         "custom_colors_text": "#223126",
         "custom_colors_solid_button_background": "#2E6B3F",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#2E6B3F",
-        "custom_colors_highlighted_background": "#EAF4E4",
+        "custom_colors_highlighted_background": "#EEF4E8",
         "custom_colors_highlighted_text": "#223126",
         "custom_colors_others_background": "#FFFFFF",
         "custom_colors_others_text": "#2E2A39"
@@ -139,37 +139,37 @@
         "template--21507361505575__6aa09428-a417-429d-9159-a4e8afd49590-column-1": {
           "type": "column",
           "settings": {
-            "icon": "water_drop",
+            "icon": "check_circle",
             "filled_icon": false,
-            "title": "Moisture Balance",
-            "text": "<p>Helps retain water without turning heavy and muddy.</p>"
+            "title": "Locks In Moisture",
+            "text": "<p>Keeps roots hydrated longer.</p>"
           }
         },
         "template--21507361505575__6aa09428-a417-429d-9159-a4e8afd49590-column-2": {
           "type": "column",
           "settings": {
-            "icon": "spa",
+            "icon": "check_circle",
             "filled_icon": false,
-            "title": "Stronger Roots",
-            "text": "<p>Airy texture supports healthier root development.</p>"
+            "title": "Improves Drainage",
+            "text": "<p>Reduces soggy soil and water buildup.</p>"
           }
         },
         "template--21507361505575__6aa09428-a417-429d-9159-a4e8afd49590-column-3": {
           "type": "column",
           "settings": {
-            "icon": "eco",
+            "icon": "check_circle",
             "filled_icon": false,
-            "title": "Naturally Renewable",
-            "text": "<p>Made from coconut husk fiber, a renewable byproduct.</p>"
+            "title": "Supports Roots",
+            "text": "<p>Creates an airy texture for root growth.</p>"
           }
         },
         "template--21507361505575__6aa09428-a417-429d-9159-a4e8afd49590-column-4": {
           "type": "column",
           "settings": {
-            "icon": "inventory_2",
+            "icon": "check_circle",
             "filled_icon": false,
-            "title": "Easy To Store",
-            "text": "<p>Compact bricks save shelf space until you need them.</p>"
+            "title": "Plant Friendly",
+            "text": "<p>Made from renewable coconut husk fiber.</p>"
           }
         }
       },
@@ -182,10 +182,10 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Built For Real Garden Results",
+        "title": "Built For Healthier Roots",
         "title_highlight_color": "#2E6B3F",
         "heading_size": "h1",
-        "text": "<p>From compact brick to fluffy growing medium in minutes.</p>",
+        "text": "<p>Simple, natural growing support from seed starting to full garden beds.</p>",
         "color_scheme": "background-1",
         "icon_layout": "vertical",
         "icon_size": "medium",
@@ -215,7 +215,7 @@
         "mobile_arrows_position": "under",
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#EEF6E8",
+        "custom_colors_background": "#EEF4E8",
         "custom_gradient_background": "",
         "custom_colors_text": "#2E2A39",
         "custom_cards_colors_background": "#FFFFFF",
@@ -230,21 +230,21 @@
           "type": "row",
           "settings": {
             "percentage": 90,
-            "row_text": "<p>of gardeners want soil that is easier to carry and store.</p>"
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
           }
         },
         "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-2": {
           "type": "row",
           "settings": {
-            "percentage": 85,
-            "row_text": "<p>say moisture control is a top concern for container plants.</p>"
+            "percentage": 90,
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
           }
         },
         "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-3": {
           "type": "row",
           "settings": {
-            "percentage": 80,
-            "row_text": "<p>prefer a cleaner growing medium for indoor and patio use.</p>"
+            "percentage": 90,
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
           }
         }
       },
@@ -256,19 +256,19 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "From Dry Brick To Fluffy Growing Medium",
+        "title": "From One Brick To A Thriving Garden",
         "title_highlight_color": "#2E6B3F",
         "heading_size": "h1",
-        "text": "<p>Add water, let it hydrate, then mix into pots, planters and garden beds.</p>",
+        "text": "<p>Just add water and watch compact coir expand into a clean, fluffy growing medium.</p>",
         "color_scheme": "background-1",
         "layout": "results_second",
-        "results_headline": "Expands 8\u201310X",
+        "results_headline": "8\u201310X Expansion",
         "results_title_highlight_color": "#2E6B3F",
         "results_headline_size": "h2",
-        "results_text": "<p>Made to help roots breathe, hold moisture and grow with less mess.</p>",
+        "results_text": "<p>Perfect for potting mixes, raised beds, seed starting and plant care.</p>",
         "results_headline_alignment": "left",
         "caption": "<p>Compact to store. Easy to hydrate. Ready for roots.</p>",
-        "button_label": "Start Growing Naturally",
+        "button_label": "See How It Works",
         "link": "",
         "button_style_secondary": false,
         "atc_button_label": "",
@@ -276,7 +276,7 @@
         "atc_skip_cart": false,
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#FFFDF8",
+        "custom_colors_background": "#FAF8F2",
         "custom_gradient_background": "",
         "custom_colors_text": "#2E2A39",
         "custom_colors_accent": "#2E6B3F",
@@ -290,14 +290,14 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Ask Us About Coco Coir",
+        "title": "Need Help With Your Garden?",
         "title_highlight_color": "#2E6B3F",
         "heading_size": "h1",
         "button_full_width": true,
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#EEF6E8",
+        "custom_colors_background": "#EEF4E8",
         "custom_gradient_background": "",
         "custom_colors_text": "#223126",
         "custom_colors_solid_button_background": "#2E6B3F",
