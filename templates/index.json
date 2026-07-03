@@ -267,11 +267,61 @@
         "custom_colors_solid_button_background": "#2E6B3F",
         "custom_colors_solid_button_text": "#ffffff"
       }
+    },
+    "coiriva-how-it-works-epic13": {
+      "type": "coiriva-how-it-works",
+      "blocks": {
+        "step-place-brick": {
+          "type": "step",
+          "settings": {
+            "icon": "🧱",
+            "title": "Place the Brick",
+            "text": "Set the compact coco coir brick in a bucket, tray, or garden container."
+          }
+        },
+        "step-add-water": {
+          "type": "step",
+          "settings": {
+            "icon": "💧",
+            "title": "Add Water",
+            "text": "Hydrate with water and let the natural coconut fibers loosen and expand."
+          }
+        },
+        "step-expand": {
+          "type": "step",
+          "settings": {
+            "icon": "🌿",
+            "title": "Watch It Expand",
+            "text": "One brick expands 8–10X into a light, airy growing medium."
+          }
+        },
+        "step-plant": {
+          "type": "step",
+          "settings": {
+            "icon": "🪴",
+            "title": "Start Planting",
+            "text": "Use it for seedlings, pots, raised beds, herbs, vegetables, and more."
+          }
+        }
+      },
+      "block_order": [
+        "step-place-brick",
+        "step-add-water",
+        "step-expand",
+        "step-plant"
+      ],
+      "settings": {
+        "eyebrow": "Simple Garden Setup",
+        "heading": "From Brick to Garden-Ready Coir",
+        "subheading": "Coiriva makes it easy to turn one compact coconut coir brick into a clean, airy growing medium your plants will love.",
+        "show_before_after": true
+      }
     }
   },
   "order": [
     "cfca4268-6358-426c-98ab-d292aeef11e5",
     "d2d3417b-e92f-428c-b221-5bceffb552be",
+    "coiriva-how-it-works-epic13",
     "6aa09428-a417-429d-9159-a4e8afd49590",
     "0f1fc9e4-bc4c-4052-9747-62d1f8472caa",
     "ee8d9ca6-4a41-401f-83a3-37e138a112b9"

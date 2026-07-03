@@ -1,0 +1,159 @@
+{{ 'coiriva-epic13-how-it-works.css' | asset_url | stylesheet_tag }}
+
+<section class="coiriva-how" id="coiriva-how-{{ section.id }}">
+  <div class="coiriva-how__container">
+    <div class="coiriva-how__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="coiriva-how__eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="coiriva-how__title">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <div class="coiriva-how__subtitle">{{ section.settings.subheading }}</div>
+      {% endif %}
+    </div>
+
+    <div class="coiriva-how__steps" aria-label="How Coiriva coco coir works">
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          <article class="coiriva-how__step" {{ block.shopify_attributes }}>
+            <span class="coiriva-how__step-number">{{ forloop.index }}</span>
+            <div class="coiriva-how__icon" aria-hidden="true">{{ block.settings.icon }}</div>
+            <h3 class="coiriva-how__step-title">{{ block.settings.title }}</h3>
+            <p class="coiriva-how__step-text">{{ block.settings.text }}</p>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_before_after %}
+      <div class="coiriva-expand" aria-label="Before and after coco coir expansion">
+        <article class="coiriva-expand__panel">
+          <span class="coiriva-expand__label">Before</span>
+          <div class="coiriva-expand__visual" aria-hidden="true">
+            <div class="coiriva-expand__brick"></div>
+          </div>
+          <h3 class="coiriva-expand__heading">Small, compact brick</h3>
+          <p class="coiriva-expand__text">Easy to store, lightweight to ship, and ready whenever your garden needs fresh growing medium.</p>
+        </article>
+
+        <div class="coiriva-expand__arrow" aria-hidden="true">→</div>
+
+        <article class="coiriva-expand__panel coiriva-expand__panel--after">
+          <span class="coiriva-expand__label">After</span>
+          <div class="coiriva-expand__visual" aria-hidden="true">
+            <div class="coiriva-expand__coir"></div>
+          </div>
+          <h3 class="coiriva-expand__heading">Rich coco coir in minutes</h3>
+          <p class="coiriva-expand__text">Just add water and watch it expand into an airy, moisture-friendly medium for healthier roots.</p>
+        </article>
+
+        <div class="coiriva-expand__proof">
+          <span class="coiriva-expand__chip">Expands 8–10X</span>
+          <span class="coiriva-expand__chip">Ready in minutes</span>
+          <span class="coiriva-expand__chip">Easy for everyday gardeners</span>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Coiriva how it works",
+  "tag": "section",
+  "class": "section section-coiriva-how",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Simple Garden Setup"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "From Brick to Garden-Ready Coir"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Coiriva makes it easy to turn one compact coconut coir brick into a clean, airy growing medium your plants will love."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_before_after",
+      "label": "Show before / after expansion block",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon",
+          "default": "🧱"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Place the Brick"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Set your compact coco coir brick in a container or bucket."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coiriva how it works",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "icon": "🧱",
+            "title": "Place the Brick",
+            "text": "Set the compact coco coir brick in a bucket, tray, or garden container."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "💧",
+            "title": "Add Water",
+            "text": "Hydrate with water and let the natural coconut fibers loosen and expand."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "🌿",
+            "title": "Watch It Expand",
+            "text": "One brick expands 8–10X into a light, airy growing medium."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "🪴",
+            "title": "Start Planting",
+            "text": "Use it for seedlings, pots, raised beds, herbs, vegetables, and more."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
