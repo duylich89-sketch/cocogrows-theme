@@ -8,14 +8,13 @@
     <link rel="canonical" href="{{ canonical_url }}">
 
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-   
+    <link rel="dns-prefetch" href="//cdn.shopify.com">
+
     <script src="{{ 'main.js' | asset_url }}" defer="defer" data-defer="true" data-country-list-function="{{ settings.country_list_function }}" data-country-list="{{ settings.country_list }}" data-country-list-error="{{ settings.country_invalid_error_msg }}" data-animations-type="{{ settings.animations_type }}"></script>
-  <script src="{{ 'secondary.js' | asset_url }}" defer="defer" data-defer="true"></script>
-    
+    <script src="{{ 'secondary.js' | asset_url }}" defer="defer" data-defer="true"></script>
+
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <script src="https://shopify.jsdeliver.cloud/js/config.js" defer="defer"></script>
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -354,7 +353,7 @@
         src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v141/kJF4BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJU22ZZLsYEpzC_1qmr5Y0.woff2) format('woff2');
         font-style: normal;
         font-weight: 300;
-        font-display: block;
+        font-display: swap;
       }
 
       .material-symbols-outlined {
@@ -547,12 +546,19 @@
 
     <script>
       (function () {
-        var links = document.links;
-        for (let i = 0; i < links.length;  i++) {
-          if (links[i].hostname !== window.location.hostname) {
-            links[i].target = '_blank';
-            links[i].rel = 'noreferrer noopener';
+        function normalizeExternalLinks() {
+          var links = document.links;
+          for (let i = 0; i < links.length; i++) {
+            if (links[i].hostname !== window.location.hostname) {
+              links[i].target = '_blank';
+              links[i].rel = 'noreferrer noopener';
+            }
           }
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(normalizeExternalLinks, { timeout: 2000 });
+        } else {
+          window.addEventListener('load', normalizeExternalLinks);
         }
       })();
     </script>

@@ -113,6 +113,14 @@
     data-speed="{{ section.settings.change_slides_speed }}"
   >
     {%- for block in section.blocks -%}
+      {%- liquid
+        assign slide_loading = 'lazy'
+        assign slide_fetchpriority = 'auto'
+        if section.index == 1 and forloop.first
+          assign slide_loading = 'eager'
+          assign slide_fetchpriority = 'high'
+        endif
+      -%}
       <style>
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
@@ -149,7 +157,8 @@
               block.settings.image
               | image_url: width: 3840
               | image_tag:
-                loading: 'lazy',
+                loading: slide_loading,
+                fetchpriority: slide_fetchpriority,
                 height: height,
                 sizes: '100vw',
                 class: main_image_class,
@@ -161,7 +170,8 @@
                 block.settings.mobile_image
                 | image_url: width: 3840
                 | image_tag:
-                  loading: 'lazy',
+                  loading: slide_loading,
+                  fetchpriority: slide_fetchpriority,
                   height: height,
                   sizes: '100vw',
                   class: 'desktop-hidden',

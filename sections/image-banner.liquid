@@ -46,6 +46,12 @@
       <div class="banner__media media {{ section.settings.image_1_visibility }}{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank and section.settings.image_2_visibility != 'desktop-hidden' %} banner__media-half{% endif %}">
         {%- liquid
           assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign image_loading = 'lazy'
+          assign image_fetchpriority = 'auto'
+          if section.index == 1
+            assign image_loading = 'eager'
+            assign image_fetchpriority = 'high'
+          endif
           if section.settings.image_2 != blank
             assign image_class = 'banner__media-image-half'
           endif
@@ -61,7 +67,8 @@
           section.settings.image
           | image_url: width: 3840
           | image_tag:
-            loading: 'lazy',
+            loading: image_loading,
+            fetchpriority: image_fetchpriority,
             width: section.settings.image.width,
             height: image_height,
             class: image_class,
@@ -78,6 +85,8 @@
       <div class="banner__media media {{ section.settings.image_2_visibility }}{% if section.settings.image != blank and section.settings.image_2_visibility != 'desktop-hidden' %} banner__media-half{% endif %}">
         {%- liquid
           assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
+          assign image_2_loading = image_loading | default: 'lazy'
+          assign image_2_fetchpriority = image_fetchpriority | default: 'auto'
           if section.settings.image != blank
             assign image_class_2 = 'banner__media-image-half'
           endif
@@ -93,7 +102,8 @@
           section.settings.image_2
           | image_url: width: 3840
           | image_tag:
-            loading: 'lazy',
+            loading: image_2_loading,
+            fetchpriority: image_2_fetchpriority,
             width: section.settings.image_2.width,
             height: image_height_2,
             class: image_class_2,
