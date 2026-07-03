@@ -1,0 +1,263 @@
+/* =========================================================
+   COIRIVA ULTIMATE — EPIC 1.1 HERO PREMIUM
+   Scope: homepage first slideshow/hero only + header state.
+   Uses Sprint 0.1/0.2 design tokens. No cart/product logic changes.
+   ========================================================= */
+
+body.coiriva-template-index {
+  --coiriva-hero-green: var(--coiriva-color-primary, #2F6B3F);
+  --coiriva-hero-forest: var(--coiriva-color-primary-dark, #1F4D32);
+  --coiriva-hero-cream: var(--coiriva-color-bg, #FAF7EF);
+  --coiriva-hero-gold: var(--coiriva-color-cta, #D89A3D);
+}
+
+/* Header becomes premium on the homepage */
+body.coiriva-template-index .shopify-section-group-header-group {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  transition: background .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+body.coiriva-template-index:not(.coiriva-scrolled) .shopify-section-group-header-group,
+body.coiriva-template-index:not(.coiriva-scrolled) .header-wrapper {
+  background: rgba(250,247,239,.72) !important;
+  border-color: rgba(47,107,63,.10) !important;
+  backdrop-filter: blur(16px);
+  box-shadow: none !important;
+}
+body.coiriva-template-index.coiriva-scrolled .shopify-section-group-header-group,
+body.coiriva-template-index.coiriva-scrolled .header-wrapper {
+  background: rgba(255,255,255,.94) !important;
+  box-shadow: 0 10px 30px rgba(31,42,34,.08);
+  backdrop-filter: blur(18px);
+}
+
+/* Full premium homepage hero */
+.coiriva-hero-premium {
+  display: block;
+  background:
+    radial-gradient(circle at 16% 12%, rgba(220,232,210,.95), transparent 27rem),
+    radial-gradient(circle at 88% 72%, rgba(139,94,60,.13), transparent 30rem),
+    linear-gradient(135deg, #fbf8f1 0%, #eef6e8 58%, #ffffff 100%);
+  overflow: hidden;
+  position: relative;
+}
+.coiriva-hero-premium::before {
+  content: '';
+  position: absolute;
+  inset: auto -6rem -9rem auto;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 999px;
+  background: rgba(47,107,63,.08);
+  pointer-events: none;
+}
+.coiriva-hero-premium .slideshow.banner {
+  min-height: clamp(620px, 88vh, 860px) !important;
+  background: transparent !important;
+}
+.coiriva-hero-premium .slideshow__slide {
+  min-height: inherit;
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  padding: clamp(28px, 5vw, 72px) max(24px, calc((100vw - 1220px) / 2));
+}
+.coiriva-hero-premium .slideshow__media {
+  position: relative !important;
+  grid-column: 2;
+  grid-row: 1;
+  min-height: clamp(420px, 62vh, 680px);
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(31,77,50,.18);
+  border: 1px solid rgba(47,107,63,.14);
+  background:
+    radial-gradient(circle at 45% 35%, rgba(255,255,255,.72), transparent 18rem),
+    linear-gradient(145deg, rgba(220,232,210,.7), rgba(250,247,239,.85));
+}
+.coiriva-hero-premium .slideshow__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(250,247,239,.08), rgba(255,255,255,0));
+  pointer-events: none;
+}
+.coiriva-hero-premium .slideshow__media img,
+.coiriva-hero-premium .slideshow__media svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  filter: saturate(1.08) contrast(1.03);
+}
+.coiriva-hero-premium .slideshow__text-wrapper {
+  position: relative !important;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  padding: 0 !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  z-index: 2;
+}
+.coiriva-hero-premium .slideshow__text {
+  width: min(560px, 100%);
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  backdrop-filter: none !important;
+  text-align: left !important;
+}
+.coiriva-hero-premium .slideshow__text::before {
+  content: '🌿 Premium Coco Coir';
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(47,107,63,.12);
+  color: var(--coiriva-hero-forest);
+  border: 1px solid rgba(47,107,63,.16);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.coiriva-hero-premium .banner__heading,
+.coiriva-hero-premium .slideshow__heading {
+  max-width: 10ch;
+  margin: 0;
+  color: #1f2a22 !important;
+  font-size: clamp(46px, 6.8vw, 88px) !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+  font-weight: 950 !important;
+}
+.coiriva-hero-premium .banner__text {
+  max-width: 560px;
+  margin-top: 22px;
+  color: rgba(31,42,34,.78) !important;
+  font-size: clamp(17px, 1.55vw, 22px) !important;
+  line-height: 1.55;
+}
+.coiriva-hero-premium .coiriva-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.coiriva-hero-premium .coiriva-hero__buttons .button {
+  min-height: 56px;
+  padding-inline: 28px;
+  border-radius: 999px !important;
+  font-size: 15px;
+  font-weight: 900;
+}
+.coiriva-hero-premium .coiriva-hero__buttons .button--primary {
+  background: linear-gradient(135deg, var(--coiriva-hero-gold), #b97924) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 16px 34px rgba(216,154,61,.32) !important;
+}
+.coiriva-hero-premium .coiriva-hero__secondary {
+  background: #fff !important;
+  color: var(--coiriva-hero-forest) !important;
+  border: 1px solid rgba(47,107,63,.22) !important;
+  box-shadow: 0 10px 24px rgba(31,42,34,.07) !important;
+}
+.coiriva-hero-premium .coiriva-hero__secondary::before {
+  content: '▶';
+  font-size: .9em;
+  margin-right: 8px;
+}
+.coiriva-hero__usp {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  max-width: 560px;
+  margin-top: 22px;
+}
+.coiriva-hero__usp span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--coiriva-hero-forest);
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 850;
+}
+.coiriva-hero__usp span::before {
+  content: '✓';
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: rgba(47,107,63,.12);
+  color: var(--coiriva-hero-forest);
+  font-size: 12px;
+  flex: 0 0 auto;
+}
+
+/* Make the old trust strip look connected to the new hero */
+body.coiriva-template-index .coiriva-garden-strip {
+  border-top: 0;
+  background: linear-gradient(90deg, #1f4d32, #2f6b3f, #1f4d32);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(31,77,50,.12);
+}
+
+@media screen and (max-width: 989px) {
+  .coiriva-hero-premium .slideshow__slide {
+    grid-template-columns: 1fr;
+    padding: 28px 20px 36px;
+    gap: 22px;
+  }
+  .coiriva-hero-premium .slideshow__text-wrapper,
+  .coiriva-hero-premium .slideshow__media {
+    grid-column: 1;
+  }
+  .coiriva-hero-premium .slideshow__text-wrapper { grid-row: 1; }
+  .coiriva-hero-premium .slideshow__media {
+    grid-row: 2;
+    min-height: 310px;
+    border-radius: 24px;
+  }
+  .coiriva-hero-premium .slideshow__text {
+    text-align: left !important;
+  }
+  .coiriva-hero-premium .banner__heading,
+  .coiriva-hero-premium .slideshow__heading {
+    max-width: 11ch;
+    font-size: clamp(42px, 12vw, 60px) !important;
+  }
+  .coiriva-hero-premium .slideshow.banner {
+    min-height: auto !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .coiriva-hero-premium .coiriva-hero__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .coiriva-hero-premium .coiriva-hero__buttons .button {
+    width: 100%;
+    min-height: 54px;
+  }
+  .coiriva-hero__usp {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  .coiriva-hero-premium .slideshow__media {
+    min-height: 260px;
+  }
+}

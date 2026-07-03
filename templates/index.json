@@ -7,28 +7,28 @@
           "type": "slide",
           "settings": {
             "image_overlay_opacity": 0,
-            "heading": "Grow Stronger Plants With Premium Coco Coir",
+            "heading": "Grow Bigger.\nWater Less.",
             "title_highlight_color": "#2E6B3F",
             "heading_size": "h1",
-            "subheading": "Clean, compressed coconut coir bricks that expand into a rich, airy growing medium for healthier roots.",
+            "subheading": "Premium coconut coir bricks that expand into a clean, airy growing medium for healthier roots, better moisture and easier gardening.",
             "button_label": "Shop Coco Coir",
             "link": "",
             "button_style_secondary": false,
             "atc_button_label": "",
             "atc_product": "",
             "atc_skip_cart": false,
-            "box_align": "middle-center",
+            "box_align": "middle-left",
             "show_text_box": true,
-            "text_alignment": "center",
+            "text_alignment": "left",
             "color_scheme": "background-1",
             "transparent_container_color": "white",
-            "text_alignment_mobile": "center",
-            "custom_colors_background": "#FAF8F2",
+            "text_alignment_mobile": "left",
+            "custom_colors_background": "#FAF7EF",
             "custom_gradient_background": "",
-            "custom_colors_text": "#223126",
-            "custom_colors_solid_button_background": "#2E6B3F",
+            "custom_colors_text": "#1F2A22",
+            "custom_colors_solid_button_background": "#D89A3D",
             "custom_colors_solid_button_text": "#ffffff",
-            "custom_colors_outline_button": "#2E6B3F"
+            "custom_colors_outline_button": "#2F6B3F"
           }
         }
       },
@@ -38,12 +38,12 @@
       "settings": {
         "visibility": "always-display",
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "large",
         "slider_visual": "dots",
         "desktop_pagination_position": "over",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": true,
+        "show_text_below": false,
         "mobile_pagination_position": "under",
         "accessibility_info": "Cocogrows premium coco coir for healthier plant roots"
       }
