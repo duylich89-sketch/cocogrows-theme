@@ -1,0 +1,135 @@
+{{ 'coiriva-epic12-benefits.css' | asset_url | stylesheet_tag }}
+
+<section class="coiriva-benefits" id="coiriva-benefits-{{ section.id }}">
+  <div class="coiriva-benefits__container">
+    <div class="coiriva-benefits__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="coiriva-benefits__eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="coiriva-benefits__title">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <div class="coiriva-benefits__subtitle">{{ section.settings.subheading }}</div>
+      {% endif %}
+    </div>
+
+    <div class="coiriva-benefits__grid">
+      {% for block in section.blocks %}
+        <article class="coiriva-benefits__card" {{ block.shopify_attributes }}>
+          <div class="coiriva-benefits__icon" aria-hidden="true">{{ block.settings.icon }}</div>
+          <h3 class="coiriva-benefits__card-title">{{ block.settings.title }}</h3>
+          <p class="coiriva-benefits__card-text">{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_chips %}
+      <div class="coiriva-benefits__proof" aria-label="Coiriva product benefits">
+        <span class="coiriva-benefits__chip">Fast US Shipping</span>
+        <span class="coiriva-benefits__chip">Expands 8–10X</span>
+        <span class="coiriva-benefits__chip">Plant Friendly</span>
+        <span class="coiriva-benefits__chip">Easy To Store</span>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Coiriva benefit cards",
+  "tag": "section",
+  "class": "section section-coiriva-benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Garden Premium"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Gardeners Choose Coiriva"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Premium coconut coir engineered for healthier plants, stronger roots, and easier everyday gardening."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_chips",
+      "label": "Show proof chips",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon",
+          "default": "🌱"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Supports Strong Roots"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Creates a lighter, airier growing environment so roots can spread with less compaction."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coiriva benefit cards",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "💧",
+            "title": "Holds Moisture",
+            "text": "Keeps roots hydrated longer between watering while helping reduce dry pockets."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "🌱",
+            "title": "Supports Strong Roots",
+            "text": "Creates a clean, airy medium that encourages healthy root development."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "🌿",
+            "title": "Naturally Renewable",
+            "text": "Made from coconut husks, a renewable material gardeners can feel good using."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "🪴",
+            "title": "Improves Drainage",
+            "text": "Helps reduce compaction and supports better airflow for everyday growing."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

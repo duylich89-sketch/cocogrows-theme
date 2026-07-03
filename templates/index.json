@@ -49,88 +49,52 @@
       }
     },
     "d2d3417b-e92f-428c-b221-5bceffb552be": {
-      "type": "comparison-table",
+      "type": "coiriva-benefit-cards",
       "blocks": {
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-1": {
-          "type": "row",
+        "benefit-moisture": {
+          "type": "benefit",
           "settings": {
-            "benefit": "Expands with water",
-            "us": true,
-            "others": false
+            "icon": "💧",
+            "title": "Holds Moisture",
+            "text": "Keeps roots hydrated longer between watering while helping reduce dry pockets."
           }
         },
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-2": {
-          "type": "row",
+        "benefit-roots": {
+          "type": "benefit",
           "settings": {
-            "benefit": "Helps roots breathe",
-            "us": true,
-            "others": false
+            "icon": "🌱",
+            "title": "Supports Strong Roots",
+            "text": "Creates a clean, airy medium that encourages healthy root development."
           }
         },
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-3": {
-          "type": "row",
+        "benefit-renewable": {
+          "type": "benefit",
           "settings": {
-            "benefit": "Holds moisture longer",
-            "us": true,
-            "others": false
+            "icon": "🌿",
+            "title": "Naturally Renewable",
+            "text": "Made from coconut husks, a renewable material gardeners can feel good using."
+          }
+        },
+        "benefit-drainage": {
+          "type": "benefit",
+          "settings": {
+            "icon": "🪴",
+            "title": "Improves Drainage",
+            "text": "Helps reduce compaction and supports better airflow for everyday growing."
           }
         }
       },
       "block_order": [
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-1",
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-2",
-        "template--21507361505575__d2d3417b-e92f-428c-b221-5bceffb552be-row-3"
+        "benefit-moisture",
+        "benefit-roots",
+        "benefit-renewable",
+        "benefit-drainage"
       ],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Why Gardeners Choose Cocogrows",
-        "title_highlight_color": "#2E6B3F",
-        "heading_size": "h1",
-        "text": "<p>A cleaner, lighter and more root-friendly growing medium for home gardens, raised beds and potted plants.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "color_scheme": "background-1",
-        "layout": "table_second",
-        "style": "centered",
-        "us_label": "Cocogrows",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Regular Soil",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "checkmark_style": "regular",
-        "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#53af01",
-        "x_style": "regular",
-        "x_color": "#121212",
-        "x_bg_color": "#dbdbdb",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "accent-1",
-        "highlighted_separator_opacity": 0,
-        "highlighted_overlay_opacity": 0,
-        "other_cells_color_scheme": "background-1",
-        "regular_separator_opacity": 10,
-        "regular_overlay_opacity": 0,
-        "minimalistic_border_opacity": 16,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#FAF8F2",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#223126",
-        "custom_colors_solid_button_background": "#2E6B3F",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#2E6B3F",
-        "custom_colors_highlighted_background": "#EEF4E8",
-        "custom_colors_highlighted_text": "#223126",
-        "custom_colors_others_background": "#FFFFFF",
-        "custom_colors_others_text": "#2E2A39"
+        "eyebrow": "Garden Premium",
+        "heading": "Why Gardeners Choose Coiriva",
+        "subheading": "Premium coconut coir engineered for healthier plants, stronger roots, and easier everyday gardening.",
+        "show_chips": true
       }
     },
     "6aa09428-a417-429d-9159-a4e8afd49590": {
@@ -262,7 +226,7 @@
         "text": "<p>Just add water and watch compact coir expand into a clean, fluffy growing medium.</p>",
         "color_scheme": "background-1",
         "layout": "results_second",
-        "results_headline": "8\u201310X Expansion",
+        "results_headline": "8–10X Expansion",
         "results_title_highlight_color": "#2E6B3F",
         "results_headline_size": "h2",
         "results_text": "<p>Perfect for potting mixes, raised beds, seed starting and plant care.</p>",
