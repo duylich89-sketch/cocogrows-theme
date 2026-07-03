@@ -582,13 +582,18 @@
         document.addEventListener("selectstart", (e) => {
           e.preventDefault();
         });
-        document.addEventListener('DOMContentLoaded', function() {
+        function disableImageDragging() {
           document.querySelectorAll('img').forEach(img => {
             img.addEventListener('dragstart', function(e) {
               e.preventDefault();
-            })
+            }, { passive: false })
           })
-        })
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(disableImageDragging, { timeout: 2500 });
+        } else {
+          window.addEventListener('load', disableImageDragging, { once: true });
+        }
         function ctrlShiftKey(e, keyCode) {
           return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
         }

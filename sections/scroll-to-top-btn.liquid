@@ -35,19 +35,25 @@
   
   <script>
     {% unless section.settings.display_after == 0 %}
+      const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+      let scrollToTopTicking = false;
+
       function checkBtnVisibility() {
-        const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
-        if (scrollToTopBtn) {
-          if (window.scrollY > {{ section.settings.display_after }}) {
-            scrollToTopBtn.style.display = '';
-          } else {
-            scrollToTopBtn.style.display = 'none';
-          }
-        }
+        if (!scrollToTopBtn) return;
+        scrollToTopBtn.style.display = window.scrollY > {{ section.settings.display_after }} ? '' : 'none';
       }
-      checkBtnVisibility()
-    
-      window.addEventListener('scroll', checkBtnVisibility)
+
+      function scheduleScrollToTopVisibility() {
+        if (scrollToTopTicking) return;
+        scrollToTopTicking = true;
+        window.requestAnimationFrame(() => {
+          checkBtnVisibility();
+          scrollToTopTicking = false;
+        });
+      }
+
+      checkBtnVisibility();
+      window.addEventListener('scroll', scheduleScrollToTopVisibility, { passive: true });
     {% endunless %}
   
     function handleScrollToTop() {

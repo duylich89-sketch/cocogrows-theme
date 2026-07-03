@@ -80,15 +80,34 @@
   </div>
 </div>
 
-<script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
 <script type="text/javascript">
+  function load17Track(callback) {
+    if (window.YQV5) {
+      callback();
+      return;
+    }
+    var existingScript = document.querySelector('script[data-shrine-17track]');
+    if (existingScript) {
+      existingScript.addEventListener('load', callback, { once: true });
+      return;
+    }
+    var script = document.createElement('script');
+    script.src = 'https://www.17track.net/externalcall.js';
+    script.async = true;
+    script.defer = true;
+    script.dataset.shrine17track = 'true';
+    script.addEventListener('load', callback, { once: true });
+    document.head.appendChild(script);
+  }
+
   function doTrack() {
     var num = document.getElementById("YQNum").value;
     if(num===""){
       alert("Enter your number.");
       return;
     }
-    YQV5.trackSingle({
+    load17Track(function() {
+      YQV5.trackSingle({
       //Required, Specify the container ID of the carrier content.
       YQ_ContainerId:"YQContainer",
       //Optional, specify tracking result height, max height 800px, default is 560px.
@@ -98,7 +117,8 @@
       //Optional, specify UI language, default language is automatically detected based on the browser settings.
       YQ_Lang:"en",
       //Required, specify the number needed to be tracked.
-      YQ_Num:num
+        YQ_Num:num
+      });
     });
   }
 </script>
