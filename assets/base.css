@@ -269,3 +269,31 @@ body.template-index .coiriva-final-cta__visual,
 body.template-index .coiriva-final-cta__visual * {
   pointer-events: none !important;
 }
+
+
+/* v3.1.5 Premium Visual Consistency */
+:root{
+ --cg-radius:18px;
+ --cg-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+.card,.product__info-wrapper .card,.shopify-payment-button,.accordion,.product-form,.bundle-card,.multicolumn-card{
+ border-radius:var(--cg-radius)!important;
+}
+.card,.accordion,.bundle-card,.product__info-wrapper .card{
+ box-shadow:var(--cg-shadow)!important;
+}
+.button,.button--primary,.shopify-payment-button__button{
+ border-radius:999px!important;
+ font-weight:700!important;
+ letter-spacing:.02em;
+ transition:all .2s ease;
+}
+.button:hover,.button--primary:hover{
+ transform:translateY(-1px);
+}
+h1,h2,h3{
+ letter-spacing:-.02em;
+}
+.rte p,.product__description p{
+ line-height:1.7;
+}
