@@ -86,18 +86,18 @@
 
   <nav class="cocogrows-footer-nav page-width" aria-label="Cocogrows footer navigation">
     <div class="cocogrows-footer-nav__grid">
-      <div class="cocogrows-footer-nav__column">
-        <h2 class="cocogrows-footer-nav__heading">Shop</h2>
+      <details class="cocogrows-footer-nav__column" open>
+        <summary class="cocogrows-footer-nav__heading"><span>Shop</span></summary>
         <ul class="cocogrows-footer-nav__list" role="list">
           <li><a href="/products/premium-organic-coco-coir-growing-medium">Shop Coco Coir</a></li>
           <li><a href="/#coiriva-how-it-works">How It Works</a></li>
           <li><a href="/#coiriva-benefits">Why Coco Coir</a></li>
           <li><a href="/pages/track-your-order">Track Your Order</a></li>
         </ul>
-      </div>
+      </details>
 
-      <div class="cocogrows-footer-nav__column">
-        <h2 class="cocogrows-footer-nav__heading">Support</h2>
+      <details class="cocogrows-footer-nav__column" open>
+        <summary class="cocogrows-footer-nav__heading"><span>Support</span></summary>
         <ul class="cocogrows-footer-nav__list" role="list">
           <li><a href="/pages/contact">Contact Us</a></li>
           <li><a href="/policies/shipping-policy">Shipping Policy</a></li>
@@ -105,27 +105,40 @@
           <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
           <li><a href="/policies/terms-of-service">Terms of Service</a></li>
         </ul>
-      </div>
+      </details>
 
-      <div class="cocogrows-footer-nav__column">
-        <h2 class="cocogrows-footer-nav__heading">Company</h2>
+      <details class="cocogrows-footer-nav__column" open>
+        <summary class="cocogrows-footer-nav__heading"><span>Company</span></summary>
         <ul class="cocogrows-footer-nav__list" role="list">
           <li><a href="/pages/about-us">About Cocogrows</a></li>
           <li><a href="/pages/about-us#our-mission">Our Mission</a></li>
           <li><a href="/pages/faq">FAQ</a></li>
         </ul>
-      </div>
+      </details>
 
-      <div class="cocogrows-footer-nav__column cocogrows-footer-nav__column--connect">
-        <h2 class="cocogrows-footer-nav__heading">Connect</h2>
+      <details class="cocogrows-footer-nav__column cocogrows-footer-nav__column--connect" open>
+        <summary class="cocogrows-footer-nav__heading"><span>Connect</span></summary>
         <ul class="cocogrows-footer-nav__list" role="list">
           <li><a href="https://www.facebook.com/cocogrows" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li><a href="https://www.instagram.com/cocogrows" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://www.pinterest.com/cocogrows" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
           <li><a href="mailto:support@cocogrows.com">support@cocogrows.com</a></li>
         </ul>
-      </div>
+      </details>
     </div>
+
+    <script>
+      (() => {
+        const setFooterDetails = () => {
+          document.querySelectorAll('.cocogrows-footer-nav__column').forEach((item) => {
+            if (window.matchMedia('(max-width: 749px)').matches) item.removeAttribute('open');
+            else item.setAttribute('open', '');
+          });
+        };
+        setFooterDetails();
+        window.addEventListener('resize', setFooterDetails, { passive: true });
+      })();
+    </script>
 
     <div class="cocogrows-footer-trust" aria-label="Cocogrows shopping benefits">
       <span>🔒 Secure Checkout</span>
