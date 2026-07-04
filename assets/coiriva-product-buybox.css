@@ -33,3 +33,135 @@
     display: none !important;
   }
 }
+
+/* v3.1.2 — Product Page Quantity Selector Fix
+   Restores the missing plus control on mobile/desktop product quantity selector.
+   Scoped only to product page quantity block to avoid cart/drawer side effects. */
+.template-product .product-form__quantity .quantity.main-quantity,
+.product .product-form__quantity .quantity.main-quantity,
+main .product-form__quantity .quantity.main-quantity {
+  display: grid !important;
+  grid-template-columns: 64px 72px 64px !important;
+  align-items: stretch !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  min-width: 200px !important;
+  min-height: 56px !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(24,79,59,.16) !important;
+  background: rgba(255,255,255,.78) !important;
+  box-shadow: 0 10px 26px rgba(18,61,49,.06) !important;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__button,
+.product .product-form__quantity .quantity.main-quantity .quantity__button,
+main .product-form__quantity .quantity.main-quantity .quantity__button {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 64px !important;
+  width: 64px !important;
+  height: 56px !important;
+  min-height: 56px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  z-index: 3 !important;
+  color: #173d31 !important;
+  background: rgba(255,255,255,.50) !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__button[name='plus'],
+.product .product-form__quantity .quantity.main-quantity .quantity__button[name='plus'],
+main .product-form__quantity .quantity.main-quantity .quantity__button[name='plus'] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__button svg,
+.product .product-form__quantity .quantity.main-quantity .quantity__button svg,
+main .product-form__quantity .quantity.main-quantity .quantity__button svg {
+  display: none !important;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__button[name='minus']::before,
+.product .product-form__quantity .quantity.main-quantity .quantity__button[name='minus']::before,
+main .product-form__quantity .quantity.main-quantity .quantity__button[name='minus']::before {
+  content: '−';
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__button[name='plus']::before,
+.product .product-form__quantity .quantity.main-quantity .quantity__button[name='plus']::before,
+main .product-form__quantity .quantity.main-quantity .quantity__button[name='plus']::before {
+  content: '+';
+  display: block;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__input,
+.product .product-form__quantity .quantity.main-quantity .quantity__input,
+main .product-form__quantity .quantity.main-quantity .quantity__input {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 72px !important;
+  min-width: 72px !important;
+  height: 56px !important;
+  min-height: 56px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  font-weight: 900 !important;
+  font-size: 1.75rem !important;
+  color: #17241f !important;
+  background: rgba(247,248,239,.94) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -moz-appearance: textfield !important;
+}
+
+.template-product .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-outer-spin-button,
+.template-product .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-inner-spin-button,
+.product .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-outer-spin-button,
+.product .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-inner-spin-button,
+main .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-outer-spin-button,
+main .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .product-form__quantity .quantity.main-quantity,
+  .product .product-form__quantity .quantity.main-quantity,
+  main .product-form__quantity .quantity.main-quantity {
+    grid-template-columns: 62px 70px 62px !important;
+    min-width: 194px !important;
+    min-height: 56px !important;
+  }
+  .template-product .product-form__quantity .quantity.main-quantity .quantity__button,
+  .product .product-form__quantity .quantity.main-quantity .quantity__button,
+  main .product-form__quantity .quantity.main-quantity .quantity__button {
+    min-width: 62px !important;
+    width: 62px !important;
+    height: 56px !important;
+  }
+  .template-product .product-form__quantity .quantity.main-quantity .quantity__input,
+  .product .product-form__quantity .quantity.main-quantity .quantity__input,
+  main .product-form__quantity .quantity.main-quantity .quantity__input {
+    width: 70px !important;
+    min-width: 70px !important;
+    height: 56px !important;
+  }
+}
