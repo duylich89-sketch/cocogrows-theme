@@ -69,3 +69,16 @@
     -webkit-box-orient:vertical !important;
   }
 }
+
+/* v3.1.3 Desktop Patch
+   Desktop product page was showing an old floating rating pseudo-badge from a previous sprint.
+   Keep the mobile rating pill, but remove the desktop pseudo badge so the title/buybox aligns correctly. */
+@media screen and (min-width: 750px){
+  .template-product .main-product__info-container::before,
+  .template-product .product__info-container::before,
+  body.template-product .main-product__info-container::before,
+  body.template-product .product__info-container::before {
+    content: none !important;
+    display: none !important;
+  }
+}
