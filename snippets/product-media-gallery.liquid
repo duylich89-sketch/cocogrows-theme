@@ -95,6 +95,16 @@
   data-disable-prepend="{{ disable_prepend }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+  {%- unless is_duplicate -%}
+    <div class="coiriva-gallery__badges" aria-hidden="true">
+      <span class="coiriva-gallery__badge coiriva-gallery__badge--primary">⭐ Best Seller</span>
+      <span class="coiriva-gallery__badge">Expands 8–10×</span>
+      <span class="coiriva-gallery__badge">Fast US Shipping</span>
+    </div>
+    {%- if media_count > 1 -%}
+      <div class="coiriva-gallery__counter">1 / {{ media_count }}</div>
+    {%- endif -%}
+  {%- endunless -%}
   <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="product-media-slider slider-mobile-gutter" data-pause-videos='true' data-update-active="true">
     {%- unless is_duplicate -%}
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
