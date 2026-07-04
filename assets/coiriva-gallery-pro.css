@@ -1,0 +1,308 @@
+/* Coiriva Ultimate v2.2.2 — Premium Gallery PRO UI
+   Scope: product page media gallery only. Complements v2.2.1 performance layer. */
+
+.template-product media-gallery.coiriva-gallery-pro {
+  --cg-pro-green: var(--color-primary, #2F6B3F);
+  --cg-pro-forest: var(--color-foreground, #173F35);
+  --cg-pro-cream: var(--color-bg, #FAF7EF);
+  --cg-pro-gold: #D89A3D;
+  --cg-pro-line: rgba(31, 77, 50, .14);
+  --cg-pro-shadow: 0 22px 70px rgba(22, 55, 42, .14);
+  --cg-pro-shadow-hover: 0 28px 90px rgba(22, 55, 42, .18);
+  position: relative;
+  display: block;
+}
+
+.template-product media-gallery.coiriva-gallery-pro::before {
+  content: '';
+  position: absolute;
+  inset: -10px -10px auto -10px;
+  height: min(62%, 520px);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(216, 154, 61, .16), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(47, 107, 63, .14), transparent 34%),
+    linear-gradient(180deg, rgba(250, 247, 239, .72), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.template-product media-gallery.coiriva-gallery-pro > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Premium media frame */
+.template-product media-gallery.coiriva-gallery-pro .product-media-container {
+  position: relative;
+  border-radius: 26px !important;
+  border: 1px solid var(--cg-pro-line) !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.96), rgba(250,247,239,.90)) !important;
+  box-shadow: var(--cg-pro-shadow) !important;
+  isolation: isolate;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .product-media-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.7), rgba(255,255,255,0) 45%),
+    radial-gradient(circle at 18% 0%, rgba(216, 154, 61, .11), transparent 34%);
+  z-index: 1;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .product-media-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  transform: translateX(-120%);
+  opacity: 0;
+  z-index: 2;
+}
+
+@media (hover:hover) {
+  .template-product media-gallery.coiriva-gallery-pro .product-media-container:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--cg-pro-shadow-hover) !important;
+    border-color: rgba(47, 107, 63, .28) !important;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .product-media-container:hover::after {
+    animation: coiriva-gallery-pro-sheen 1.05s ease;
+  }
+}
+
+@keyframes coiriva-gallery-pro-sheen {
+  0% { opacity: 0; transform: translateX(-120%); }
+  15% { opacity: .8; }
+  100% { opacity: 0; transform: translateX(120%); }
+}
+
+/* Smart badge stack */
+.template-product .coiriva-gallery-pro__badges {
+  top: 18px;
+  left: 18px;
+  gap: 9px;
+  max-width: calc(100% - 126px);
+}
+
+.template-product .coiriva-gallery-pro__badge {
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.86);
+  color: var(--cg-pro-forest);
+  border: 1px solid rgba(47, 107, 63, .14);
+  box-shadow: 0 12px 34px rgba(22,55,42,.13);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  font-size: 11px;
+  letter-spacing: .055em;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.template-product .coiriva-gallery-pro__badge-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(47, 107, 63, .10);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.template-product .coiriva-gallery__badge--primary.coiriva-gallery-pro__badge {
+  background: linear-gradient(135deg, #173F35, #2F6B3F);
+  color: #fff;
+  border-color: rgba(255,255,255,.22);
+}
+
+.template-product .coiriva-gallery__badge--primary .coiriva-gallery-pro__badge-icon {
+  background: rgba(255,255,255,.18);
+}
+
+.template-product .coiriva-gallery-pro__badge--guarantee {
+  background: rgba(250, 247, 239, .90);
+}
+
+@media (hover:hover) {
+  .template-product .coiriva-gallery-pro__badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 38px rgba(22,55,42,.16);
+  }
+}
+
+/* Premium counter pill */
+.template-product .coiriva-gallery-pro__counter {
+  top: 18px;
+  right: 18px;
+  min-width: 70px;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  color: var(--cg-pro-forest);
+  border: 1px solid rgba(47, 107, 63, .14);
+  box-shadow: 0 14px 38px rgba(22,55,42,.15);
+  backdrop-filter: blur(16px) saturate(1.12);
+  -webkit-backdrop-filter: blur(16px) saturate(1.12);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+/* Thumbnail PRO */
+.template-product media-gallery.coiriva-gallery-pro .thumbnail-slider {
+  margin-top: 16px;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .thumbnail-list {
+  gap: 12px;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .thumbnail-list__item,
+.template-product media-gallery.coiriva-gallery-pro .thumbnail {
+  border-radius: 16px !important;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .thumbnail {
+  background: #fff;
+  border: 2px solid rgba(31, 77, 50, .10) !important;
+  box-shadow: 0 8px 22px rgba(22,55,42,.07) !important;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .thumbnail[aria-current='true'],
+.template-product media-gallery.coiriva-gallery-pro .thumbnail:hover {
+  border-color: var(--cg-pro-green) !important;
+  box-shadow: 0 13px 34px rgba(22,55,42,.16) !important;
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .thumbnail[aria-current='true']::after {
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.86), inset 0 0 0 4px rgba(47,107,63,.16) !important;
+  border-radius: 14px;
+}
+
+/* Video premium overlay */
+.template-product media-gallery.coiriva-gallery-pro .media-type-video .product-media-container,
+.template-product media-gallery.coiriva-gallery-pro .media-type-external_video .product-media-container,
+.template-product media-gallery.coiriva-gallery-pro .product-media-container.media-type-video,
+.template-product media-gallery.coiriva-gallery-pro .product-media-container.media-type-external_video {
+  background: linear-gradient(145deg, #fff, #f7f2e8) !important;
+}
+
+.template-product media-gallery.coiriva-gallery-pro .deferred-media__poster-button,
+.template-product media-gallery.coiriva-gallery-pro .internal-video__play .play-button,
+.template-product media-gallery.coiriva-gallery-pro .product__media-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92) !important;
+  color: var(--cg-pro-green) !important;
+  border: 1px solid rgba(47,107,63,.16) !important;
+  box-shadow: 0 18px 44px rgba(22,55,42,.18) !important;
+  backdrop-filter: blur(12px);
+}
+
+.template-product media-gallery.coiriva-gallery-pro .product-media-container:has(.deferred-media__poster-button)::before,
+.template-product media-gallery.coiriva-gallery-pro .product-media-container:has(.internal-video__play)::before {
+  background:
+    linear-gradient(180deg, rgba(23,63,53,.08), rgba(23,63,53,.20)),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.12), transparent 45%);
+}
+
+/* Skeleton-style premium loading surface */
+.template-product media-gallery.coiriva-gallery-pro .product-media-container.loading::before,
+.template-product media-gallery.coiriva-gallery-pro .product-media-container[aria-busy='true']::before {
+  background: linear-gradient(110deg, #f6f1e8 8%, #fff 18%, #f6f1e8 33%);
+  background-size: 200% 100%;
+  animation: coiriva-gallery-pro-shimmer 1.2s linear infinite;
+}
+
+@keyframes coiriva-gallery-pro-shimmer {
+  to { background-position-x: -200%; }
+}
+
+/* Mobile polish */
+@media screen and (max-width: 749px) {
+  .template-product media-gallery.coiriva-gallery-pro::before {
+    inset: -6px -6px auto -6px;
+    border-radius: 24px;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .product-media-container {
+    border-radius: 20px !important;
+    box-shadow: 0 16px 42px rgba(22,55,42,.12) !important;
+  }
+
+  .template-product .coiriva-gallery-pro__badges {
+    top: 12px;
+    left: 12px;
+    max-width: calc(100% - 86px);
+    gap: 6px;
+  }
+
+  .template-product .coiriva-gallery-pro__badge {
+    min-height: 29px;
+    padding: 6px 9px;
+    font-size: 9.5px;
+    letter-spacing: .04em;
+  }
+
+  .template-product .coiriva-gallery-pro__badge-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+
+  .template-product .coiriva-gallery-pro__badge:not(.coiriva-gallery__badge--primary) {
+    display: none;
+  }
+
+  .template-product .coiriva-gallery-pro__counter {
+    top: 12px;
+    right: 12px;
+    min-width: 58px;
+    height: 31px;
+    padding: 0 10px;
+    font-size: 10.5px;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .thumbnail-slider {
+    margin-top: 12px;
+    padding-inline: 10px;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .thumbnail-list {
+    gap: 9px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .thumbnail-list__item {
+    scroll-snap-align: start;
+  }
+
+  .template-product media-gallery.coiriva-gallery-pro .thumbnail {
+    min-width: 62px;
+    min-height: 62px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .template-product media-gallery.coiriva-gallery-pro *,
+  .template-product media-gallery.coiriva-gallery-pro *::before,
+  .template-product media-gallery.coiriva-gallery-pro *::after {
+    animation: none !important;
+    transition-duration: .01ms !important;
+  }
+}

@@ -84,7 +84,7 @@
 
 <media-gallery
   id="MediaGallery-{{ section.id }}{{ id_append }}"
-  class="coiriva-gallery-performance media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}"
+  class="coiriva-gallery-performance coiriva-gallery-pro media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}"
   data-section="{{ section.id }}"
   {% if has_filtering %}
     data-filtering-option="{{ section.settings.variant_image_filtering }}"
@@ -97,13 +97,26 @@
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   {%- unless is_duplicate -%}
-    <div class="coiriva-gallery__badges" aria-hidden="true">
-      <span class="coiriva-gallery__badge coiriva-gallery__badge--primary">⭐ Best Seller</span>
-      <span class="coiriva-gallery__badge">Expands 8–10×</span>
-      <span class="coiriva-gallery__badge">Fast US Shipping</span>
+    <div class="coiriva-gallery__badges coiriva-gallery-pro__badges" aria-label="Product highlights">
+      <span class="coiriva-gallery__badge coiriva-gallery__badge--primary coiriva-gallery-pro__badge">
+        <span class="coiriva-gallery-pro__badge-icon">⭐</span>
+        <span>Best Seller</span>
+      </span>
+      <span class="coiriva-gallery__badge coiriva-gallery-pro__badge">
+        <span class="coiriva-gallery-pro__badge-icon">🌱</span>
+        <span>Expands 8–10×</span>
+      </span>
+      <span class="coiriva-gallery__badge coiriva-gallery-pro__badge">
+        <span class="coiriva-gallery-pro__badge-icon">🚚</span>
+        <span>Fast US Shipping</span>
+      </span>
+      <span class="coiriva-gallery__badge coiriva-gallery-pro__badge coiriva-gallery-pro__badge--guarantee">
+        <span class="coiriva-gallery-pro__badge-icon">💚</span>
+        <span>60-Day Guarantee</span>
+      </span>
     </div>
     {%- if media_count > 1 -%}
-      <div class="coiriva-gallery__counter" aria-live="polite">1 / {{ media_count }}</div>
+      <div class="coiriva-gallery__counter coiriva-gallery-pro__counter" aria-live="polite">01 / {{ media_count | prepend: '0' | slice: -2, 2 }}</div>
     {%- endif -%}
   {%- endunless -%}
   <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="product-media-slider slider-mobile-gutter" data-pause-videos='true' data-update-active="true">

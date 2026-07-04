@@ -26,7 +26,8 @@
       var visibleIndex = visibleSlides.indexOf(active);
       if (visibleIndex < 0) visibleIndex = indexOfActive();
       var visibleTotal = visibleSlides.length || total || slides.length;
-      counter.textContent = (visibleIndex + 1) + ' / ' + visibleTotal;
+      var pad = function (num) { return String(num).padStart(2, '0'); };
+      counter.textContent = pad(visibleIndex + 1) + ' / ' + pad(visibleTotal);
       counter.classList.add('is-updating');
       window.setTimeout(function () { counter.classList.remove('is-updating'); }, 180);
     }
