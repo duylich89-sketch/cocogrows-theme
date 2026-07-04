@@ -161,3 +161,126 @@
     height: 26px;
   }
 }
+
+/* v2.8.1 – Mobile Footer Final Polish */
+@media screen and (max-width: 749px) {
+  .footer.coiriva-footer-upgraded {
+    overflow-x: hidden;
+  }
+
+  .footer.coiriva-footer-upgraded .page-width,
+  .cocogrows-footer-nav.page-width {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .cocogrows-footer-nav {
+    margin-top: 1.4rem;
+    padding-top: 2.1rem;
+    border-top: 1px solid rgba(47,107,63,.14);
+  }
+
+  .cocogrows-footer-nav__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cocogrows-footer-nav__column {
+    border: 1px solid rgba(47,107,63,.12);
+    border-radius: 20px;
+    background: rgba(255,255,255,.74);
+    padding: 1.15rem 1.2rem 1.22rem;
+    box-shadow: 0 10px 26px rgba(31,77,50,.055);
+  }
+
+  .cocogrows-footer-nav__heading {
+    display: flex;
+    align-items: center;
+    margin: 0 0 .95rem;
+    color: #2f6b3f;
+    font-size: 1rem;
+    font-weight: 950;
+    line-height: 1.1;
+    letter-spacing: .16em;
+  }
+
+  .cocogrows-footer-nav__list {
+    display: grid;
+    gap: .82rem;
+  }
+
+  .cocogrows-footer-nav__list a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    color: rgba(31,42,34,.82);
+    font-size: 1.18rem;
+    font-weight: 760;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .cocogrows-footer-nav__column--connect .cocogrows-footer-nav__list a[href^="mailto:"] {
+    font-size: 1.14rem;
+    font-weight: 900;
+    word-break: break-word;
+  }
+
+  .cocogrows-footer-trust {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin: 1.25rem auto 0;
+    grid-template-columns: 1fr;
+    gap: .72rem;
+    padding: .82rem;
+    border-radius: 22px;
+  }
+
+  .cocogrows-footer-trust span {
+    justify-content: center;
+    min-height: 56px;
+    border-radius: 999px;
+    font-size: 1.08rem;
+    font-weight: 900;
+  }
+
+  .footer .footer__payment {
+    margin-top: 1.55rem;
+  }
+
+  .footer .list-payment {
+    gap: .6rem .68rem;
+    justify-content: center;
+  }
+
+  .footer .list-payment__item .icon {
+    min-width: 40px;
+    height: 27px;
+  }
+
+  .footer .footer__copyright,
+  .footer .copyright__content {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .footer .footer__content-bottom-wrapper {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.35rem 0 1.55rem !important;
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 749px) {
+  .cocogrows-footer-nav__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
