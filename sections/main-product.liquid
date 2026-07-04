@@ -176,6 +176,7 @@
                   </div>
                 </div>
                 {% render 'product-trust-bar' %}
+                {% render 'coiriva-buybox-pro-addons', product: product %}
               </div>
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
@@ -1012,6 +1013,7 @@
   </div>
 
   {% render 'product-media-modal' variant_images: variant_images %}
+  {% render 'coiriva-sticky-atc-pro', product: product %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}
   {%- for block in popups -%}

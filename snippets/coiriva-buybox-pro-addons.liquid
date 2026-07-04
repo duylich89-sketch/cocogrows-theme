@@ -1,0 +1,54 @@
+{%- comment -%}
+  Coiriva v2.3.0 Premium Buy Box PRO
+  CRO helper blocks for PDP: social proof, bundle selector, stock signal and trust/payment polish.
+{%- endcomment -%}
+{%- assign coiriva_variant = product.selected_or_first_available_variant -%}
+{%- assign coiriva_save_amount = 0 -%}
+{%- if coiriva_variant.compare_at_price > coiriva_variant.price -%}
+  {%- assign coiriva_save_amount = coiriva_variant.compare_at_price | minus: coiriva_variant.price -%}
+{%- endif -%}
+
+<div class="coiriva-buybox-pro" data-coiriva-buybox-pro>
+  <div class="coiriva-buybox-pro__social" aria-label="Customer confidence">
+    <div class="coiriva-buybox-pro__stars">★★★★★</div>
+    <div>
+      <strong>4.9/5 from 3,200+ home gardeners</strong>
+      <span>Trusted for seedlings, pots, raised beds and everyday growing.</span>
+    </div>
+  </div>
+
+  <div class="coiriva-buybox-pro__stock" aria-label="Stock and fulfillment status">
+    <span class="coiriva-buybox-pro__pulse" aria-hidden="true"></span>
+    <span><strong>In stock today</strong> · Ships from USA in 1–2 business days</span>
+  </div>
+
+  <div class="coiriva-bundle-pro" aria-label="Bundle offers">
+    <div class="coiriva-bundle-pro__head">
+      <span>Choose Your Garden Pack</span>
+      <small>More bricks, better value</small>
+    </div>
+    <div class="coiriva-bundle-pro__grid" role="group" aria-label="Quantity bundle options">
+      <button class="coiriva-bundle-pro__card is-active" type="button" data-coiriva-qty="1">
+        <span class="coiriva-bundle-pro__title">Buy 1</span>
+        <span class="coiriva-bundle-pro__meta">Starter pack</span>
+      </button>
+      <button class="coiriva-bundle-pro__card" type="button" data-coiriva-qty="2">
+        <span class="coiriva-bundle-pro__badge">Popular</span>
+        <span class="coiriva-bundle-pro__title">Buy 2</span>
+        <span class="coiriva-bundle-pro__meta">Best for pots</span>
+      </button>
+      <button class="coiriva-bundle-pro__card coiriva-bundle-pro__card--best" type="button" data-coiriva-qty="4">
+        <span class="coiriva-bundle-pro__badge">Best Value</span>
+        <span class="coiriva-bundle-pro__title">Buy 4</span>
+        <span class="coiriva-bundle-pro__meta">Garden ready</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="coiriva-buybox-pro__trust" aria-label="Store guarantees">
+    <span>🚚 Fast US Shipping</span>
+    <span>💚 60-Day Guarantee</span>
+    <span>🔒 Secure Checkout</span>
+    <span>🌱 100% Natural</span>
+  </div>
+</div>

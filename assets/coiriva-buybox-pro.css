@@ -1,0 +1,326 @@
+/* Coiriva v2.3.0 – Premium Buy Box PRO */
+:root {
+  --coiriva-pro-green: #184f3b;
+  --coiriva-pro-green-dark: #123d31;
+  --coiriva-pro-mint: #eef8f1;
+  --coiriva-pro-gold: #d8b56d;
+  --coiriva-pro-ink: #17241f;
+  --coiriva-pro-muted: #65716c;
+  --coiriva-pro-border: rgba(24, 79, 59, 0.14);
+  --coiriva-pro-shadow: 0 18px 50px rgba(18, 61, 49, 0.10);
+}
+
+.product__info-wrapper .product__info-container,
+.main-product__info-container {
+  position: relative;
+}
+
+@media (min-width: 990px) {
+  .product__info-wrapper .product__info-container {
+    padding: clamp(18px, 2vw, 30px);
+    border: 1px solid var(--coiriva-pro-border);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(250,253,250,.92));
+    box-shadow: var(--coiriva-pro-shadow);
+  }
+}
+
+.coiriva-product-title__heading,
+.product__title .coiriva-product-title__heading {
+  letter-spacing: -0.045em;
+}
+
+.coiriva-price-module,
+.coiriva-buybox-pro,
+.coiriva-delivery-pro,
+.coiriva-premium-guarantee {
+  border-radius: 22px;
+}
+
+.coiriva-buybox-pro {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0 18px;
+}
+
+.coiriva-buybox-pro__social,
+.coiriva-buybox-pro__stock,
+.coiriva-buybox-pro__trust,
+.coiriva-bundle-pro {
+  border: 1px solid var(--coiriva-pro-border);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 12px 28px rgba(18,61,49,.06);
+}
+
+.coiriva-buybox-pro__social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border-radius: 20px;
+}
+
+.coiriva-buybox-pro__stars {
+  flex: 0 0 auto;
+  color: #c29332;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.coiriva-buybox-pro__social strong {
+  display: block;
+  color: var(--coiriva-pro-ink);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.coiriva-buybox-pro__social span,
+.coiriva-bundle-pro__head small,
+.coiriva-bundle-pro__meta {
+  color: var(--coiriva-pro-muted);
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+.coiriva-buybox-pro__stock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 999px;
+  color: var(--coiriva-pro-green-dark);
+  background: linear-gradient(90deg, #f2fbf4, #ffffff);
+  font-size: 1.25rem;
+}
+
+.coiriva-buybox-pro__pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #2f9e55;
+  box-shadow: 0 0 0 0 rgba(47, 158, 85, .38);
+  animation: coirivaPulse 1.8s infinite;
+}
+
+@keyframes coirivaPulse {
+  70% { box-shadow: 0 0 0 9px rgba(47,158,85,0); }
+  100% { box-shadow: 0 0 0 0 rgba(47,158,85,0); }
+}
+
+.coiriva-bundle-pro {
+  padding: 14px;
+  border-radius: 22px;
+}
+
+.coiriva-bundle-pro__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.coiriva-bundle-pro__head span {
+  color: var(--coiriva-pro-ink);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.42rem;
+}
+
+.coiriva-bundle-pro__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.coiriva-bundle-pro__card {
+  position: relative;
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 12px 10px;
+  border: 1px solid var(--coiriva-pro-border);
+  border-radius: 18px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.coiriva-bundle-pro__card:hover,
+.coiriva-bundle-pro__card.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(24, 79, 59, .44);
+  box-shadow: 0 12px 24px rgba(18, 61, 49, .10);
+  background: linear-gradient(180deg, #ffffff, #f5fbf6);
+}
+
+.coiriva-bundle-pro__card--best {
+  border-color: rgba(216, 181, 109, .65);
+  background: linear-gradient(180deg, #fffdf7, #f8f1df);
+}
+
+.coiriva-bundle-pro__title {
+  color: var(--coiriva-pro-green-dark);
+  font-weight: 900;
+  font-size: 1.45rem;
+}
+
+.coiriva-bundle-pro__badge {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--coiriva-pro-green);
+  color: #fff;
+  font-size: .92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.coiriva-bundle-pro__card--best .coiriva-bundle-pro__badge {
+  background: var(--coiriva-pro-gold);
+  color: #173428;
+}
+
+.coiriva-buybox-pro__trust {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px;
+  padding: 12px;
+  border-radius: 20px;
+  background: #fbfdfb;
+}
+
+.coiriva-buybox-pro__trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--coiriva-pro-green-dark);
+  font-weight: 750;
+  font-size: 1.15rem;
+}
+
+.coiriva-premium-atc,
+.product-form__submit.coiriva-premium-atc {
+  min-height: 58px;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 34px rgba(18,61,49,.20);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.coiriva-premium-atc:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(18,61,49,.24);
+  filter: saturate(1.05);
+}
+
+.coiriva-payment-trust {
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.coiriva-sticky-atc-pro {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, .88);
+  border-top: 1px solid var(--coiriva-pro-border);
+  box-shadow: 0 -18px 50px rgba(18,61,49,.12);
+  backdrop-filter: blur(16px);
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform .24s ease, opacity .24s ease;
+}
+
+.coiriva-sticky-atc-pro.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.coiriva-sticky-atc-pro__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(190px, 270px);
+  align-items: center;
+  gap: 16px;
+}
+
+.coiriva-sticky-atc-pro__product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.coiriva-sticky-atc-pro__product img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--coiriva-pro-border);
+}
+
+.coiriva-sticky-atc-pro__product strong {
+  display: block;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--coiriva-pro-ink);
+  font-size: 1.28rem;
+}
+
+.coiriva-sticky-atc-pro__product span,
+.coiriva-sticky-atc-pro__trust {
+  color: var(--coiriva-pro-muted);
+  font-size: 1.16rem;
+}
+
+.coiriva-sticky-atc-pro__product s {
+  opacity: .58;
+}
+
+.coiriva-sticky-atc-pro__button {
+  min-height: 50px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--coiriva-pro-green), #257254);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .01em;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(18,61,49,.20);
+}
+
+@media (max-width: 749px) {
+  body.coiriva-sticky-atc-active { padding-bottom: 92px; }
+  .coiriva-bundle-pro__head { display: block; }
+  .coiriva-bundle-pro__grid { grid-template-columns: 1fr; }
+  .coiriva-bundle-pro__card { min-height: 66px; }
+  .coiriva-buybox-pro__trust { grid-template-columns: 1fr; }
+  .coiriva-buybox-pro__social { align-items: flex-start; }
+  .coiriva-sticky-atc-pro__inner { grid-template-columns: 1fr; gap: 8px; }
+  .coiriva-sticky-atc-pro__trust { display: none; }
+  .coiriva-sticky-atc-pro__product img { width: 44px; height: 44px; }
+  .coiriva-sticky-atc-pro__button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coiriva-buybox-pro__pulse,
+  .coiriva-bundle-pro__card,
+  .coiriva-premium-atc,
+  .coiriva-sticky-atc-pro { animation: none !important; transition: none !important; }
+}

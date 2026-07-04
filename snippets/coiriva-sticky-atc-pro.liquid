@@ -1,0 +1,25 @@
+{%- comment -%}Coiriva v2.3.0 Sticky Add To Cart PRO{%- endcomment -%}
+{%- assign coiriva_variant = product.selected_or_first_available_variant -%}
+<div class="coiriva-sticky-atc-pro" data-coiriva-sticky-atc hidden>
+  <div class="coiriva-sticky-atc-pro__inner page-width">
+    <div class="coiriva-sticky-atc-pro__product">
+      {%- if product.featured_image != blank -%}
+        <img
+          src="{{ product.featured_image | image_url: width: 120 }}"
+          alt="{{ product.featured_image.alt | default: product.title | escape }}"
+          width="60"
+          height="60"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <div>
+        <strong>{{ product.title }}</strong>
+        <span>{{ coiriva_variant.price | money }}{% if coiriva_variant.compare_at_price > coiriva_variant.price %} <s>{{ coiriva_variant.compare_at_price | money }}</s>{% endif %}</span>
+      </div>
+    </div>
+    <div class="coiriva-sticky-atc-pro__trust">🚚 Ships from USA · 💚 60-Day Guarantee</div>
+    <button class="coiriva-sticky-atc-pro__button" type="button" data-coiriva-sticky-submit>
+      Add To Cart — Ships Today
+    </button>
+  </div>
+</div>
