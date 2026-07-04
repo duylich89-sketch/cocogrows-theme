@@ -1,1 +1,10 @@
-<div class="coiriva-trust-item"><strong>Ships from USA</strong><br>1 Business Day Processing<br>2–5 Business Days</div>
+{% if settings.enable_shipping_confidence != false %}
+  <article class="coiriva-trust-card" aria-label="Shipping confidence">
+    <div class="coiriva-trust-card__head"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 9-4 9 4-9 4z"></path><path d="M3 7v10l9 4 9-4V7"></path><path d="M12 11v10"></path></svg></span><span>{{ settings.trust_shipping_origin | default: 'Ships from USA' }}</span></div>
+    <div class="coiriva-trust-card__body">
+      <div>Processing: <strong>{{ settings.trust_processing_time | default: '1 Business Day' }}</strong></div>
+      <div>Delivery: <strong>{{ settings.trust_delivery_time | default: '2–5 Business Days' }}</strong></div>
+      <div>{{ settings.trust_tracking_text | default: 'Tracking Included' }}</div>
+    </div>
+  </article>
+{% endif %}

@@ -2908,5 +2908,100 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Coiriva Trust Psychology PRO",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Module visibility"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_trust_strip",
+        "label": "Enable Trust Strip",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_payment_confidence",
+        "label": "Enable Payment Icons",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shipping_confidence",
+        "label": "Enable Shipping Card",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_guarantee_card",
+        "label": "Enable Guarantee Card",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_review_summary",
+        "label": "Enable Review Summary",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_trust_microcopy",
+        "label": "Enable Microcopy",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shipping confidence"
+      },
+      {
+        "type": "text",
+        "id": "trust_shipping_origin",
+        "label": "Origin text",
+        "default": "Ships from USA"
+      },
+      {
+        "type": "text",
+        "id": "trust_processing_time",
+        "label": "Processing time",
+        "default": "1 Business Day"
+      },
+      {
+        "type": "text",
+        "id": "trust_delivery_time",
+        "label": "Delivery time",
+        "default": "2–5 Business Days"
+      },
+      {
+        "type": "text",
+        "id": "trust_tracking_text",
+        "label": "Tracking text",
+        "default": "Tracking Included"
+      },
+      {
+        "type": "header",
+        "content": "Guarantee"
+      },
+      {
+        "type": "text",
+        "id": "trust_guarantee_title",
+        "label": "Guarantee card title",
+        "default": "Grow With Confidence"
+      },
+      {
+        "type": "text",
+        "id": "trust_guarantee_heading",
+        "label": "Guarantee heading",
+        "default": "60-Day Money-Back Guarantee"
+      },
+      {
+        "type": "text",
+        "id": "trust_guarantee_text",
+        "label": "Guarantee text",
+        "default": "Love it or we'll make it right."
+      }
+    ]
   }
 ]

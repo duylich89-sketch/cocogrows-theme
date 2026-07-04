@@ -1,1 +1,8 @@
-{% if settings.enable_trust_strip != false %}<div class="coiriva-trust-strip"><div class="coiriva-trust-item">🔒 Secure Checkout</div><div class="coiriva-trust-item">🚚 Fast US Shipping</div><div class="coiriva-trust-item">↩️ 60-Day Guarantee</div><div class="coiriva-trust-item">⭐ Premium Quality</div></div>{% endif %}
+{% if settings.enable_trust_strip != false %}
+  <div class="coiriva-trust-strip" role="list" aria-label="Purchase confidence highlights">
+    <div class="coiriva-trust-item" role="listitem"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span><span>Secure Checkout</span></div>
+    <div class="coiriva-trust-item" role="listitem"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3z"></path><path d="M14 10h4l3 3v4h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span><span>Fast US Shipping</span></div>
+    <div class="coiriva-trust-item" role="listitem"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10a6 6 0 1 1 0 12H8"></path></svg></span><span>60-Day Guarantee</span></div>
+    <div class="coiriva-trust-item" role="listitem"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9z"></path></svg></span><span>Premium Quality</span></div>
+  </div>
+{% endif %}

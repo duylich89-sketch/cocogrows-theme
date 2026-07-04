@@ -1,1 +1,12 @@
-{% if product.metafields.reviews.rating %}<div class="coiriva-microcopy">★★★★★ Rated Excellent by Verified Customers</div>{% endif %}
+{% if settings.enable_review_summary != false %}
+  {% assign coiriva_has_rating = false %}
+  {% if product.metafields.reviews.rating.value != blank or product.metafields.judgeme.badge != blank or product.metafields.loox.avg_rating != blank or product.metafields.trustoo.rating != blank %}
+    {% assign coiriva_has_rating = true %}
+  {% endif %}
+  {% if coiriva_has_rating %}
+    <div class="coiriva-review-summary" aria-label="Review confidence">
+      <div class="coiriva-review-summary__stars" aria-hidden="true">★★★★★</div>
+      <div class="coiriva-review-summary__text"><strong>Rated Excellent</strong><span>by Verified Customers</span></div>
+    </div>
+  {% endif %}
+{% endif %}

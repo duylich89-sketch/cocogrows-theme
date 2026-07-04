@@ -1,1 +1,8 @@
-<div class="coiriva-microcopy">Visa • Mastercard • Amex • Apple Pay • Google Pay • PayPal • Shop Pay<br><strong>Encrypted &amp; Secure Checkout</strong></div>
+{% if settings.enable_payment_confidence != false %}
+  <div class="coiriva-payment" aria-label="Payment confidence">
+    <div class="coiriva-payment__label"><span class="coiriva-trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></span><span>Encrypted &amp; Secure Checkout</span></div>
+    <div class="coiriva-payment__icons" aria-label="Accepted payment methods">
+      <span class="coiriva-pay-pill">Visa</span><span class="coiriva-pay-pill">Mastercard</span><span class="coiriva-pay-pill">Amex</span><span class="coiriva-pay-pill">Apple Pay</span><span class="coiriva-pay-pill">Google Pay</span><span class="coiriva-pay-pill">PayPal</span><span class="coiriva-pay-pill">Shop Pay</span>
+    </div>
+  </div>
+{% endif %}

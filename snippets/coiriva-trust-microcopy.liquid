@@ -1,1 +1,7 @@
-<div class="coiriva-microcopy">✓ Secure Payment &nbsp; ✓ Free Returns &nbsp; ✓ No Hidden Fees</div>
+{% if settings.enable_trust_microcopy != false %}
+  <div class="coiriva-microcopy" aria-label="Checkout assurances">
+    <span><b>✓</b> Secure Payment</span>
+    <span><b>✓</b> Free Returns</span>
+    <span><b>✓</b> No Hidden Fees</span>
+  </div>
+{% endif %}
