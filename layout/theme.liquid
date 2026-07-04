@@ -427,6 +427,17 @@
       >
     {%- endif -%}
 
+    {%- if request.page_type == 'product' and product.featured_media.preview_image != blank -%}
+      <link
+        rel="preload"
+        as="image"
+        href="{{ product.featured_media.preview_image | image_url: width: 1200 }}"
+        imagesrcset="{{ product.featured_media.preview_image | image_url: width: 600 }} 600w, {{ product.featured_media.preview_image | image_url: width: 900 }} 900w, {{ product.featured_media.preview_image | image_url: width: 1200 }} 1200w, {{ product.featured_media.preview_image | image_url: width: 1600 }} 1600w"
+        imagesizes="(min-width: 990px) 58vw, 100vw"
+        fetchpriority="high"
+      >
+    {%- endif -%}
+
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -456,6 +467,7 @@
   {{ 'coiriva-footer-premium.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-product-buybox.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-gallery.css' | asset_url | stylesheet_tag }}
+  {{ 'coiriva-gallery-performance.css' | asset_url | stylesheet_tag }}
 </head>
 
   <!-- Coiriva Ultimate Epic 1.1: Hero Premium -->
@@ -643,5 +655,6 @@
         }, { passive: true });
       })();
     </script>
-  </body>
+    <script src="{{ 'coiriva-gallery-performance.js' | asset_url }}" defer="defer"></script>
+</body>
 </html>

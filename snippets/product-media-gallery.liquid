@@ -84,7 +84,7 @@
 
 <media-gallery
   id="MediaGallery-{{ section.id }}{{ id_append }}"
-  class="media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}"
+  class="coiriva-gallery-performance media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}"
   data-section="{{ section.id }}"
   {% if has_filtering %}
     data-filtering-option="{{ section.settings.variant_image_filtering }}"
@@ -93,6 +93,7 @@
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
   data-disable-prepend="{{ disable_prepend }}"
+  data-coiriva-media-count="{{ media_count }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   {%- unless is_duplicate -%}
@@ -102,7 +103,7 @@
       <span class="coiriva-gallery__badge">Fast US Shipping</span>
     </div>
     {%- if media_count > 1 -%}
-      <div class="coiriva-gallery__counter">1 / {{ media_count }}</div>
+      <div class="coiriva-gallery__counter" aria-live="polite">1 / {{ media_count }}</div>
     {%- endif -%}
   {%- endunless -%}
   <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="product-media-slider slider-mobile-gutter" data-pause-videos='true' data-update-active="true">

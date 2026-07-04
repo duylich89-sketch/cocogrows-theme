@@ -1,0 +1,114 @@
+/* Coiriva Ultimate v2.2.1 — Gallery Performance
+   Purpose: smoother product media transitions, less layout shift, stronger mobile gallery UX. */
+
+.template-product .coiriva-gallery-performance {
+  contain: layout paint;
+}
+
+.template-product .coiriva-gallery-performance .product__media-wrapper,
+.template-product .coiriva-gallery-performance .product__media-list {
+  backface-visibility: hidden;
+}
+
+.template-product .coiriva-gallery-performance .product__media-item {
+  opacity: .86;
+  transform: scale(.992);
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.template-product .coiriva-gallery-performance .product__media-item.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.template-product .coiriva-gallery-performance .product-media-container {
+  aspect-ratio: var(--preview-ratio, 1 / 1);
+  overflow: hidden;
+  background: #fffdf8;
+}
+
+.template-product .coiriva-gallery-performance .product__media,
+.template-product .coiriva-gallery-performance .deferred-media,
+.template-product .coiriva-gallery-performance .deferred-media__poster {
+  min-height: 100%;
+}
+
+.template-product .coiriva-gallery-performance img {
+  transform: translateZ(0);
+  image-rendering: auto;
+}
+
+.template-product .coiriva-gallery-performance .product__media img {
+  transition: transform .24s ease, filter .24s ease, opacity .18s ease;
+}
+
+.template-product .coiriva-gallery-performance .product__media-item:not(.is-active) .product__media img {
+  opacity: .96;
+}
+
+.template-product .coiriva-gallery-performance .thumbnail {
+  will-change: transform;
+}
+
+.template-product .coiriva-gallery-performance .thumbnail[aria-current='true'] {
+  outline: 3px solid rgba(47,107,63,.18);
+  outline-offset: 2px;
+}
+
+.template-product .coiriva-gallery-performance .deferred-media__poster-button,
+.template-product .coiriva-gallery-performance .product__media-icon {
+  transform: translateZ(0);
+}
+
+.template-product .coiriva-gallery-performance .deferred-media__poster-button {
+  box-shadow: 0 18px 40px rgba(20,53,43,.18);
+}
+
+.template-product .coiriva-gallery-performance .coiriva-gallery__counter {
+  transition: transform .2s ease, background .2s ease;
+}
+
+.template-product .coiriva-gallery-performance .coiriva-gallery__counter.is-updating {
+  transform: scale(1.04);
+  background: rgba(250,247,239,.98);
+}
+
+@media screen and (min-width: 990px) {
+  .template-product .coiriva-gallery-performance .product-media-container {
+    min-height: clamp(420px, 52vw, 720px);
+  }
+
+  .template-product .coiriva-gallery-performance .product__media img {
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template-product .coiriva-gallery-performance .product__media-list {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .template-product .coiriva-gallery-performance .product-media-container {
+    min-height: min(88vw, 520px);
+  }
+
+  .template-product .coiriva-gallery-performance .product__media-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .template-product .coiriva-gallery-performance .thumbnail-list {
+    scroll-padding-inline: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .template-product .coiriva-gallery-performance *,
+  .template-product .coiriva-gallery-performance *::before,
+  .template-product .coiriva-gallery-performance *::after {
+    animation: none !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
