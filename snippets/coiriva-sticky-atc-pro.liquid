@@ -14,12 +14,12 @@
       {%- endif -%}
       <div>
         <strong>{{ product.title }}</strong>
-        <span>{{ coiriva_variant.price | money }}{% if coiriva_variant.compare_at_price > coiriva_variant.price %} <s>{{ coiriva_variant.compare_at_price | money }}</s>{% endif %}</span>
+        <span data-coiriva-sticky-price>{{ coiriva_variant.price | money }}{% if coiriva_variant.compare_at_price > coiriva_variant.price %} <s>{{ coiriva_variant.compare_at_price | money }}</s>{% endif %}</span><small data-coiriva-sticky-pack>Best Value Pack</small>
       </div>
     </div>
     <div class="coiriva-sticky-atc-pro__trust">🚚 Ships from USA · 💚 60-Day Guarantee</div>
-    <button class="coiriva-sticky-atc-pro__button" type="button" data-coiriva-sticky-submit>
-      Add To Cart — Ships Today
+    <button class="coiriva-sticky-atc-pro__button" type="button" data-coiriva-sticky-submit aria-label="Add selected garden pack to cart">
+      <span data-coiriva-sticky-cta>Add To Cart — Ships Today</span>
     </button>
   </div>
 </div>

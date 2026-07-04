@@ -1,5 +1,5 @@
 {%- comment -%}
-  Coiriva v2.5.0 CRO Ultimate | Smart Bundle PRO
+  Coiriva v2.5.5 CRO Ultimate | Buy Box Audit PRO + Smart Savings Engine
   Premium bundle selector for PDP: need-based packs, dynamic pricing labels and quantity sync.
 {%- endcomment -%}
 {%- assign coiriva_variant = product.selected_or_first_available_variant -%}
@@ -29,7 +29,7 @@
         <span>Choose Your Garden Pack</span>
         <small>More bricks, better value for every growing project.</small>
       </div>
-      <em>Best value selected</em>
+      <em data-coiriva-bundle-headline>Best value selected</em>
     </div>
 
     <div class="coiriva-smart-bundle__grid" role="radiogroup" aria-label="Quantity bundle options">
@@ -101,6 +101,17 @@
 
     <div class="coiriva-smart-bundle__summary" aria-live="polite" data-coiriva-bundle-summary>
       ⭐ Best Value Pack selected · 8 bricks for bigger planting projects.
+    </div>
+
+    <div class="coiriva-value-summary" aria-live="polite" data-coiriva-value-summary>
+      <span class="coiriva-value-summary__label">Best Value selected</span>
+      <strong>You're saving on every brick with the raised-bed pack.</strong>
+      <small>Best balance of price, quantity and everyday garden use.</small>
+    </div>
+
+    <div class="coiriva-value-meter" aria-hidden="true">
+      <span class="coiriva-value-meter__track"><span class="coiriva-value-meter__fill" data-coiriva-value-meter style="width: 82%"></span></span>
+      <span data-coiriva-value-meter-label>BEST VALUE</span>
     </div>
   </div>
 
