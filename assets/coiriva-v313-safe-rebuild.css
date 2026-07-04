@@ -82,3 +82,269 @@
     display: none !important;
   }
 }
+
+/* v3.1.4 Priority 1 UX Compression
+   Safe CSS-only patch from stable v3.1.3 desktop fix.
+   Goals: slimmer sticky bar, shorter trust area, tighter shipping timeline. No cart/bundle/quantity JS changes. */
+
+/* 1) Slimmer sticky Add To Cart bar */
+@media screen and (max-width: 749px){
+  body.coiriva-sticky-atc-active{
+    padding-bottom: 76px !important;
+  }
+
+  .coiriva-sticky-atc-pro{
+    padding: 6px 10px calc(6px + env(safe-area-inset-bottom)) !important;
+    box-shadow: 0 -10px 30px rgba(18,61,49,.10) !important;
+  }
+
+  .coiriva-sticky-atc-pro__inner{
+    grid-template-columns: minmax(0,1fr) minmax(132px,44%) !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+
+  .coiriva-sticky-atc-pro__product{
+    gap: 7px !important;
+  }
+
+  .coiriva-sticky-atc-pro__product img{
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+
+  .coiriva-sticky-atc-pro__product strong{
+    font-size: 1.06rem !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
+  }
+
+  .coiriva-sticky-atc-pro__product span{
+    font-size: .98rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .coiriva-sticky-atc-pro__product small{
+    font-size: .88rem !important;
+    line-height: 1.05 !important;
+    margin-top: 1px !important;
+  }
+
+  .coiriva-sticky-atc-pro__button{
+    width: 100% !important;
+    min-height: 46px !important;
+    border-radius: 14px !important;
+    font-size: 1.1rem !important;
+    padding: 0 12px !important;
+    box-shadow: 0 10px 22px rgba(18,61,49,.18) !important;
+  }
+
+  /* Native Shrine sticky fallback, kept compact when it appears instead of the custom sticky bar */
+  .sticky-atc{
+    min-height: auto !important;
+    padding-top: 6px !important;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .sticky-atc-container{
+    min-height: 56px !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+
+  .sticky-atc__image img,
+  .sticky-atc__image .media{
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+
+  .sticky-atc__title{
+    font-size: 1.05rem !important;
+    line-height: 1.1 !important;
+    max-height: 2.3em !important;
+    overflow: hidden !important;
+  }
+
+  .sticky-atc__price{
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .sticky-atc__button .button,
+  .sticky-atc__button button{
+    min-height: 44px !important;
+    border-radius: 14px !important;
+    padding: 0 14px !important;
+  }
+}
+
+/* 2) Compact trust / checkout area without removing information */
+@media screen and (max-width: 749px){
+  .coiriva-trust{
+    margin-top: 8px !important;
+  }
+
+  .coiriva-trust-strip{
+    gap: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .coiriva-trust-item{
+    min-height: 34px !important;
+    padding: 6px 8px !important;
+    border-radius: 13px !important;
+    font-size: 10.9px !important;
+    line-height: 1.12 !important;
+  }
+
+  .coiriva-trust svg{
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .coiriva-microcopy{
+    margin: 4px 0 6px !important;
+    gap: 4px 8px !important;
+    font-size: 10.9px !important;
+    line-height: 1.25 !important;
+  }
+
+  .coiriva-payment{
+    margin: 6px 0 !important;
+    padding: 8px 9px !important;
+    border-radius: 14px !important;
+  }
+
+  .coiriva-payment__label{
+    margin-bottom: 6px !important;
+    font-size: 11.2px !important;
+  }
+
+  .coiriva-payment__icons{
+    gap: 4px !important;
+  }
+
+  .coiriva-pay-pill{
+    min-height: 22px !important;
+    padding: 3px 6px !important;
+    font-size: 9.2px !important;
+    border-radius: 7px !important;
+  }
+
+  .coiriva-trust-grid{
+    gap: 6px !important;
+    margin-top: 6px !important;
+  }
+
+  .coiriva-trust-card{
+    padding: 10px 11px !important;
+    border-radius: 14px !important;
+  }
+
+  .coiriva-trust-card__head{
+    margin-bottom: 5px !important;
+    gap: 7px !important;
+    font-size: 12.2px !important;
+  }
+
+  .coiriva-trust-card__body{
+    gap: 3px !important;
+    font-size: 11.3px !important;
+    line-height: 1.28 !important;
+  }
+
+  .coiriva-buybox-pro{
+    gap: 9px !important;
+    margin: 10px 0 12px !important;
+  }
+
+  .coiriva-buybox-pro__social{
+    padding: 10px 12px !important;
+    border-radius: 16px !important;
+  }
+
+  .coiriva-buybox-pro__stock{
+    padding: 9px 12px !important;
+    font-size: 1.14rem !important;
+  }
+
+  .coiriva-price-module{
+    margin-top: 10px !important;
+    padding: 11px 12px !important;
+  }
+
+  .coiriva-price-module__trust span{
+    min-height: 32px !important;
+    padding: 6px 8px !important;
+    font-size: 1.02rem !important;
+  }
+
+  .coiriva-review-summary{
+    padding: 7px 9px !important;
+    margin-top: 7px !important;
+    border-radius: 14px !important;
+  }
+}
+
+/* 3) Tighter shipping timeline */
+@media screen and (max-width: 749px){
+  .shipping-checkpoints{
+    margin-top: 14px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .shipping-checkpoints__bar{
+    height: 3px !important;
+  }
+
+  .shipping-checkpoint__icon{
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    font-size: 20px !important;
+  }
+
+  .shipping-checkpoint__icon .material-icon,
+  .shipping-checkpoint__icon svg{
+    font-size: 23px !important;
+    width: 23px !important;
+    height: 23px !important;
+  }
+
+  .shipping-checkpoint__top{
+    margin-top: 7px !important;
+    margin-bottom: 2px !important;
+    font-size: 1.05rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .shipping-checkpoint__bottom{
+    font-size: .98rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .coiriva-delivery-protection{
+    margin-top: 12px !important;
+    padding: 12px !important;
+    border-radius: 16px !important;
+  }
+
+  .coiriva-delivery-step{
+    padding: 10px !important;
+    gap: 8px !important;
+  }
+
+  .coiriva-delivery-step__icon{
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1.45rem !important;
+  }
+
+  .coiriva-guarantee-item{
+    padding: 10px !important;
+    border-radius: 15px !important;
+  }
+}
