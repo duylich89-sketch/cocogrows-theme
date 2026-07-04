@@ -107,10 +107,5 @@
   {% render 'coiriva-progress-bar' %}
   {% render 'coiriva-smart-offer', product: product %}
 
-  <div class="coiriva-buybox-pro__trust" aria-label="Store guarantees">
-    <span>🚚 Fast US Shipping</span>
-    <span>💚 60-Day Guarantee</span>
-    <span>🔒 Secure Checkout</span>
-    <span>🌱 100% Natural</span>
-  </div>
+  {%- comment -%}Legacy emoji trust row removed in v2.5.4 RC. Trust is handled by coiriva-trust-layer below CTA.{%- endcomment -%}
 </div>

@@ -2,14 +2,20 @@
   assign trust_primary = settings.trust_primary_color | default: '#2f6b4f'
   assign trust_background = settings.trust_background_color | default: '#ffffff'
   assign trust_radius = settings.trust_corner_radius | default: 14
+  assign show_trust_layer = false
+  if settings.enable_trust_strip != false or settings.enable_trust_microcopy != false or settings.enable_payment_confidence != false or settings.enable_shipping_confidence != false or settings.enable_guarantee_card != false or settings.enable_review_summary != false
+    assign show_trust_layer = true
+  endif
 %}
-<div class="coiriva-trust" data-coiriva-trust data-animate="true" style="--coiriva-trust-primary: {{ trust_primary }}; --coiriva-trust-bg: {{ trust_background }}; --coiriva-trust-radius: {{ trust_radius }}px;">
-  {% render 'coiriva-trust-strip' %}
-  {% render 'coiriva-trust-microcopy' %}
-  {% render 'coiriva-payment-confidence' %}
-  <div class="coiriva-trust-grid">
-    {% render 'coiriva-shipping-card' %}
-    {% render 'coiriva-guarantee-card' %}
+{% if show_trust_layer %}
+  <div class="coiriva-trust" data-coiriva-trust data-animate="true" style="--coiriva-trust-primary: {{ trust_primary }}; --coiriva-trust-bg: {{ trust_background }}; --coiriva-trust-radius: {{ trust_radius }}px;">
+    {% render 'coiriva-trust-strip' %}
+    {% render 'coiriva-trust-microcopy' %}
+    {% render 'coiriva-payment-confidence' %}
+    <div class="coiriva-trust-grid">
+      {% render 'coiriva-shipping-card' %}
+      {% render 'coiriva-guarantee-card' %}
+    </div>
+    {% render 'coiriva-review-summary', product: product %}
   </div>
-  {% render 'coiriva-review-summary', product: product %}
-</div>
+{% endif %}
