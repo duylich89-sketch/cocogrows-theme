@@ -1,14 +1,15 @@
 {%- comment -%}
-  Coiriva v2.3.0 Premium Buy Box PRO
-  CRO helper blocks for PDP: social proof, bundle selector, stock signal and trust/payment polish.
+  Coiriva v2.5.0 CRO Ultimate | Smart Bundle PRO
+  Premium bundle selector for PDP: need-based packs, dynamic pricing labels and quantity sync.
 {%- endcomment -%}
 {%- assign coiriva_variant = product.selected_or_first_available_variant -%}
-{%- assign coiriva_save_amount = 0 -%}
-{%- if coiriva_variant.compare_at_price > coiriva_variant.price -%}
-  {%- assign coiriva_save_amount = coiriva_variant.compare_at_price | minus: coiriva_variant.price -%}
+{%- assign coiriva_unit_price = coiriva_variant.price -%}
+{%- assign coiriva_unit_compare = coiriva_variant.compare_at_price | default: coiriva_variant.price -%}
+{%- if coiriva_unit_compare < coiriva_unit_price -%}
+  {%- assign coiriva_unit_compare = coiriva_unit_price -%}
 {%- endif -%}
 
-<div class="coiriva-buybox-pro" data-coiriva-buybox-pro>
+<div class="coiriva-buybox-pro coiriva-smart-bundle-pro" data-coiriva-buybox-pro data-coiriva-smart-bundle>
   <div class="coiriva-buybox-pro__social" aria-label="Customer confidence">
     <div class="coiriva-buybox-pro__stars">★★★★★</div>
     <div>
@@ -22,26 +23,78 @@
     <span><strong>In stock today</strong> · Ships from USA in 1–2 business days</span>
   </div>
 
-  <div class="coiriva-bundle-pro" aria-label="Bundle offers">
-    <div class="coiriva-bundle-pro__head">
-      <span>Choose Your Garden Pack</span>
-      <small>More bricks, better value</small>
+  <div class="coiriva-bundle-pro coiriva-smart-bundle" aria-label="Smart bundle offers">
+    <div class="coiriva-bundle-pro__head coiriva-smart-bundle__head">
+      <div>
+        <span>Choose Your Garden Pack</span>
+        <small>More bricks, better value for every growing project.</small>
+      </div>
+      <em>Best value selected</em>
     </div>
-    <div class="coiriva-bundle-pro__grid" role="group" aria-label="Quantity bundle options">
-      <button class="coiriva-bundle-pro__card is-active" type="button" data-coiriva-qty="1">
-        <span class="coiriva-bundle-pro__title">Buy 1</span>
-        <span class="coiriva-bundle-pro__meta">Starter pack</span>
-      </button>
-      <button class="coiriva-bundle-pro__card" type="button" data-coiriva-qty="2">
-        <span class="coiriva-bundle-pro__badge">Popular</span>
-        <span class="coiriva-bundle-pro__title">Buy 2</span>
-        <span class="coiriva-bundle-pro__meta">Best for pots</span>
-      </button>
-      <button class="coiriva-bundle-pro__card coiriva-bundle-pro__card--best" type="button" data-coiriva-qty="4">
-        <span class="coiriva-bundle-pro__badge">Best Value</span>
-        <span class="coiriva-bundle-pro__title">Buy 4</span>
-        <span class="coiriva-bundle-pro__meta">Garden ready</span>
-      </button>
+
+    <div class="coiriva-smart-bundle__grid" role="radiogroup" aria-label="Quantity bundle options">
+      {%- assign bundle_quantities = '1,2,4,8' | split: ',' -%}
+      {%- for qty_string in bundle_quantities -%}
+        {%- assign qty = qty_string | plus: 0 -%}
+        {%- assign discount = 0 -%}
+        {%- assign pack_name = 'Starter Pack' -%}
+        {%- assign pack_subtitle = 'Perfect for small pots' -%}
+        {%- assign pack_badge = '' -%}
+        {%- assign pack_bricks = qty | times: 2 -%}
+        {%- if qty == 2 -%}
+          {%- assign discount = 10 -%}
+          {%- assign pack_name = 'Home Garden Pack' -%}
+          {%- assign pack_subtitle = 'Great for herbs and containers' -%}
+          {%- assign pack_badge = 'Save 10%' -%}
+        {%- elsif qty == 4 -%}
+          {%- assign discount = 25 -%}
+          {%- assign pack_name = 'Best Value Pack' -%}
+          {%- assign pack_subtitle = 'Most popular for raised beds' -%}
+          {%- assign pack_badge = 'Best Value' -%}
+        {%- elsif qty == 8 -%}
+          {%- assign discount = 30 -%}
+          {%- assign pack_name = 'Grower Pack' -%}
+          {%- assign pack_subtitle = 'Ideal for larger garden projects' -%}
+          {%- assign pack_badge = 'Max Savings' -%}
+        {%- endif -%}
+        {%- assign compare_total = coiriva_unit_compare | times: qty -%}
+        {%- assign discount_multiplier = 100 | minus: discount -%}
+        {%- assign bundle_total = coiriva_unit_price | times: qty | times: discount_multiplier | divided_by: 100 -%}
+        {%- assign brick_count = qty | times: 2 -%}
+        {%- assign per_brick = bundle_total | divided_by: brick_count -%}
+        {%- assign save_total = compare_total | minus: bundle_total -%}
+        <button
+          class="coiriva-smart-bundle__card{% if qty == 4 %} is-active coiriva-smart-bundle__card--best{% endif %}"
+          type="button"
+          role="radio"
+          aria-checked="{% if qty == 4 %}true{% else %}false{% endif %}"
+          data-coiriva-qty="{{ qty }}"
+          data-coiriva-pack="{{ pack_name | escape }}"
+        >
+          {%- if pack_badge != blank -%}
+            <span class="coiriva-smart-bundle__badge">{{ pack_badge }}</span>
+          {%- endif -%}
+          <span class="coiriva-smart-bundle__topline">
+            <span class="coiriva-smart-bundle__radio" aria-hidden="true"></span>
+            <strong>{{ pack_name }}</strong>
+          </span>
+          <span class="coiriva-smart-bundle__meta">{{ brick_count }} bricks · {{ pack_subtitle }}</span>
+          <span class="coiriva-smart-bundle__price-row">
+            <span class="coiriva-smart-bundle__price">{{ bundle_total | money_without_trailing_zeros }}</span>
+            {%- if compare_total > bundle_total -%}
+              <s>{{ compare_total | money_without_trailing_zeros }}</s>
+            {%- endif -%}
+          </span>
+          <span class="coiriva-smart-bundle__value">
+            {{ per_brick | money_without_trailing_zeros }} / brick
+            {%- if save_total > 0 -%}<span>Save {{ save_total | money_without_trailing_zeros }}</span>{%- endif -%}
+          </span>
+        </button>
+      {%- endfor -%}
+    </div>
+
+    <div class="coiriva-smart-bundle__summary" aria-live="polite" data-coiriva-bundle-summary>
+      ⭐ Best Value Pack selected · 8 bricks for bigger planting projects.
     </div>
   </div>
 
