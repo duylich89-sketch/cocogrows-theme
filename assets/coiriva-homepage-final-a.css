@@ -71,3 +71,29 @@ body.coiriva-template-index .coiriva-best-seller__image{
   body.coiriva-template-index .coiriva-expand__image{height:220px;}
   body.coiriva-template-index .coiriva-final-cta__image-card{width:min(100%,360px);}
 }
+
+/* v2.7.4 Hero Hotfix — production hero image + clickable CTAs */
+body.coiriva-template-index .coiriva-hero-premium .slideshow__text-wrapper,
+body.coiriva-template-index .coiriva-hero-premium .slideshow__text,
+body.coiriva-template-index .coiriva-hero-premium .banner__box,
+body.coiriva-template-index .coiriva-hero-premium .banner__buttons,
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons,
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button{
+  position:relative;
+  z-index:20;
+  pointer-events:auto;
+}
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media,
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero-visual,
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero-visual__image{
+  pointer-events:none;
+}
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero-visual--photo{
+  background:linear-gradient(145deg,#ffffff 0%,#faf7ef 52%,#edf7ea 100%);
+}
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero-visual__image{
+  object-fit:cover;
+  object-position:center center;
+  filter:saturate(1.03) contrast(1.02);
+}
+html{scroll-behavior:smooth;}
