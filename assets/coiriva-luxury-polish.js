@@ -38,3 +38,10 @@
     markReveal(); enhanceButtons();
   }
 })();
+
+/* Coiriva v2.7.0 – Final Luxury Release marker. */
+(function(){
+  if(document && document.documentElement){
+    document.documentElement.classList.add('coiriva-v270-final');
+  }
+})();

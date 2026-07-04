@@ -1,1 +1,70 @@
 :root{--coiriva-lux-ink:#13251d;--coiriva-lux-muted:#64726b;--coiriva-lux-green:#184f3b;--coiriva-lux-green-2:#2f6b4f;--coiriva-lux-soft:#f7faf7;--coiriva-lux-line:rgba(24,79,59,.14);--coiriva-lux-gold:#d8b56d;--coiriva-lux-radius:22px;--coiriva-lux-shadow:0 18px 48px rgba(18,61,49,.10);--coiriva-lux-shadow-sm:0 10px 26px rgba(18,61,49,.075);--coiriva-lux-ease:cubic-bezier(.22,.61,.36,1)}.template-product .product__info-container>*+*,.product__info-container>*+.coiriva-trust,.product__info-container>*+[data-coiriva-smart-bundle]{margin-top:clamp(10px,1.35vw,16px)}.product__info-wrapper .product__info-container,.coiriva-price-module,.coiriva-buybox-pro__social,.coiriva-buybox-pro__stock,.coiriva-bundle-pro,.coiriva-smart-bundle,.coiriva-value-summary,.coiriva-trust-item,.coiriva-payment,.coiriva-trust-card,.coiriva-review-summary{border-color:var(--coiriva-lux-line)}@media (min-width:990px){.product__info-wrapper .product__info-container{background:radial-gradient(circle at 90% 0%,rgba(216,181,109,.09),transparent 30%),linear-gradient(180deg,rgba(255,255,255,.98),rgba(250,253,250,.94));box-shadow:var(--coiriva-lux-shadow);backdrop-filter:saturate(115%) blur(2px)}}.coiriva-product-title__eyebrow,.coiriva-bundle-pro__badge,.coiriva-price-chip,.coiriva-smart-bundle__badge{letter-spacing:.075em}.coiriva-product-title__heading,.product__title h1,.product__title .h1{letter-spacing:-.055em;text-wrap:balance}.product-page-price .price__regular .price-item--regular,.product-page-price .price__sale .price-item--sale,.product-page-price .price-item--last{color:var(--coiriva-lux-ink);letter-spacing:-.06em}.product-page-price s.price-item,.product-page-price .price__compare,.product-page-price .price__sale .price-item--regular{color:rgba(19,37,29,.52)!important}.product__media,.product-media-container,.product__media-wrapper .media,.thumbnail,.thumbnail[aria-current]{border-radius:clamp(16px,2vw,24px)}.product__media-wrapper .product__media,.product-media-container{overflow:hidden;box-shadow:0 18px 44px rgba(18,61,49,.075)}.product__media img,.product-media-container img,.thumbnail img{transition:transform .45s var(--coiriva-lux-ease),filter .45s var(--coiriva-lux-ease),opacity .25s ease}@media (hover:hover){.product__media-wrapper .product__media:hover img,.product-media-container:hover img{transform:scale(1.012);filter:saturate(1.03) contrast(1.015)}.thumbnail:hover img{transform:scale(1.045)}}.thumbnail[aria-current],.thumbnail[aria-current="true"]{box-shadow:0 0 0 2px rgba(24,79,59,.34),0 8px 20px rgba(18,61,49,.10)}.coiriva-bundle-pro__card,.coiriva-smart-bundle__card{transition:transform .2s var(--coiriva-lux-ease),box-shadow .2s var(--coiriva-lux-ease),border-color .2s ease,background .2s ease}.coiriva-bundle-pro__card.is-active,.coiriva-smart-bundle__card.is-active,.coiriva-smart-bundle__card[aria-checked="true"]{background:linear-gradient(180deg,#fff,#f4fbf6);border-color:rgba(24,79,59,.46)!important;box-shadow:0 14px 34px rgba(18,61,49,.12)}@media (hover:hover){.coiriva-bundle-pro__card:hover,.coiriva-smart-bundle__card:hover{transform:translateY(-2px);box-shadow:var(--coiriva-lux-shadow-sm)}}.coiriva-value-meter,.coiriva-value-summary{background:linear-gradient(180deg,#ffffff,#f8fbf8)}.product-form__submit,.coiriva-premium-atc,.coiriva-sticky-atc-pro__button,.shopify-payment-button__button{border-radius:18px!important;letter-spacing:.035em;transition:transform .18s var(--coiriva-lux-ease),box-shadow .18s var(--coiriva-lux-ease),filter .18s ease,opacity .18s ease!important}.product-form__submit,.coiriva-premium-atc{box-shadow:0 16px 36px rgba(18,61,49,.22)!important}@media (hover:hover){.product-form__submit:hover,.coiriva-premium-atc:hover,.coiriva-sticky-atc-pro__button:hover{transform:translateY(-1px);box-shadow:0 20px 42px rgba(18,61,49,.25)!important;filter:saturate(1.04)}}.product-form__submit:active,.coiriva-premium-atc:active,.coiriva-sticky-atc-pro__button:active{transform:translateY(0) scale(.99)!important}.product-form__submit[disabled],.product-form__submit[aria-disabled="true"]{opacity:.62;box-shadow:none!important}.coiriva-trust{--ct-radius:16px}.coiriva-trust-item,.coiriva-payment,.coiriva-trust-card,.coiriva-review-summary{background:linear-gradient(180deg,#fff,#fbfdfb);box-shadow:0 8px 22px rgba(18,61,49,.045)}.coiriva-trust-item{min-height:42px;font-weight:760}.coiriva-pay-pill{border-radius:9px;box-shadow:0 1px 0 rgba(18,61,49,.04),inset 0 1px 0 rgba(255,255,255,.85)}.coiriva-trust-card__head,.coiriva-payment__label{letter-spacing:-.01em}.coiriva-trust-card:before{height:2px;opacity:.85}.coiriva-sticky-atc-pro,.coiriva-sticky-atc,.sticky-atc{backdrop-filter:saturate(135%) blur(10px);box-shadow:0 -14px 36px rgba(18,61,49,.10);border-top:1px solid rgba(24,79,59,.12)}.product-form__submit:focus-visible,.coiriva-premium-atc:focus-visible,.coiriva-bundle-pro__card:focus-visible,.coiriva-smart-bundle__card:focus-visible,.coiriva-trust-item:focus-visible,.coiriva-pay-pill:focus-visible,.thumbnail:focus-visible{outline:2px solid rgba(24,79,59,.38)!important;outline-offset:3px!important}.shopify-section[id*="product"] .rich-text,.product__accordion,.collapsible-content,.accordion{scroll-margin-top:90px}.product__accordion summary,.accordion summary{transition:color .18s ease,background .18s ease}@media (hover:hover){.product__accordion summary:hover,.accordion summary:hover{color:var(--coiriva-lux-green)}}@media (max-width:749px){.product__info-container,.product__info-wrapper{padding-left:16px!important;padding-right:16px!important}.product__media-wrapper .product__media,.product-media-container{border-radius:18px;box-shadow:0 10px 28px rgba(18,61,49,.07)}.coiriva-product-title__heading,.product__title h1{letter-spacing:-.052em!important}.coiriva-bundle-pro,.coiriva-smart-bundle,.coiriva-payment,.coiriva-trust-card,.coiriva-review-summary{border-radius:16px!important}.coiriva-trust-item{min-height:38px;box-shadow:none}.coiriva-payment{box-shadow:none}.coiriva-trust-card{box-shadow:0 6px 18px rgba(18,61,49,.045)}.product-form__submit,.coiriva-premium-atc{min-height:56px!important;box-shadow:0 12px 28px rgba(18,61,49,.20)!important}.shopify-payment-button__button{min-height:52px!important}}@media (prefers-reduced-motion:reduce){.coiriva-lux-reveal,.coiriva-lux-reveal.is-visible,.product__media img,.product-media-container img,.thumbnail img,.product-form__submit,.coiriva-premium-atc,.coiriva-bundle-pro__card,.coiriva-smart-bundle__card{transition:none!important;transform:none!important}}.coiriva-lux-reveal{opacity:0;transform:translateY(8px);transition:opacity .42s var(--coiriva-lux-ease),transform .42s var(--coiriva-lux-ease)}.coiriva-lux-reveal.is-visible{opacity:1;transform:none}.coiriva-lux-clicked{filter:saturate(1.08) brightness(.98)!important}
+/* Coiriva v2.7.0 – Final Luxury Release
+   Final pass: premium consistency, tap targets, focus states, and low-cost visual refinement. */
+:root{
+  --coiriva-final-ink:#10231b;
+  --coiriva-final-line:rgba(16,35,27,.12);
+  --coiriva-final-soft:#f8fbf8;
+  --coiriva-final-shadow:0 16px 40px rgba(16,35,27,.08);
+}
+.template-product .product__info-container,
+.template-product .coiriva-price-module,
+.template-product .coiriva-bundle-pro,
+.template-product .coiriva-smart-bundle,
+.template-product .coiriva-value-summary,
+.template-product .coiriva-payment,
+.template-product .coiriva-trust-card,
+.template-product .coiriva-review-summary{
+  border-color:var(--coiriva-final-line)!important;
+}
+.template-product .product__title h1,
+.template-product .coiriva-product-title__heading{
+  color:var(--coiriva-final-ink);
+  max-width:14ch;
+}
+.template-product .coiriva-price-chip,
+.template-product .coiriva-bundle-pro__badge,
+.template-product .coiriva-smart-bundle__badge{
+  border-color:rgba(24,79,59,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+}
+.template-product .product-form__submit,
+.template-product .coiriva-premium-atc,
+.template-product .coiriva-sticky-atc-pro__button{
+  min-height:58px;
+  font-weight:800;
+}
+.template-product .shopify-payment-button__button{
+  min-height:54px;
+}
+.template-product .product__accordion summary,
+.template-product .accordion summary{
+  min-height:48px;
+}
+.template-product .coiriva-payment,
+.template-product .coiriva-trust-card,
+.template-product .coiriva-review-summary{
+  background:linear-gradient(180deg,#fff 0%,var(--coiriva-final-soft) 100%);
+}
+@media (hover:hover){
+  .template-product .coiriva-payment:hover,
+  .template-product .coiriva-trust-card:hover,
+  .template-product .coiriva-review-summary:hover{
+    box-shadow:var(--coiriva-final-shadow);
+    transform:translateY(-1px);
+  }
+}
+@media (max-width:749px){
+  .template-product .product__title h1,
+  .template-product .coiriva-product-title__heading{
+    max-width:18ch;
+  }
+  .template-product .coiriva-payment,
+  .template-product .coiriva-trust-card,
+  .template-product .coiriva-review-summary{
+    transform:none!important;
+  }
+  .template-product .product__info-container>*+*{
+    margin-top:12px;
+  }
+}
