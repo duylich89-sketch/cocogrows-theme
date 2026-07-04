@@ -1,0 +1,43 @@
+/* =========================================================
+   COIRIVA HOMEPAGE FINAL A — TASK 6: FAQ PREMIUM
+   ========================================================= */
+.coiriva-faq{
+  position:relative;
+  padding:clamp(56px,7vw,104px) 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(220,232,210,.55), transparent 34%),
+    linear-gradient(180deg,#fff 0%, var(--coiriva-color-bg,#FAF7EF) 100%);
+  overflow:hidden;
+}
+.coiriva-faq__inner{position:relative;z-index:1;}
+.coiriva-faq__header{max-width:760px;margin:0 auto clamp(32px,4vw,54px);text-align:center;}
+.coiriva-faq__eyebrow{margin:0 0 10px;color:var(--coiriva-color-brown,#8B5E3C);font-weight:900;text-transform:uppercase;letter-spacing:.14em;font-size:12px;}
+.coiriva-faq__heading{margin:0;color:var(--coiriva-color-primary-dark,#1F4D32);font-size:clamp(32px,4vw,54px);line-height:1.02;letter-spacing:-.04em;}
+.coiriva-faq__subheading{margin:18px auto 0;max-width:620px;color:var(--coiriva-color-muted,#657267);font-size:clamp(15px,1.5vw,18px);line-height:1.7;}
+.coiriva-faq__grid{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:clamp(22px,4vw,52px);align-items:start;}
+.coiriva-faq__visual{position:sticky;top:120px;min-height:320px;border-radius:var(--coiriva-radius-xl,24px);background:linear-gradient(145deg,var(--coiriva-color-primary,#2F6B3F),var(--coiriva-color-primary-dark,#1F4D32));box-shadow:var(--coiriva-shadow-card,0 8px 24px rgba(31,42,34,.06));padding:28px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;}
+.coiriva-faq__visual:before{content:"";position:absolute;inset:auto -40px -70px auto;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.1);}
+.coiriva-faq__badge{width:max-content;display:inline-flex;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.15);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;}
+.coiriva-faq__card{position:relative;z-index:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:22px;backdrop-filter:blur(10px);}
+.coiriva-faq__icon{display:block;font-size:34px;margin-bottom:14px;}
+.coiriva-faq__card strong{display:block;font-size:22px;line-height:1.15;margin-bottom:8px;}
+.coiriva-faq__card small{display:block;color:rgba(255,255,255,.82);font-size:14px;line-height:1.6;}
+.coiriva-faq__items{display:grid;gap:14px;}
+.coiriva-faq__item{background:#fff;border:1px solid var(--coiriva-color-border,#E7E2D8);border-radius:var(--coiriva-radius-lg,18px);box-shadow:var(--coiriva-shadow-soft,0 3px 12px rgba(31,42,34,.05));overflow:hidden;transition:box-shadow .25s ease,transform .25s ease,border-color .25s ease;}
+.coiriva-faq__item:hover{transform:translateY(-1px);box-shadow:var(--coiriva-shadow-card,0 8px 24px rgba(31,42,34,.06));border-color:rgba(47,107,63,.22);}
+.coiriva-faq__question{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;color:var(--coiriva-color-text,#1F2A22);font-weight:900;font-size:clamp(16px,1.5vw,19px);}
+.coiriva-faq__question::-webkit-details-marker{display:none;}
+.coiriva-faq__plus{flex:0 0 34px;width:34px;height:34px;border-radius:999px;background:var(--coiriva-color-leaf,#DCE8D2);color:var(--coiriva-color-primary-dark,#1F4D32);display:inline-flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;transition:transform .25s ease,background .25s ease;}
+.coiriva-faq__item[open] .coiriva-faq__plus{transform:rotate(45deg);background:var(--coiriva-color-cta,#D89A3D);color:#fff;}
+.coiriva-faq__answer{padding:0 24px 24px;color:var(--coiriva-color-muted,#657267);font-size:15px;line-height:1.75;}
+.coiriva-faq__answer p{margin:0;}
+@media screen and (max-width: 899px){
+  .coiriva-faq__grid{grid-template-columns:1fr;}
+  .coiriva-faq__visual{position:relative;top:auto;min-height:220px;}
+}
+@media screen and (max-width: 560px){
+  .coiriva-faq{padding:48px 0;}
+  .coiriva-faq__header{text-align:left;margin-bottom:24px;}
+  .coiriva-faq__question{padding:18px 18px;font-size:16px;}
+  .coiriva-faq__answer{padding:0 18px 20px;}
+}

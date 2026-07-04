@@ -1,0 +1,73 @@
+{{ 'coiriva-garden-lifestyle.css' | asset_url | stylesheet_tag }}
+
+<section class="coiriva-lifestyle color-{{ section.settings.color_scheme }}" aria-labelledby="coiriva-lifestyle-title-{{ section.id }}">
+  <div class="coiriva-lifestyle__inner page-width">
+    <div class="coiriva-lifestyle__copy">
+      {% if section.settings.eyebrow != blank %}
+        <p class="coiriva-lifestyle__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 id="coiriva-lifestyle-title-{{ section.id }}" class="coiriva-lifestyle__heading">{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="coiriva-lifestyle__text rte">{{ section.settings.text }}</div>
+      {% endif %}
+      <div class="coiriva-lifestyle__chips" aria-label="Garden use cases">
+        {% for block in section.blocks %}
+          <span class="coiriva-lifestyle__chip" {{ block.shopify_attributes }}>
+            <span aria-hidden="true">{{ block.settings.icon }}</span>
+            {{ block.settings.label | escape }}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="coiriva-lifestyle__visual" aria-label="Coco coir garden lifestyle visual">
+      <div class="coiriva-lifestyle__card coiriva-lifestyle__card--main">
+        <span class="coiriva-lifestyle__emoji" aria-hidden="true">🪴</span>
+        <strong>Container Gardens</strong>
+        <p>Light, airy coir helps roots breathe while holding the moisture plants need.</p>
+      </div>
+      <div class="coiriva-lifestyle__card coiriva-lifestyle__card--accent">
+        <span class="coiriva-lifestyle__emoji" aria-hidden="true">🌱</span>
+        <strong>Seed Starting</strong>
+        <p>Clean texture for seedlings, herbs, flowers, and everyday planting projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Coiriva garden lifestyle",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Made for everyday gardeners" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "A Better Growing Medium For Every Garden." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Use Coiriva for raised beds, containers, seed starting, houseplants, herbs, and vegetable gardens. It stores compactly, expands quickly, and creates a clean foundation for healthier roots.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "chip",
+      "name": "Use case chip",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon", "default": "🌿" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Raised beds" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coiriva garden lifestyle",
+      "blocks": [
+        { "type": "chip", "settings": { "icon": "🌿", "label": "Raised beds" } },
+        { "type": "chip", "settings": { "icon": "🍅", "label": "Vegetables" } },
+        { "type": "chip", "settings": { "icon": "🌸", "label": "Flowers" } },
+        { "type": "chip", "settings": { "icon": "🪴", "label": "Containers" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

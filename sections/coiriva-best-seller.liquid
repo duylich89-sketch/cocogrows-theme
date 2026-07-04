@@ -1,0 +1,102 @@
+{{ 'coiriva-best-seller.css' | asset_url | stylesheet_tag }}
+
+<section class="coiriva-best-seller" id="{{ section.id }}">
+  <div class="coiriva-best-seller__inner">
+    <div class="coiriva-best-seller__grid">
+      <div class="coiriva-best-seller__content">
+        {% if section.settings.eyebrow != blank %}
+          <div class="coiriva-best-seller__eyebrow">{{ section.settings.eyebrow }}</div>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="coiriva-best-seller__title">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <div class="coiriva-best-seller__text">{{ section.settings.text }}</div>
+        {% endif %}
+
+        <ul class="coiriva-best-seller__bullets" role="list">
+          {% for block in section.blocks %}
+            {% if block.type == 'benefit' %}
+              <li {{ block.shopify_attributes }}>
+                <span class="coiriva-best-seller__check">✓</span>
+                <span>{{ block.settings.text }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <div class="coiriva-best-seller__actions">
+          {% if section.settings.primary_label != blank %}
+            <a class="coiriva-best-seller__button" href="{{ section.settings.primary_link | default: routes.all_products_collection_url }}">
+              {{ section.settings.primary_label }}
+            </a>
+          {% endif %}
+          {% if section.settings.secondary_label != blank %}
+            <a class="coiriva-best-seller__button-secondary" href="{{ section.settings.secondary_link | default: routes.all_products_collection_url }}">
+              {{ section.settings.secondary_label }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="coiriva-best-seller__media-card">
+        {% if section.settings.badge != blank %}
+          <div class="coiriva-best-seller__badge">{{ section.settings.badge }}</div>
+        {% endif %}
+        <div class="coiriva-best-seller__image-wrap">
+          {% if section.settings.image != blank %}
+            {{ section.settings.image | image_url: width: 900 | image_tag: class: 'coiriva-best-seller__image', loading: 'lazy', sizes: '(min-width: 900px) 42vw, 92vw', widths: '360, 540, 720, 900' }}
+          {% else %}
+            <div class="coiriva-best-seller__placeholder">
+              Coco Coir<br>Best Seller
+            </div>
+          {% endif %}
+        </div>
+        <div class="coiriva-best-seller__stats">
+          <div class="coiriva-best-seller__stat"><strong>8–10×</strong><span>Expansion</span></div>
+          <div class="coiriva-best-seller__stat"><strong>4.9★</strong><span>Rated</span></div>
+          <div class="coiriva-best-seller__stat"><strong>Easy</strong><span>To Use</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Coiriva Best Seller",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Best Seller" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Premium Coco Coir <span>For Better Growing</span>" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Compact coconut coir bricks that expand into a clean, airy growing medium for pots, raised beds, seed starting and everyday plant care.</p>" },
+    { "type": "image_picker", "id": "image", "label": "Product image" },
+    { "type": "text", "id": "badge", "label": "Badge", "default": "Most Popular" },
+    { "type": "text", "id": "primary_label", "label": "Primary button", "default": "Shop Best Seller" },
+    { "type": "url", "id": "primary_link", "label": "Primary link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary button", "default": "Learn How It Works" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary link" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Expands into rich coco coir" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coiriva Best Seller",
+      "blocks": [
+        { "type": "benefit", "settings": { "text": "Expands 8–10× with water" } },
+        { "type": "benefit", "settings": { "text": "Helps retain moisture" } },
+        { "type": "benefit", "settings": { "text": "Improves drainage and airflow" } },
+        { "type": "benefit", "settings": { "text": "Compact and easy to store" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
