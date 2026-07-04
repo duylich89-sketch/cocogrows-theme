@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cfca4268-6358-426c-98ab-d292aeef11e5": {
@@ -7,12 +16,12 @@
           "type": "slide",
           "settings": {
             "image_overlay_opacity": 0,
-            "heading": "Grow Bigger.\nWater Less.",
-            "title_highlight_color": "#2E6B3F",
+            "heading": "Grow Bigger.Water Less.",
+            "title_highlight_color": "#2e6b3f",
             "heading_size": "h1",
             "subheading": "Premium coconut coir bricks that expand into a clean, airy growing medium for healthier roots, better moisture and easier gardening.",
             "button_label": "Shop Coco Coir",
-            "link": "/products/premium-organic-coconut-coir-bricks-for-plants",
+            "link": "shopify://products/premium-organic-coco-coir-growing-medium",
             "button_style_secondary": false,
             "atc_button_label": "",
             "atc_product": "",
@@ -23,12 +32,12 @@
             "color_scheme": "background-1",
             "transparent_container_color": "white",
             "text_alignment_mobile": "left",
-            "custom_colors_background": "#FAF7EF",
+            "custom_colors_background": "#faf7ef",
             "custom_gradient_background": "",
-            "custom_colors_text": "#1F2A22",
-            "custom_colors_solid_button_background": "#D89A3D",
+            "custom_colors_text": "#1f2a22",
+            "custom_colors_solid_button_background": "#d89a3d",
             "custom_colors_solid_button_text": "#ffffff",
-            "custom_colors_outline_button": "#2F6B3F"
+            "custom_colors_outline_button": "#2f6b3f"
           }
         }
       },
@@ -97,6 +106,55 @@
         "show_chips": true
       }
     },
+    "coiriva-how-it-works-epic13": {
+      "type": "coiriva-how-it-works",
+      "blocks": {
+        "step-place-brick": {
+          "type": "step",
+          "settings": {
+            "icon": "🧱",
+            "title": "Place the Brick",
+            "text": "Set the compact coco coir brick in a bucket, tray, or garden container."
+          }
+        },
+        "step-add-water": {
+          "type": "step",
+          "settings": {
+            "icon": "💧",
+            "title": "Add Water",
+            "text": "Hydrate with water and let the natural coconut fibers loosen and expand."
+          }
+        },
+        "step-expand": {
+          "type": "step",
+          "settings": {
+            "icon": "🌿",
+            "title": "Watch It Expand",
+            "text": "One brick expands 8–10X into a light, airy growing medium."
+          }
+        },
+        "step-plant": {
+          "type": "step",
+          "settings": {
+            "icon": "🪴",
+            "title": "Start Planting",
+            "text": "Use it for seedlings, pots, raised beds, herbs, vegetables, and more."
+          }
+        }
+      },
+      "block_order": [
+        "step-place-brick",
+        "step-add-water",
+        "step-expand",
+        "step-plant"
+      ],
+      "settings": {
+        "eyebrow": "Simple Garden Setup",
+        "heading": "From Brick to Garden-Ready Coir",
+        "subheading": "Coiriva makes it easy to turn one compact coconut coir brick into a clean, airy growing medium your plants will love.",
+        "show_before_after": true
+      }
+    },
     "6aa09428-a417-429d-9159-a4e8afd49590": {
       "type": "icon-bar",
       "blocks": {
@@ -147,7 +205,7 @@
         "display_id": false,
         "visibility": "always-display",
         "title": "Built For Healthier Roots",
-        "title_highlight_color": "#2E6B3F",
+        "title_highlight_color": "#2e6b3f",
         "heading_size": "h1",
         "text": "<p>Simple, natural growing support from seed starting to full garden beds.</p>",
         "color_scheme": "background-1",
@@ -179,14 +237,13 @@
         "mobile_arrows_position": "under",
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#EEF4E8",
+        "custom_colors_background": "#eef4e8",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "custom_cards_colors_background": "#FFFFFF",
+        "custom_colors_text": "#2e2a39",
+        "custom_cards_colors_background": "#ffffff",
         "custom_cards_gradient_background": "",
         "custom_cards_colors_text": "#223126"
-      },
-      "disabled": true
+      }
     },
     "0f1fc9e4-bc4c-4052-9747-62d1f8472caa": {
       "type": "results",
@@ -222,101 +279,33 @@
         "display_id": false,
         "visibility": "always-display",
         "title": "From One Brick To A Thriving Garden",
-        "title_highlight_color": "#2E6B3F",
+        "title_highlight_color": "#2e6b3f",
         "heading_size": "h1",
         "text": "<p>Just add water and watch compact coir expand into a clean, fluffy growing medium.</p>",
+        "video_muted_autoplay": true,
         "color_scheme": "background-1",
         "layout": "results_second",
         "results_headline": "8–10X Expansion",
-        "results_title_highlight_color": "#2E6B3F",
+        "results_title_highlight_color": "#2e6b3f",
         "results_headline_size": "h2",
         "results_text": "<p>Perfect for potting mixes, raised beds, seed starting and plant care.</p>",
         "results_headline_alignment": "left",
         "caption": "<p>Compact to store. Easy to hydrate. Ready for roots.</p>",
         "button_label": "See How It Works",
-        "link": "#coiriva-how-it-works",
+        "link": "",
         "button_style_secondary": false,
         "atc_button_label": "",
         "atc_product": "",
         "atc_skip_cart": false,
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#FAF8F2",
+        "custom_colors_background": "#faf8f2",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "custom_colors_accent": "#2E6B3F",
-        "custom_colors_solid_button_background": "#2E6B3F",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_accent": "#2e6b3f",
+        "custom_colors_solid_button_background": "#2e6b3f",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#2E6B3F"
-      },
-      "disabled": true
-    },
-    "ee8d9ca6-4a41-401f-83a3-37e138a112b9": {
-      "type": "contact-form",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Need Help With Your Garden?",
-        "title_highlight_color": "#2E6B3F",
-        "heading_size": "h1",
-        "button_full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#EEF4E8",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#223126",
-        "custom_colors_solid_button_background": "#2E6B3F",
-        "custom_colors_solid_button_text": "#ffffff"
-      }
-    },
-    "coiriva-how-it-works-epic13": {
-      "type": "coiriva-how-it-works",
-      "blocks": {
-        "step-place-brick": {
-          "type": "step",
-          "settings": {
-            "icon": "🧱",
-            "title": "Place the Brick",
-            "text": "Set the compact coco coir brick in a bucket, tray, or garden container."
-          }
-        },
-        "step-add-water": {
-          "type": "step",
-          "settings": {
-            "icon": "💧",
-            "title": "Add Water",
-            "text": "Hydrate with water and let the natural coconut fibers loosen and expand."
-          }
-        },
-        "step-expand": {
-          "type": "step",
-          "settings": {
-            "icon": "🌿",
-            "title": "Watch It Expand",
-            "text": "One brick expands 8–10X into a light, airy growing medium."
-          }
-        },
-        "step-plant": {
-          "type": "step",
-          "settings": {
-            "icon": "🪴",
-            "title": "Start Planting",
-            "text": "Use it for seedlings, pots, raised beds, herbs, vegetables, and more."
-          }
-        }
-      },
-      "block_order": [
-        "step-place-brick",
-        "step-add-water",
-        "step-expand",
-        "step-plant"
-      ],
-      "settings": {
-        "eyebrow": "Simple Garden Setup",
-        "heading": "From Brick to Garden-Ready Coir",
-        "subheading": "Coiriva makes it easy to turn one compact coconut coir brick into a clean, airy growing medium your plants will love.",
-        "show_before_after": true
+        "custom_colors_outline_button": "#2e6b3f"
       }
     },
     "coiriva-reviews-final-a-task2": {
@@ -375,149 +364,44 @@
         "heading": "Start With Better Coco Coir Today.",
         "subheading": "Turn compact coconut coir bricks into a clean, airy growing medium made for healthier roots, better moisture, and easier gardening.",
         "primary_label": "Shop Coco Coir",
-        "primary_link": "/products/premium-organic-coconut-coir-bricks-for-plants",
+        "primary_link": "",
         "secondary_label": "See How It Works",
-        "secondary_link": "#coiriva-how-it-works",
+        "secondary_link": "",
         "visual_title": "Garden-ready in minutes",
         "visual_text": "Hydrate, expand, plant."
       }
     },
-    "coiriva-garden-lifestyle-final-a-task5": {
-      "type": "coiriva-garden-lifestyle",
+    "ee8d9ca6-4a41-401f-83a3-37e138a112b9": {
+      "type": "contact-form",
       "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Need Help With Your Garden?",
+        "title_highlight_color": "#2e6b3f",
+        "heading_size": "h1",
+        "button_full_width": true,
         "color_scheme": "background-1",
-        "eyebrow": "Made for everyday gardeners",
-        "heading": "A Better Growing Medium For Every Garden.",
-        "text": "<p>Use Coiriva for raised beds, containers, seed starting, houseplants, herbs, and vegetable gardens. It stores compactly, expands quickly, and creates a clean foundation for healthier roots.</p>"
-      },
-      "blocks": {
-        "chip-raised": {
-          "type": "chip",
-          "settings": {
-            "icon": "🌿",
-            "label": "Raised beds"
-          }
-        },
-        "chip-veg": {
-          "type": "chip",
-          "settings": {
-            "icon": "🍅",
-            "label": "Vegetables"
-          }
-        },
-        "chip-flowers": {
-          "type": "chip",
-          "settings": {
-            "icon": "🌸",
-            "label": "Flowers"
-          }
-        },
-        "chip-containers": {
-          "type": "chip",
-          "settings": {
-            "icon": "🪴",
-            "label": "Containers"
-          }
-        }
-      },
-      "block_order": [
-        "chip-raised",
-        "chip-veg",
-        "chip-flowers",
-        "chip-containers"
-      ]
-    },
-    "coiriva-faq-final-a-task6": {
-      "type": "coiriva-faq",
-      "settings": {
-        "eyebrow": "Questions gardeners ask",
-        "heading": "Coco Coir Made Simple",
-        "subheading": "Quick answers that help new gardeners understand how Coiriva fits into their growing routine.",
-        "open_first": true,
-        "visual_title": "Easy for beginners",
-        "visual_text": "Soak, expand, mix, and plant in minutes."
-      },
-      "blocks": {
-        "faq1": {
-          "type": "faq",
-          "settings": {
-            "question": "How much does one brick expand?",
-            "answer": "<p>Each compressed brick expands many times its size after hydration, creating a lightweight, airy growing medium for plants.</p>"
-          }
-        },
-        "faq2": {
-          "type": "faq",
-          "settings": {
-            "question": "Is coco coir good for indoor and outdoor plants?",
-            "answer": "<p>Yes. Coco coir works well for many indoor plants, container gardens, seed starting, raised beds, and garden mixes when used properly.</p>"
-          }
-        },
-        "faq3": {
-          "type": "faq",
-          "settings": {
-            "question": "Does coco coir help with watering?",
-            "answer": "<p>Coco coir helps hold moisture while still supporting airflow, which can make watering easier and support healthier root zones.</p>"
-          }
-        },
-        "faq4": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I mix it with soil?",
-            "answer": "<p>Yes. Many gardeners mix coco coir with soil, compost, perlite, or other amendments to improve texture, moisture retention, and drainage.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq1",
-        "faq2",
-        "faq3",
-        "faq4"
-      ]
-    },
-    "coiriva-best-seller-final-a-task7": {
-      "type": "coiriva-best-seller",
-      "blocks": {
-        "bs-benefit-1": {
-          "type": "benefit",
-          "settings": {
-            "text": "Expands 8–10× with water"
-          }
-        },
-        "bs-benefit-2": {
-          "type": "benefit",
-          "settings": {
-            "text": "Helps retain moisture longer"
-          }
-        },
-        "bs-benefit-3": {
-          "type": "benefit",
-          "settings": {
-            "text": "Improves drainage and airflow"
-          }
-        },
-        "bs-benefit-4": {
-          "type": "benefit",
-          "settings": {
-            "text": "Compact, clean and easy to store"
-          }
-        }
-      },
-      "block_order": [
-        "bs-benefit-1",
-        "bs-benefit-2",
-        "bs-benefit-3",
-        "bs-benefit-4"
-      ],
-      "settings": {
-        "eyebrow": "Best Seller Bundle",
-        "heading": "Premium Coco Coir <span>For Better Growing</span>",
-        "text": "<p>Turn compact coconut coir bricks into a clean, airy growing medium for pots, raised beds, seed starting and everyday plant care.</p>",
-        "image": "",
-        "badge": "Most Popular",
-        "primary_label": "Shop Coco Coir",
-        "primary_link": "/products/premium-organic-coconut-coir-bricks-for-plants",
-        "secondary_label": "See How It Expands",
-        "secondary_link": "#coiriva-how-it-works"
+        "success_icon": "check_circle",
+        "success_icon_filled": false,
+        "success_text_color": "#28c100",
+        "success_bg_color": "#f2ffed",
+        "success_border_radius": 8,
+        "success_border_width": 1,
+        "success_border_color": "#28c100",
+        "errors_icon": "error",
+        "errors_icon_filled": false,
+        "errors_text_color": "#ff0000",
+        "errors_bg_color": "#fff5f5",
+        "errors_border_radius": 8,
+        "errors_border_width": 1,
+        "errors_border_color": "#ff0000",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#eef4e8",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#223126",
+        "custom_colors_solid_button_background": "#2e6b3f",
+        "custom_colors_solid_button_text": "#ffffff"
       }
     }
   },
@@ -527,10 +411,8 @@
     "coiriva-how-it-works-epic13",
     "6aa09428-a417-429d-9159-a4e8afd49590",
     "0f1fc9e4-bc4c-4052-9747-62d1f8472caa",
-    "coiriva-best-seller-final-a-task7",
-    "coiriva-garden-lifestyle-final-a-task5",
     "coiriva-reviews-final-a-task2",
-    "coiriva-faq-final-a-task6",
-    "coiriva-final-cta-final-a-task3"
+    "coiriva-final-cta-final-a-task3",
+    "ee8d9ca6-4a41-401f-83a3-37e138a112b9"
   ]
 }
