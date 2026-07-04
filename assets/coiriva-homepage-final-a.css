@@ -97,3 +97,16 @@ body.coiriva-template-index .coiriva-hero-premium .coiriva-hero-visual__image{
   filter:saturate(1.03) contrast(1.02);
 }
 html{scroll-behavior:smooth;}
+
+/* v2.7.5 Homepage Final Production freeze */
+.coiriva-hero-premium .slideshow__text-wrapper,
+.coiriva-hero-premium .banner__buttons,
+.coiriva-hero-premium .button,
+.coiriva-final-cta__actions,
+.coiriva-final-cta__button{position:relative;z-index:10;pointer-events:auto}
+.coiriva-hero-premium .slideshow__media,
+.coiriva-hero-premium .banner__media{pointer-events:none}
+.coiriva-hero-visual__image{filter:saturate(1.04) contrast(1.02);transition:transform .45s ease,filter .45s ease}
+.coiriva-hero-premium:hover .coiriva-hero-visual__image{transform:scale(1.018);filter:saturate(1.07) contrast(1.03)}
+.coiriva-hero__buttons .button{min-width:168px}
+@media screen and (max-width:749px){.coiriva-hero__buttons .button{width:100%;min-width:0}}
