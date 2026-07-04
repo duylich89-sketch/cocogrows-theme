@@ -1,0 +1,45 @@
+{%- comment -%}
+  Coiriva v2.5.3 CRO Ultimate | Multi-Step Progress Bar
+  Lightweight cart goal progress component. No app, no external library.
+{%- endcomment -%}
+{%- unless settings.coiriva_progress_enable == false -%}
+{%- assign free_shipping_threshold_dollars = settings.coiriva_progress_free_shipping_threshold | default: 50 -%}
+{%- assign free_shipping_threshold = free_shipping_threshold_dollars | times: 100 -%}
+{%- assign best_value_threshold_dollars = settings.coiriva_progress_best_value_threshold | default: 100 -%}
+{%- assign best_value_threshold = best_value_threshold_dollars | times: 100 -%}
+{%- assign premium_bonus_threshold_dollars = settings.coiriva_progress_bonus_threshold | default: 150 -%}
+{%- assign premium_bonus_threshold = premium_bonus_threshold_dollars | times: 100 -%}
+{%- assign progress_total = cart.total_price | default: 0 -%}
+
+<div
+  class="coiriva-progress-engine"
+  data-coiriva-progress
+  data-cart-total="{{ progress_total }}"
+  data-free-threshold="{{ free_shipping_threshold }}"
+  data-best-threshold="{{ best_value_threshold }}"
+  data-bonus-threshold="{{ premium_bonus_threshold }}"
+  data-cart-url="{{ routes.cart_url }}.js"
+  aria-label="Cart rewards progress"
+>
+  <div class="coiriva-progress-engine__top">
+    <span class="coiriva-progress-engine__eyebrow">Cart Rewards</span>
+    <strong class="coiriva-progress-engine__message" data-coiriva-progress-message>
+      Add items to unlock rewards.
+    </strong>
+  </div>
+
+  <div class="coiriva-progress-engine__track" aria-hidden="true">
+    <span class="coiriva-progress-engine__fill" data-coiriva-progress-fill style="width:0%"></span>
+    <span class="coiriva-progress-engine__marker" data-coiriva-progress-marker="free" style="left:33.333%"><span>🚚</span></span>
+    <span class="coiriva-progress-engine__marker" data-coiriva-progress-marker="best" style="left:66.666%"><span>⭐</span></span>
+    <span class="coiriva-progress-engine__marker" data-coiriva-progress-marker="bonus" style="left:100%"><span>🎁</span></span>
+  </div>
+
+  <div class="coiriva-progress-engine__goals">
+    <span data-coiriva-progress-goal="free">${{ free_shipping_threshold_dollars }} Free Shipping</span>
+    <span data-coiriva-progress-goal="best">${{ best_value_threshold_dollars }} Best Value</span>
+    <span data-coiriva-progress-goal="bonus">${{ premium_bonus_threshold_dollars }} Bonus</span>
+  </div>
+</div>
+
+{%- endunless -%}

@@ -2830,5 +2830,50 @@
         "info": "If empty, a link to all products will be applied."
       }
     ]
+  },
+  {
+    "name": "Coiriva CRO Progress Engine",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Multi-step cart rewards"
+      },
+      {
+        "type": "checkbox",
+        "id": "coiriva_progress_enable",
+        "label": "Enable Coiriva progress engine",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "coiriva_progress_free_shipping_threshold",
+        "min": 10,
+        "max": 200,
+        "step": 5,
+        "unit": "$",
+        "label": "Free shipping threshold",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "coiriva_progress_best_value_threshold",
+        "min": 25,
+        "max": 300,
+        "step": 5,
+        "unit": "$",
+        "label": "Best value threshold",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "coiriva_progress_bonus_threshold",
+        "min": 50,
+        "max": 400,
+        "step": 5,
+        "unit": "$",
+        "label": "Premium bonus threshold",
+        "default": 150
+      }
+    ]
   }
 ]
