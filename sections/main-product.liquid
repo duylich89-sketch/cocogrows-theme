@@ -733,6 +733,7 @@
                  quantity_selector_html: quantity_selector_html,
                  quantity_atc_append_heights: quantity_atc_append_heights
               -%}
+              {% render 'coiriva-delivery-guarantee' %}
             {%- when 'reviews' -%}
               {%- render 'reviews', block: block -%}
             {%- when 'rating' -%}

@@ -420,3 +420,168 @@
     font-size: 1.5rem;
   }
 }
+
+/* Coiriva Product Foundation — Module 6 REDO: compact delivery + guarantee */
+.coiriva-delivery-protection {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(47,107,63,.14);
+  background:
+    radial-gradient(circle at top left, rgba(216,154,61,.14), transparent 34%),
+    linear-gradient(180deg, #fff, rgba(250,247,239,.92));
+  box-shadow: 0 14px 34px rgba(31,77,50,.09);
+}
+
+.coiriva-delivery-protection__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.coiriva-delivery-protection__header strong {
+  color: var(--coiriva-text, #1F2A22);
+  font-size: 1.45rem;
+  line-height: 1.15;
+  font-weight: 900;
+  text-align: right;
+}
+
+.coiriva-delivery-protection__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--coiriva-forest, #1F4D32);
+  background: rgba(47,107,63,.09);
+  font-size: 1.05rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.coiriva-delivery-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  position: relative;
+}
+
+.coiriva-delivery-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 112px;
+  padding: 14px 12px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(47,107,63,.10);
+  box-shadow: 0 8px 20px rgba(31,77,50,.055);
+}
+
+.coiriva-delivery-step__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(216,154,61,.16);
+  font-size: 1.85rem;
+}
+
+.coiriva-delivery-step__label {
+  color: rgba(31,42,34,.62);
+  font-size: 1.04rem;
+  font-weight: 800;
+}
+
+.coiriva-delivery-step strong {
+  color: var(--coiriva-text, #1F2A22);
+  font-size: 1.18rem;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.coiriva-guarantee-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.coiriva-guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(216,154,61,.18);
+  background: rgba(216,154,61,.08);
+}
+
+.coiriva-guarantee-item > span {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.coiriva-guarantee-item strong {
+  display: block;
+  color: var(--coiriva-text, #1F2A22);
+  font-size: 1.13rem;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.coiriva-guarantee-item p {
+  margin: 3px 0 0;
+  color: rgba(31,42,34,.64);
+  font-size: 1.01rem;
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+@media screen and (max-width: 749px) {
+  .coiriva-delivery-protection {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .coiriva-delivery-protection__header {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .coiriva-delivery-protection__header strong {
+    display: block;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 1.34rem;
+  }
+
+  .coiriva-delivery-timeline,
+  .coiriva-guarantee-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .coiriva-delivery-step {
+    min-height: unset;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .coiriva-delivery-step__label,
+  .coiriva-delivery-step strong {
+    display: block;
+  }
+
+  .coiriva-delivery-step strong {
+    font-size: 1.12rem;
+  }
+}
