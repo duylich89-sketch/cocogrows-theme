@@ -12,7 +12,7 @@
             "heading_size": "h1",
             "subheading": "Premium coconut coir bricks that expand into a clean, airy growing medium for healthier roots, better moisture and easier gardening.",
             "button_label": "Shop Coco Coir",
-            "link": "",
+            "link": "/products/premium-organic-coconut-coir-bricks-for-plants",
             "button_style_secondary": false,
             "atc_button_label": "",
             "atc_product": "",
@@ -248,7 +248,8 @@
         "custom_colors_solid_button_background": "#2E6B3F",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#2E6B3F"
-      }
+      },
+      "disabled": true
     },
     "ee8d9ca6-4a41-401f-83a3-37e138a112b9": {
       "type": "contact-form",
@@ -374,9 +375,9 @@
         "heading": "Start With Better Coco Coir Today.",
         "subheading": "Turn compact coconut coir bricks into a clean, airy growing medium made for healthier roots, better moisture, and easier gardening.",
         "primary_label": "Shop Coco Coir",
-        "primary_link": "",
+        "primary_link": "/products/premium-organic-coconut-coir-bricks-for-plants",
         "secondary_label": "See How It Works",
-        "secondary_link": "",
+        "secondary_link": "#coiriva-how-it-works",
         "visual_title": "Garden-ready in minutes",
         "visual_text": "Hydrate, expand, plant."
       }
@@ -514,9 +515,9 @@
         "image": "",
         "badge": "Most Popular",
         "primary_label": "Shop Coco Coir",
-        "primary_link": "",
+        "primary_link": "/products/premium-organic-coconut-coir-bricks-for-plants",
         "secondary_label": "See How It Expands",
-        "secondary_link": ""
+        "secondary_link": "#coiriva-how-it-works"
       }
     }
   },

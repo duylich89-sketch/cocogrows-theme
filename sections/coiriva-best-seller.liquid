@@ -49,9 +49,7 @@
           {% if section.settings.image != blank %}
             {{ section.settings.image | image_url: width: 900 | image_tag: class: 'coiriva-best-seller__image', loading: 'lazy', sizes: '(min-width: 900px) 42vw, 92vw', widths: '360, 540, 720, 900' }}
           {% else %}
-            <div class="coiriva-best-seller__placeholder">
-              Coco Coir<br>Best Seller
-            </div>
+            <img src="{{ 'coiriva-home-package.webp' | asset_url }}" width="832" height="680" loading="lazy" decoding="async" alt="Cocogrows premium coco coir brick product package" class="coiriva-best-seller__image">
           {% endif %}
         </div>
         <div class="coiriva-best-seller__stats">

@@ -182,15 +182,16 @@
             {% endif %}
           {%- else -%}
             {%- if section.index == 1 and request.page_type == 'index' -%}
-              <div class="coiriva-hero-visual coiriva-hero-visual--photo" role="img" aria-label="Premium coco coir brick, expanded coco coir and coconut for home gardening">
+              <div class="coiriva-hero-visual coiriva-hero-visual--photo" role="img" aria-label="Cocogrows coco coir brick, expanded coir, coconut and healthy green plants">
                 <img
-                  src="{{ 'cocogrows-home-hero.webp' | asset_url }}"
-                  alt="Premium coco coir brick with expanded coco coir and coconut for home gardening"
+                  src="{{ 'coiriva-home-hero.webp' | asset_url }}"
+                  width="1268"
+                  height="836"
                   loading="eager"
                   fetchpriority="high"
                   decoding="async"
-                  width="497"
-                  height="514"
+                  alt="Cocogrows coco coir brick with expanded coco coir, coconut and green plants"
+                  class="coiriva-hero-visual__image"
                 >
               </div>
             {%- else -%}
@@ -216,7 +217,7 @@
                   {% if block.settings.link %}
                     href="{{ block.settings.link }}"
                   {% else %}
-                    href="/products/premium-organic-coco-coir-growing-medium"
+                    role="link" aria-disabled="true"
                   {% endif %}
                   class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
                 >

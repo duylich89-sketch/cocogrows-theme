@@ -1,6 +1,6 @@
 {{ 'coiriva-epic13-how-it-works.css' | asset_url | stylesheet_tag }}
 
-<section class="coiriva-how" id="coiriva-how-it-works">
+<section class="coiriva-how" id="coiriva-how-it-works" data-section-id="{{ section.id }}">
   <div class="coiriva-how__container">
     <div class="coiriva-how__header">
       {% if section.settings.eyebrow != blank %}
@@ -31,8 +31,8 @@
       <div class="coiriva-expand" aria-label="Before and after coco coir expansion">
         <article class="coiriva-expand__panel">
           <span class="coiriva-expand__label">Before</span>
-          <div class="coiriva-expand__visual coiriva-expand__visual--image">
-            <img src="{{ 'cocogrows-before.webp' | asset_url }}" alt="One compact coco coir brick before hydration" loading="lazy" decoding="async" width="365" height="514">
+          <div class="coiriva-expand__visual">
+            <img src="{{ 'coiriva-home-before.webp' | asset_url }}" width="866" height="816" loading="lazy" decoding="async" alt="Compressed coco coir brick before hydration" class="coiriva-expand__image">
           </div>
           <h3 class="coiriva-expand__heading">Small, compact brick</h3>
           <p class="coiriva-expand__text">Easy to store, lightweight to ship, and ready whenever your garden needs fresh growing medium.</p>
@@ -42,8 +42,8 @@
 
         <article class="coiriva-expand__panel coiriva-expand__panel--after">
           <span class="coiriva-expand__label">After</span>
-          <div class="coiriva-expand__visual coiriva-expand__visual--image">
-            <img src="{{ 'cocogrows-after.webp' | asset_url }}" alt="Expanded coco coir after adding water" loading="lazy" decoding="async" width="370" height="514">
+          <div class="coiriva-expand__visual">
+            <img src="{{ 'coiriva-home-after.webp' | asset_url }}" width="976" height="816" loading="lazy" decoding="async" alt="Expanded coco coir after adding water" class="coiriva-expand__image">
           </div>
           <h3 class="coiriva-expand__heading">Rich coco coir in minutes</h3>
           <p class="coiriva-expand__text">Just add water and watch it expand into an airy, moisture-friendly medium for healthier roots.</p>
