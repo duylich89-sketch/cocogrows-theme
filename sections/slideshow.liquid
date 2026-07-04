@@ -214,7 +214,7 @@
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons{% if section.index == 1 and request.page_type == 'index' %} coiriva-hero__buttons{% endif %}">
                 <a
-                  href="{% if section.index == 1 and request.page_type == 'index' %}/products/premium-organic-coconut-coir-bricks-for-plants{% elsif block.settings.link != blank %}{{ block.settings.link }}{% else %}{{ routes.all_products_collection_url }}{% endif %}"
+                  href="{% if section.index == 1 and request.page_type == 'index' %}/products/premium-organic-coco-coir-growing-medium{% elsif block.settings.link != blank %}{{ block.settings.link }}{% else %}{{ routes.all_products_collection_url }}{% endif %}"
                   class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}{% if section.index == 1 and request.page_type == 'index' %} coiriva-cta-link coiriva-cta-link--shop{% endif %}"
                   {% if section.index == 1 and request.page_type == 'index' %}data-coiriva-cta="shop"{% endif %}
                 >
@@ -227,7 +227,7 @@
                 {%- endif -%}
               </div>
               {%- if section.index == 1 and request.page_type == 'index' -%}
-                <div class="coiriva-hero__usp" aria-label="Coiriva key benefits">
+                <div class="coiriva-hero__usp" aria-label="Cocogrows key benefits">
                   <span>Fast US Shipping</span>
                   <span>Expands 8–10×</span>
                   <span>100% Natural</span>

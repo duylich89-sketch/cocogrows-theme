@@ -68,3 +68,217 @@
     margin-top:12px;
   }
 }
+
+/* v2.8.0 – Premium Polish Pass
+   Final homepage polish for Cocogrows: typography, spacing, CTAs, cards, and mobile stability. */
+html { scroll-behavior: smooth; }
+
+body.coiriva-template-index .coiriva-hero-premium .banner__heading,
+body.coiriva-template-index .coiriva-hero-premium h2.banner__heading {
+  max-width: 680px;
+  font-size: clamp(54px, 5.35vw, 86px) !important;
+  line-height: .92 !important;
+  letter-spacing: -0.065em !important;
+  text-wrap: balance;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .banner__text {
+  max-width: 560px;
+  margin-top: 18px;
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.58;
+  color: rgba(31,42,34,.76);
+}
+
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons {
+  gap: 14px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button {
+  min-width: 172px;
+  min-height: 58px !important;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 999px !important;
+  pointer-events: auto !important;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button--primary,
+body.coiriva-template-index .coiriva-final-cta__button--primary {
+  background: #d89a3d !important;
+  color: #fff !important;
+  box-shadow: 0 16px 34px rgba(216,154,61,.25) !important;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button--secondary,
+body.coiriva-template-index .coiriva-final-cta__button--secondary {
+  border-color: rgba(47,107,63,.55) !important;
+  color: #1f4d32 !important;
+  background: rgba(255,255,255,.72) !important;
+  box-shadow: 0 12px 28px rgba(31,77,50,.08) !important;
+}
+
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button:hover,
+body.coiriva-template-index .coiriva-final-cta__button:hover {
+  transform: translateY(-2px);
+}
+
+body.coiriva-template-index .coiriva-hero__usp {
+  margin-top: 22px;
+  gap: 12px 22px;
+}
+
+body.coiriva-template-index .coiriva-hero__usp span {
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: .01em;
+}
+
+/* keep media behind clickable content */
+body.coiriva-template-index .coiriva-hero-premium .slideshow__text-wrapper,
+body.coiriva-template-index .coiriva-hero-premium .banner__box,
+body.coiriva-template-index .coiriva-hero-premium .banner__buttons,
+body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons,
+body.coiriva-template-index .coiriva-hero-premium .button {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto !important;
+}
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media,
+body.coiriva-template-index .coiriva-hero-premium .banner__media,
+body.coiriva-template-index .coiriva-hero-visual,
+body.coiriva-template-index .coiriva-hero-visual__image {
+  pointer-events: none !important;
+}
+
+/* premium card polish */
+body.coiriva-template-index .coiriva-benefits__card,
+body.coiriva-template-index .coiriva-review-card,
+body.coiriva-template-index .coiriva-expand__panel,
+body.coiriva-template-index .icon-bar-card,
+body.coiriva-template-index .icon-bar__item {
+  border-radius: 22px;
+  box-shadow: 0 14px 38px rgba(31,77,50,.065);
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+body.coiriva-template-index .coiriva-benefits__card:hover,
+body.coiriva-template-index .coiriva-review-card:hover,
+body.coiriva-template-index .coiriva-expand__panel:hover,
+body.coiriva-template-index .icon-bar-card:hover,
+body.coiriva-template-index .icon-bar__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 54px rgba(31,77,50,.105);
+}
+
+body.coiriva-template-index .coiriva-benefits__icon {
+  width: 64px;
+  height: 64px;
+  font-size: 34px;
+  border-radius: 20px;
+}
+
+body.coiriva-template-index .coiriva-review-card__avatar {
+  width: 62px;
+  height: 62px;
+  font-size: 18px;
+}
+body.coiriva-template-index .coiriva-review-card__footer::before {
+  content: "Verified gardener";
+  font-weight: 900;
+  color: rgba(47,107,63,.78);
+}
+body.coiriva-template-index .coiriva-review-card__footer > span:first-child { display:none; }
+
+/* final CTA polish */
+body.coiriva-template-index .coiriva-final-cta::before { opacity: .14; }
+body.coiriva-template-index .coiriva-final-cta__heading {
+  max-width: 790px;
+  font-size: clamp(44px,5vw,78px);
+  line-height: .95;
+  letter-spacing: -.06em;
+}
+body.coiriva-template-index .coiriva-final-cta__button {
+  min-height: 60px;
+  padding-inline: 32px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 900;
+}
+body.coiriva-template-index .coiriva-final-cta__image-card {
+  width: min(100%, 460px);
+  border-radius: 30px;
+  box-shadow: 0 34px 88px rgba(0,0,0,.22);
+}
+body.coiriva-template-index .coiriva-final-cta__image {
+  filter: saturate(1.08) contrast(1.03) brightness(1.04);
+}
+
+/* Contact form polish */
+body.coiriva-template-index .contact .title,
+body.coiriva-template-index .contact h2,
+body.coiriva-template-index .contact-form h2 {
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+body.coiriva-template-index .contact .field__input,
+body.coiriva-template-index .contact textarea.field__input {
+  min-height: 58px;
+  border-radius: 12px;
+  border-color: rgba(47,107,63,.24);
+  background: rgba(255,255,255,.92);
+}
+body.coiriva-template-index .contact textarea.field__input { min-height: 140px; }
+body.coiriva-template-index .contact .button {
+  min-height: 58px;
+  border-radius: 12px;
+  font-weight: 900;
+}
+
+/* Header menu: compact US DTC style, avoids wrapping on desktop */
+@media screen and (min-width: 990px) {
+  .header__inline-menu .list-menu--inline {
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+  .header__menu-item--main {
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    font-size: 14px !important;
+    font-weight: 650;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  body.coiriva-template-index .coiriva-hero-premium .banner__heading,
+  body.coiriva-template-index .coiriva-hero-premium h2.banner__heading {
+    max-width: 560px;
+    font-size: clamp(42px, 9vw, 64px) !important;
+  }
+  body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons .button {
+    min-height: 56px !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  body.coiriva-template-index .coiriva-hero-premium .banner__heading,
+  body.coiriva-template-index .coiriva-hero-premium h2.banner__heading {
+    font-size: clamp(40px, 12vw, 56px) !important;
+    line-height: .95 !important;
+  }
+  body.coiriva-template-index .coiriva-hero-premium .banner__text {
+    font-size: 16px;
+  }
+  body.coiriva-template-index .coiriva-hero-premium .coiriva-hero__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body.coiriva-template-index .coiriva-final-cta__heading {
+    font-size: clamp(38px, 11vw, 56px);
+  }
+}
