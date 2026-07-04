@@ -36,14 +36,15 @@
       </div>
     </div>
 
-    <div class="coiriva-final-cta__visual" aria-hidden="true">
-      <div class="coiriva-final-cta__orb coiriva-final-cta__orb--one"></div>
-      <div class="coiriva-final-cta__orb coiriva-final-cta__orb--two"></div>
-      <div class="coiriva-final-cta__card">
-        <span class="coiriva-final-cta__card-icon">🌿</span>
-        <strong>{{ section.settings.visual_title | escape }}</strong>
-        <small>{{ section.settings.visual_text | escape }}</small>
-      </div>
+    <div class="coiriva-final-cta__visual coiriva-final-cta__visual--photo">
+      <img
+        src="{{ 'cocogrows-lifestyle-cta.webp' | asset_url }}"
+        alt="Healthy garden plants with expanded coco coir and coco coir brick"
+        loading="lazy"
+        decoding="async"
+        width="514"
+        height="416"
+      >
     </div>
   </div>
 </section>

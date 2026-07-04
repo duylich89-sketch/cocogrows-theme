@@ -1,0 +1,46 @@
+{{ 'coiriva-product-image-pack.css' | asset_url | stylesheet_tag }}
+
+<section class="coiriva-product-pack" aria-labelledby="coiriva-product-pack-title-{{ section.id }}">
+  <div class="coiriva-product-pack__inner page-width">
+    <div class="coiriva-product-pack__header">
+      <p class="coiriva-product-pack__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2 id="coiriva-product-pack-title-{{ section.id }}" class="coiriva-product-pack__title">{{ section.settings.heading | escape }}</h2>
+      <p class="coiriva-product-pack__text">{{ section.settings.subheading | escape }}</p>
+    </div>
+
+    <div class="coiriva-product-pack__grid">
+      <figure class="coiriva-product-pack__item coiriva-product-pack__item--wide">
+        <img src="{{ 'cocogrows-how-it-works.webp' | asset_url }}" alt="How coco coir works in four simple steps: place the brick, add water, watch it expand, start planting" loading="lazy" decoding="async" width="514" height="514">
+        <figcaption>Hydrate, expand, plant.</figcaption>
+      </figure>
+      <figure class="coiriva-product-pack__item">
+        <img src="{{ 'cocogrows-lifestyle-trust.webp' | asset_url }}" alt="Home gardener using coco coir for healthy plants" loading="lazy" decoding="async" width="512" height="416">
+        <figcaption>Trusted by home gardeners.</figcaption>
+      </figure>
+      <figure class="coiriva-product-pack__item">
+        <img src="{{ 'cocogrows-macro-texture.webp' | asset_url }}" alt="Close-up macro texture of expanded coco coir fibers" loading="lazy" decoding="async" width="348" height="416">
+        <figcaption>Light, airy texture.</figcaption>
+      </figure>
+      <figure class="coiriva-product-pack__item coiriva-product-pack__item--wide">
+        <img src="{{ 'cocogrows-product-package.webp' | asset_url }}" alt="Coco coir brick package with compact brick and expanded coco coir" loading="lazy" decoding="async" width="370" height="416">
+        <figcaption>Compact to store. Easy to use.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Coiriva product image pack",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "See the product in action" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "From Compact Brick To Garden-Ready Coir" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "A simple, natural way to create a clean growing medium for pots, seedlings, herbs, raised beds and everyday garden projects." }
+  ],
+  "presets": [
+    { "name": "Coiriva product image pack" }
+  ]
+}
+{% endschema %}

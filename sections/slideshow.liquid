@@ -182,21 +182,16 @@
             {% endif %}
           {%- else -%}
             {%- if section.index == 1 and request.page_type == 'index' -%}
-              <div class="coiriva-hero-visual" role="img" aria-label="Coconut coir brick expanding into rich coco coir with healthy green plants">
-                <div class="coiriva-hero-visual__glow"></div>
-                <div class="coiriva-hero-visual__plant coiriva-hero-visual__plant--back">🌿</div>
-                <div class="coiriva-hero-visual__coir coiriva-hero-visual__coir--expanded">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <div class="coiriva-hero-visual__brick">
-                  <span class="coiriva-hero-visual__brick-line"></span>
-                  <span class="coiriva-hero-visual__brick-line"></span>
-                  <span class="coiriva-hero-visual__brick-line"></span>
-                </div>
-                <div class="coiriva-hero-visual__pot">
-                  <div class="coiriva-hero-visual__sprout">🌱</div>
-                </div>
-                <div class="coiriva-hero-visual__label">Expands 8–10×</div>
+              <div class="coiriva-hero-visual coiriva-hero-visual--photo" role="img" aria-label="Premium coco coir brick, expanded coco coir and coconut for home gardening">
+                <img
+                  src="{{ 'cocogrows-home-hero.webp' | asset_url }}"
+                  alt="Premium coco coir brick with expanded coco coir and coconut for home gardening"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  width="497"
+                  height="514"
+                >
               </div>
             {%- else -%}
               {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -221,7 +216,7 @@
                   {% if block.settings.link %}
                     href="{{ block.settings.link }}"
                   {% else %}
-                    role="link" aria-disabled="true"
+                    href="/products/premium-organic-coco-coir-growing-medium"
                   {% endif %}
                   class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
                 >
