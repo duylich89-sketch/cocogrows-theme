@@ -1,0 +1,39 @@
+/* Coiriva Ultimate v2.5.5 — Hero Performance Engine
+   Locks product hero dimensions and protects LCP/CLS without changing visual design. */
+
+.template-product media-gallery.coiriva-gallery-performance .product-media-container[data-coiriva-lcp-hero='true'] {
+  content-visibility: visible;
+  contain-intrinsic-size: auto 720px;
+}
+
+.template-product media-gallery.coiriva-gallery-performance .product-media-container {
+  aspect-ratio: var(--preview-ratio, 1 / 1);
+}
+
+.template-product media-gallery.coiriva-gallery-performance .product__media,
+.template-product media-gallery.coiriva-gallery-performance .product__modal-opener,
+.template-product media-gallery.coiriva-gallery-performance .product__media img {
+  width: 100%;
+}
+
+.template-product media-gallery.coiriva-gallery-performance .product__media img {
+  height: auto;
+  display: block;
+}
+
+.template-product media-gallery.coiriva-gallery-performance .product__media-item:not(.is-active) img[loading='lazy'] {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
+
+@media screen and (min-width: 990px) {
+  .template-product media-gallery.coiriva-gallery-performance .product-media-container[data-coiriva-lcp-hero='true'] {
+    min-height: clamp(480px, 54vw, 760px);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template-product media-gallery.coiriva-gallery-performance .product-media-container[data-coiriva-lcp-hero='true'] {
+    min-height: min(92vw, 560px);
+  }
+}

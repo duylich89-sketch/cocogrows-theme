@@ -37,8 +37,8 @@
       [activeIndex + 1, activeIndex + 2].forEach(function (i) {
         var img = slides[i] && slides[i].querySelector('img[loading="lazy"]');
         if (!img) return;
-        img.setAttribute('loading', 'eager');
-        if (img.decode) img.decode().catch(function () {});
+        img.setAttribute('fetchpriority', 'low');
+        if (img.complete && img.decode) img.decode().catch(function () {});
       });
     }
 

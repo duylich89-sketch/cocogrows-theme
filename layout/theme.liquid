@@ -416,24 +416,15 @@
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'coiriva-sprint4-micro2.css' | asset_url | stylesheet_tag }}
 
-    {%- if request.page_type == 'product' and product.featured_image -%}
-      <link
-        rel="preload"
-        as="image"
-        href="{{ product.featured_image | image_url: width: 1200 }}"
-        imagesrcset="{{ product.featured_image | image_url: width: 600 }} 600w, {{ product.featured_image | image_url: width: 900 }} 900w, {{ product.featured_image | image_url: width: 1200 }} 1200w, {{ product.featured_image | image_url: width: 1600 }} 1600w"
-        imagesizes="(min-width: 990px) 55vw, 100vw"
-        fetchpriority="high"
-      >
-    {%- endif -%}
-
+    {%- comment -%} Coiriva v2.5.5 — preload only the real LCP product hero image. {%- endcomment -%}
     {%- if request.page_type == 'product' and product.featured_media.preview_image != blank -%}
+      {%- assign coiriva_lcp_image = product.selected_or_first_available_variant.featured_media.preview_image | default: product.featured_media.preview_image -%}
       <link
         rel="preload"
         as="image"
-        href="{{ product.featured_media.preview_image | image_url: width: 1200 }}"
-        imagesrcset="{{ product.featured_media.preview_image | image_url: width: 600 }} 600w, {{ product.featured_media.preview_image | image_url: width: 900 }} 900w, {{ product.featured_media.preview_image | image_url: width: 1200 }} 1200w, {{ product.featured_media.preview_image | image_url: width: 1600 }} 1600w"
-        imagesizes="(min-width: 990px) 58vw, 100vw"
+        href="{{ coiriva_lcp_image | image_url: width: 1200 }}"
+        imagesrcset="{{ coiriva_lcp_image | image_url: width: 480 }} 480w, {{ coiriva_lcp_image | image_url: width: 720 }} 720w, {{ coiriva_lcp_image | image_url: width: 960 }} 960w, {{ coiriva_lcp_image | image_url: width: 1200 }} 1200w, {{ coiriva_lcp_image | image_url: width: 1600 }} 1600w, {{ coiriva_lcp_image | image_url: width: 2000 }} 2000w"
+        imagesizes="(min-width: 1200px) 58vw, (min-width: 990px) 55vw, 100vw"
         fetchpriority="high"
       >
     {%- endif -%}
@@ -468,6 +459,7 @@
   {{ 'coiriva-product-buybox.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-gallery.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-gallery-performance.css' | asset_url | stylesheet_tag }}
+  {{ 'coiriva-hero-performance.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-gallery-pro.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-gallery-motion.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-buybox-pro.css' | asset_url | stylesheet_tag }}
