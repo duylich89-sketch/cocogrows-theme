@@ -15,3 +15,149 @@
 .footer .copyright__content{color:rgba(31,42,34,.66);font-weight:600}
 @media screen and (max-width:989px){.cocogrows-footer-nav__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cocogrows-footer-trust{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media screen and (max-width:549px){.cocogrows-footer-nav{padding-top:2rem}.cocogrows-footer-nav__grid{grid-template-columns:1fr;gap:1.7rem}.cocogrows-footer-nav__heading{margin-bottom:.75rem}.cocogrows-footer-nav__list{gap:.62rem}.cocogrows-footer-trust{grid-template-columns:1fr;padding:.85rem;border-radius:18px}.cocogrows-footer-trust span{justify-content:flex-start;padding:0 1rem}.footer .footer__content-bottom-wrapper{gap:.6rem;text-align:center}.footer .footer__payment .list-payment{justify-content:center}}
+
+/* v2.7.5 – Premium Footer Typography Polish */
+.footer.coiriva-footer-upgraded {
+  --cocogrows-footer-green: #2f6b3f;
+  --cocogrows-footer-text: rgba(31, 42, 34, .80);
+}
+
+.cocogrows-footer-nav {
+  padding-top: clamp(3rem, 5vw, 5.25rem);
+  margin-bottom: 2.35rem;
+}
+
+.cocogrows-footer-nav__grid {
+  gap: clamp(2.25rem, 5vw, 6rem);
+}
+
+.cocogrows-footer-nav__heading {
+  margin-bottom: 1.25rem;
+  color: var(--cocogrows-footer-green);
+  font-size: clamp(.86rem, .95vw, .98rem);
+  font-weight: 900;
+  letter-spacing: .16em;
+  line-height: 1.2;
+}
+
+.cocogrows-footer-nav__list {
+  gap: 1rem;
+}
+
+.cocogrows-footer-nav__list a {
+  color: var(--cocogrows-footer-text);
+  font-size: clamp(1.05rem, 1.12vw, 1.18rem);
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: .01em;
+  text-underline-offset: .18em;
+}
+
+.cocogrows-footer-nav__list a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cocogrows-footer-nav__column--connect .cocogrows-footer-nav__list a[href^="mailto:"] {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .1rem;
+  font-size: clamp(1.08rem, 1.16vw, 1.22rem);
+  font-weight: 850;
+}
+
+.cocogrows-footer-nav__column--connect .cocogrows-footer-nav__list a[href^="mailto:"]::before {
+  content: "✉";
+  font-size: .95em;
+}
+
+.cocogrows-footer-trust {
+  gap: .9rem;
+  margin-top: clamp(2.4rem, 4vw, 3.4rem);
+  padding: 1.08rem;
+  border-radius: 26px;
+}
+
+.cocogrows-footer-trust span {
+  min-height: 58px;
+  gap: .62rem;
+  font-size: clamp(1rem, 1.05vw, 1.12rem);
+  font-weight: 850;
+}
+
+.footer .footer__payment {
+  margin-top: .4rem;
+  margin-bottom: .45rem;
+}
+
+.footer .list-payment {
+  gap: .72rem;
+}
+
+.footer .list-payment__item .icon {
+  width: auto;
+  min-width: 42px;
+  height: 28px;
+}
+
+.footer .footer__copyright {
+  display: grid;
+  gap: .45rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer .copyright__content {
+  color: rgba(31,42,34,.70);
+  font-size: clamp(.98rem, 1vw, 1.06rem);
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: .01em;
+}
+
+.footer .footer__content-bottom-wrapper {
+  padding-top: 1.45rem;
+  padding-bottom: 1.45rem;
+}
+
+@media screen and (max-width: 989px) {
+  .cocogrows-footer-nav__grid {
+    gap: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .cocogrows-footer-nav {
+    padding-top: 2.35rem;
+  }
+
+  .cocogrows-footer-nav__heading {
+    margin-bottom: .72rem;
+    font-size: .88rem;
+  }
+
+  .cocogrows-footer-nav__list {
+    gap: .66rem;
+  }
+
+  .cocogrows-footer-nav__list a {
+    font-size: 1.03rem;
+    line-height: 1.45;
+  }
+
+  .cocogrows-footer-trust {
+    gap: .7rem;
+  }
+
+  .cocogrows-footer-trust span {
+    min-height: 52px;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .footer .list-payment__item .icon {
+    min-width: 38px;
+    height: 26px;
+  }
+}
