@@ -1,0 +1,71 @@
+/*
+  Cocogrows / Coiriva Ultimate
+  v3.1.3 SAFE REBUILD — UI Premium Polish
+  Rebuilt from stable v3.1.2. Surgical CSS only; no cart, bundle, quantity, or layout logic changes.
+*/
+
+/* Before / After readability fix */
+.coiriva-before-after__content h3,
+.coiriva-before-after__content .h2,
+.coiriva-before-after__content .title{
+  color:#ffffff !important;
+  opacity:1 !important;
+  text-shadow:0 2px 10px rgba(0,0,0,.16);
+}
+.coiriva-before-after__content p{
+  color:rgba(255,255,255,.86) !important;
+}
+.coiriva-mini-stats span{
+  color:#ffffff !important;
+  background:rgba(255,255,255,.14) !important;
+}
+.coiriva-ba-arrow{
+  color:#f0c66a !important;
+}
+
+/* CTA dark block readability */
+.coiriva-story-cta h3,
+.coiriva-story-cta .h2,
+.coiriva-story-cta .title{
+  color:#ffffff !important;
+  opacity:1 !important;
+}
+.coiriva-story-cta p{
+  color:rgba(255,255,255,.86) !important;
+}
+
+/* Product accordion icon guard: prevents invalid icon text from becoming oversized */
+.product__accordion .summary__title .material-icon{
+  flex:0 0 auto !important;
+  width:24px !important;
+  height:24px !important;
+  min-width:24px !important;
+  max-width:24px !important;
+  overflow:hidden !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:22px !important;
+  line-height:1 !important;
+  color:#173f35 !important;
+}
+.product__accordion .summary__title{
+  align-items:center !important;
+  gap:12px !important;
+}
+.product__accordion .accordion__title{
+  line-height:1.2 !important;
+}
+
+/* Keep sticky ATC readable without changing its logic */
+.coiriva-sticky-atc-pro__product strong{
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+}
+@media screen and (max-width:749px){
+  .coiriva-sticky-atc-pro__product strong{
+    display:-webkit-box !important;
+    -webkit-line-clamp:1 !important;
+    -webkit-box-orient:vertical !important;
+  }
+}
