@@ -3001,6 +3001,32 @@
         "id": "trust_guarantee_text",
         "label": "Guarantee text",
         "default": "Love it or we'll make it right."
+      },
+      {
+        "type": "header",
+        "content": "Premium design"
+      },
+      {
+        "type": "color",
+        "id": "trust_primary_color",
+        "label": "Primary trust color",
+        "default": "#2f6b4f"
+      },
+      {
+        "type": "color",
+        "id": "trust_background_color",
+        "label": "Card background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "trust_corner_radius",
+        "min": 8,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "Corner radius",
+        "default": 14
       }
     ]
   }

@@ -1,4 +1,9 @@
-<div class="coiriva-trust" data-coiriva-trust data-animate="true">
+{% liquid
+  assign trust_primary = settings.trust_primary_color | default: '#2f6b4f'
+  assign trust_background = settings.trust_background_color | default: '#ffffff'
+  assign trust_radius = settings.trust_corner_radius | default: 14
+%}
+<div class="coiriva-trust" data-coiriva-trust data-animate="true" style="--coiriva-trust-primary: {{ trust_primary }}; --coiriva-trust-bg: {{ trust_background }}; --coiriva-trust-radius: {{ trust_radius }}px;">
   {% render 'coiriva-trust-strip' %}
   {% render 'coiriva-trust-microcopy' %}
   {% render 'coiriva-payment-confidence' %}
