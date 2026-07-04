@@ -17,13 +17,13 @@
 
       <div class="coiriva-final-cta__actions">
         {% if section.settings.primary_label != blank %}
-          <a class="coiriva-final-cta__button coiriva-final-cta__button--primary" href="{{ section.settings.primary_link | default: routes.all_products_collection_url }}">
+          <a class="coiriva-final-cta__button coiriva-final-cta__button--primary coiriva-cta-link coiriva-cta-link--shop" href="/products/premium-organic-coconut-coir-bricks-for-plants" data-coiriva-cta="shop">
             {{ section.settings.primary_label | escape }}
           </a>
         {% endif %}
 
         {% if section.settings.secondary_label != blank %}
-          <a class="coiriva-final-cta__button coiriva-final-cta__button--secondary" href="{{ section.settings.secondary_link | default: '#MainContent' }}">
+          <a class="coiriva-final-cta__button coiriva-final-cta__button--secondary coiriva-cta-link coiriva-cta-link--how" href="#coiriva-how-it-works" data-coiriva-cta="how">
             {{ section.settings.secondary_label | escape }}
           </a>
         {% endif %}

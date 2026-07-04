@@ -202,3 +202,70 @@ h1.title::after {
   opacity: 1 !important;
   pointer-events: auto !important;
 }
+
+
+/* v2.7.7 Restore Homepage CTA Link + Visibility Hotfix */
+body.coiriva-template-index .coiriva-cta-link,
+body.template-index .coiriva-cta-link,
+.template-index .coiriva-cta-link,
+.coiriva-cta-link {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  user-select: none;
+  position: relative !important;
+  z-index: 999 !important;
+  text-decoration: none !important;
+}
+body.coiriva-template-index .coiriva-cta-link[aria-disabled='true'],
+body.template-index .coiriva-cta-link[aria-disabled='true'],
+.coiriva-cta-link[aria-disabled='true'] {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+body.coiriva-template-index .coiriva-hero-premium .coiriva-cta-link--shop,
+body.template-index .coiriva-hero-premium .coiriva-cta-link--shop,
+.coiriva-hero-premium .coiriva-cta-link--shop {
+  background: linear-gradient(135deg,#e5c38b 0%,#d89a3d 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(47,107,63,.62) !important;
+  box-shadow: 0 14px 34px rgba(216,154,61,.28) !important;
+}
+body.coiriva-template-index .coiriva-hero-premium .coiriva-cta-link--how,
+body.template-index .coiriva-hero-premium .coiriva-cta-link--how,
+.coiriva-hero-premium .coiriva-cta-link--how {
+  background: #ffffff !important;
+  color: #17472d !important;
+  border: 2px solid #2f6b3f !important;
+  box-shadow: 0 14px 34px rgba(31,77,50,.12) !important;
+}
+body.coiriva-template-index .coiriva-final-cta__button,
+body.template-index .coiriva-final-cta__button,
+.coiriva-final-cta__button {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  color: #ffffff !important;
+}
+body.coiriva-template-index .coiriva-final-cta__button--primary,
+body.template-index .coiriva-final-cta__button--primary,
+.coiriva-final-cta__button--primary {
+  background: linear-gradient(135deg,#e5c38b 0%,#d89a3d 100%) !important;
+  border: 0 !important;
+}
+body.coiriva-template-index .coiriva-final-cta__button--secondary,
+body.template-index .coiriva-final-cta__button--secondary,
+.coiriva-final-cta__button--secondary {
+  background: rgba(255,255,255,.14) !important;
+  border: 1px solid rgba(255,255,255,.42) !important;
+}
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media,
+body.coiriva-template-index .coiriva-hero-premium .slideshow__media *,
+body.coiriva-template-index .coiriva-final-cta__visual,
+body.coiriva-template-index .coiriva-final-cta__visual *,
+body.template-index .coiriva-hero-premium .slideshow__media,
+body.template-index .coiriva-hero-premium .slideshow__media *,
+body.template-index .coiriva-final-cta__visual,
+body.template-index .coiriva-final-cta__visual * {
+  pointer-events: none !important;
+}

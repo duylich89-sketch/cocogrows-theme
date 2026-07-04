@@ -675,5 +675,32 @@
       <script src="{{ 'coiriva-mobile-cro.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'coiriva-luxury-polish.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+<script>
+  (function(){
+    var productUrl = '/products/premium-organic-coconut-coir-bricks-for-plants';
+    function scrollHow(){
+      var target = document.getElementById('coiriva-how-it-works');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (history && history.replaceState) history.replaceState(null, '', '#coiriva-how-it-works');
+      }
+    }
+    document.addEventListener('click', function(event){
+      var link = event.target.closest && event.target.closest('[data-coiriva-cta]');
+      if (!link) return;
+      var action = link.getAttribute('data-coiriva-cta');
+      if (action === 'how') {
+        event.preventDefault();
+        scrollHow();
+        return;
+      }
+      if (action === 'shop') {
+        event.preventDefault();
+        window.location.href = link.getAttribute('href') || productUrl;
+      }
+    }, true);
+  })();
+</script>
 </body>
 </html>

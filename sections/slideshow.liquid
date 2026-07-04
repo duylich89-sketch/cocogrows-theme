@@ -214,17 +214,14 @@
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons{% if section.index == 1 and request.page_type == 'index' %} coiriva-hero__buttons{% endif %}">
                 <a
-                  {% if block.settings.link %}
-                    href="{{ block.settings.link }}"
-                  {% else %}
-                    role="link" aria-disabled="true"
-                  {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                  href="{% if section.index == 1 and request.page_type == 'index' %}/products/premium-organic-coconut-coir-bricks-for-plants{% elsif block.settings.link != blank %}{{ block.settings.link }}{% else %}{{ routes.all_products_collection_url }}{% endif %}"
+                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}{% if section.index == 1 and request.page_type == 'index' %} coiriva-cta-link coiriva-cta-link--shop{% endif %}"
+                  {% if section.index == 1 and request.page_type == 'index' %}data-coiriva-cta="shop"{% endif %}
                 >
                   {{- block.settings.button_label -}}
                 </a>
                 {%- if section.index == 1 and request.page_type == 'index' -%}
-                  <a href="#coiriva-how-it-works" class="button button--secondary coiriva-hero__secondary">
+                  <a href="#coiriva-how-it-works" class="button button--secondary coiriva-hero__secondary coiriva-cta-link coiriva-cta-link--how" data-coiriva-cta="how">
                     Watch It Expand
                   </a>
                 {%- endif -%}
