@@ -181,7 +181,26 @@
               }}
             {% endif %}
           {%- else -%}
-            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- if section.index == 1 and request.page_type == 'index' -%}
+              <div class="coiriva-hero-visual" role="img" aria-label="Coconut coir brick expanding into rich coco coir with healthy green plants">
+                <div class="coiriva-hero-visual__glow"></div>
+                <div class="coiriva-hero-visual__plant coiriva-hero-visual__plant--back">🌿</div>
+                <div class="coiriva-hero-visual__coir coiriva-hero-visual__coir--expanded">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="coiriva-hero-visual__brick">
+                  <span class="coiriva-hero-visual__brick-line"></span>
+                  <span class="coiriva-hero-visual__brick-line"></span>
+                  <span class="coiriva-hero-visual__brick-line"></span>
+                </div>
+                <div class="coiriva-hero-visual__pot">
+                  <div class="coiriva-hero-visual__sprout">🌱</div>
+                </div>
+                <div class="coiriva-hero-visual__label">Expands 8–10×</div>
+              </div>
+            {%- else -%}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% unless block.settings.heading != blank or block.settings.subheading != blank or block.settings.button_label != blank or block.settings.atc_button_label != blank %} hidden{% endunless %}">

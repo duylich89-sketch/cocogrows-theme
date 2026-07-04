@@ -316,6 +316,69 @@
         "subheading": "Coiriva makes it easy to turn one compact coconut coir brick into a clean, airy growing medium your plants will love.",
         "show_before_after": true
       }
+    },
+    "coiriva-reviews-final-a-task2": {
+      "type": "coiriva-reviews",
+      "blocks": {
+        "review-sarah": {
+          "type": "review",
+          "settings": {
+            "initials": "SM",
+            "name": "Sarah M.",
+            "location": "Austin, TX",
+            "title": "My seedlings finally stayed hydrated.",
+            "text": "The coir expanded quickly and gave my plants a clean, fluffy growing mix. It holds moisture without feeling heavy."
+          }
+        },
+        "review-david": {
+          "type": "review",
+          "settings": {
+            "initials": "DR",
+            "name": "David R.",
+            "location": "Phoenix, AZ",
+            "title": "Easy to store, easy to use.",
+            "text": "I like that the bricks are compact until I need them. Add water, wait a few minutes, and I have plenty of growing medium."
+          }
+        },
+        "review-karen": {
+          "type": "review",
+          "settings": {
+            "initials": "KL",
+            "name": "Karen L.",
+            "location": "Tampa, FL",
+            "title": "Great for container gardening.",
+            "text": "The texture is light and airy, and my patio plants seem happier. It mixes well with my usual potting soil."
+          }
+        }
+      },
+      "block_order": [
+        "review-sarah",
+        "review-david",
+        "review-karen"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "eyebrow": "Loved by home gardeners",
+        "heading": "Gardeners Are Growing Better With Coiriva",
+        "subheading": "A cleaner, lighter growing medium for home gardens, raised beds, containers, and everyday planting projects.",
+        "rating_text": "4.9/5 average rating",
+        "trust_text": "Trusted by gardeners across the USA"
+      }
+    },
+    "coiriva-final-cta-final-a-task3": {
+      "type": "coiriva-final-cta",
+      "settings": {
+        "color_scheme": "background-1",
+        "eyebrow": "Ready to grow better?",
+        "heading": "Start With Better Coco Coir Today.",
+        "subheading": "Turn compact coconut coir bricks into a clean, airy growing medium made for healthier roots, better moisture, and easier gardening.",
+        "primary_label": "Shop Coco Coir",
+        "primary_link": "",
+        "secondary_label": "See How It Works",
+        "secondary_link": "",
+        "visual_title": "Garden-ready in minutes",
+        "visual_text": "Hydrate, expand, plant."
+      }
     }
   },
   "order": [
@@ -324,6 +387,8 @@
     "coiriva-how-it-works-epic13",
     "6aa09428-a417-429d-9159-a4e8afd49590",
     "0f1fc9e4-bc4c-4052-9747-62d1f8472caa",
+    "coiriva-reviews-final-a-task2",
+    "coiriva-final-cta-final-a-task3",
     "ee8d9ca6-4a41-401f-83a3-37e138a112b9"
   ]
 }

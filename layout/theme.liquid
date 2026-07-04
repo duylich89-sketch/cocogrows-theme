@@ -452,6 +452,8 @@
   {{ 'coiriva-tokens.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-epic11-hero.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-epic14-homepage-polish.css' | asset_url | stylesheet_tag }}
+  {{ 'coiriva-homepage-final-a.css' | asset_url | stylesheet_tag }}
+  {{ 'coiriva-footer-premium.css' | asset_url | stylesheet_tag }}
 </head>
 
   <!-- Coiriva Ultimate Epic 1.1: Hero Premium -->
@@ -621,9 +623,7 @@
         })
       </script>
     {% endif %}
-    <div class="coiriva-sprint4-marker">EPIC 1.4 · HOMEPAGE POLISH</div>
-
-    <script>
+<script>
       (function() {
         var isIndex = document.body && document.body.classList.contains('coiriva-template-index');
         if (!isIndex) return;

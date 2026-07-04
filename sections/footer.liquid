@@ -45,7 +45,7 @@
   {% endif %}
 {%- endstyle -%}
 
-<footer class="footer color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding animate-section animate--hidden" data-animations='{{ section.settings.display_animations }}' data-type='{{ settings.animations_type }}'> 
+<footer class="footer coiriva-footer-upgraded color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding animate-section animate--hidden" data-animations='{{ section.settings.display_animations }}' data-type='{{ settings.animations_type }}'> 
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -60,7 +60,31 @@
       assign only_empty_brand = true
     endif
   -%}
-  {%- if section.blocks.size > 0
+  
+  <div class="coiriva-footer-premium page-width" aria-label="Coiriva premium footer callout">
+    <div class="coiriva-footer-premium__grid">
+      <div>
+        <p class="coiriva-footer-premium__eyebrow">🌿 Coiriva Garden Club</p>
+        <h2 class="coiriva-footer-premium__title">Grow healthier plants from the ground up.</h2>
+        <p class="coiriva-footer-premium__text">Premium coconut coir bricks made for cleaner potting mixes, stronger roots, and easier everyday gardening.</p>
+        <div class="coiriva-footer-premium__actions">
+          <a class="coiriva-footer-premium__button coiriva-footer-premium__button--primary" href="/collections/all">Shop Coco Coir</a>
+          <a class="coiriva-footer-premium__button coiriva-footer-premium__button--secondary" href="/pages/contact">Ask a Garden Question</a>
+        </div>
+      </div>
+      <div class="coiriva-footer-premium__panel">
+        <p class="coiriva-footer-premium__panel-title">Why gardeners come back</p>
+        <div class="coiriva-footer-premium__chips">
+          <span class="coiriva-footer-premium__chip">🚚 Fast US Shipping</span>
+          <span class="coiriva-footer-premium__chip">🌱 Expands 8–10×</span>
+          <span class="coiriva-footer-premium__chip">🛡️ 60-Day Guarantee</span>
+          <span class="coiriva-footer-premium__chip">🔒 Secure Checkout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%- if section.blocks.size > 0
     or section.settings.newsletter_enable
     or section.settings.show_social
     or section.settings.enable_follow_on_shop

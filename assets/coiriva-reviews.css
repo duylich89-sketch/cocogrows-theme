@@ -1,0 +1,224 @@
+.coiriva-reviews {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(56px, 7vw, 96px) 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(47, 107, 63, 0.10), transparent 28%),
+    linear-gradient(180deg, rgba(250, 247, 239, 0.9), rgba(255,255,255,0.96));
+}
+
+.coiriva-reviews__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.coiriva-reviews__header {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.coiriva-reviews__eyebrow {
+  margin: 0 0 10px;
+  color: var(--color-primary, #2f6b3f);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.coiriva-reviews__heading {
+  margin: 0;
+  color: var(--color-text, #1f2a22);
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  line-height: .98;
+  letter-spacing: -0.045em;
+}
+
+.coiriva-reviews__subheading {
+  max-width: 660px;
+  margin: 18px auto 0;
+  color: rgba(31, 42, 34, 0.72);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.65;
+}
+
+.coiriva-reviews__summary {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 34px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 1px solid rgba(47, 107, 63, 0.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 10px 30px rgba(31, 42, 34, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.coiriva-reviews__score {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.coiriva-reviews__stars,
+.coiriva-review-card__stars {
+  color: var(--color-cta, #d89a3d);
+  letter-spacing: .05em;
+  line-height: 1;
+}
+
+.coiriva-reviews__summary p {
+  margin: 0;
+  color: rgba(31, 42, 34, 0.7);
+  font-size: .93rem;
+}
+
+.coiriva-reviews__divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(31, 42, 34, 0.16);
+}
+
+.coiriva-reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.coiriva-review-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: clamp(22px, 2.6vw, 30px);
+  border: 1px solid rgba(47, 107, 63, 0.12);
+  border-radius: var(--radius-card, 18px);
+  background: rgba(255,255,255,0.92);
+  box-shadow: var(--shadow-card, 0 8px 24px rgba(0,0,0,.06));
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.coiriva-review-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(216, 154, 61, 0.28);
+  box-shadow: var(--shadow-hover, 0 16px 40px rgba(0,0,0,.12));
+}
+
+.coiriva-review-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.coiriva-review-card__avatar {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--color-primary, #2f6b3f), var(--color-brown, #8b5e3c));
+  box-shadow: 0 12px 28px rgba(47, 107, 63, 0.18);
+}
+
+.coiriva-review-card__name,
+.coiriva-review-card__location,
+.coiriva-review-card__title,
+.coiriva-review-card__text {
+  margin: 0;
+}
+
+.coiriva-review-card__name {
+  margin-top: 5px;
+  color: var(--color-text, #1f2a22);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.coiriva-review-card__location {
+  margin-top: 2px;
+  color: rgba(31, 42, 34, 0.58);
+  font-size: .88rem;
+}
+
+.coiriva-review-card__title {
+  color: var(--color-text, #1f2a22);
+  font-size: clamp(1.08rem, 1.45vw, 1.28rem);
+  line-height: 1.22;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.coiriva-review-card__text {
+  margin-top: 12px;
+  color: rgba(31, 42, 34, 0.72);
+  line-height: 1.65;
+}
+
+.coiriva-review-card__footer {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(31, 42, 34, 0.68);
+  font-size: .88rem;
+  font-weight: 800;
+}
+
+.coiriva-review-card__check {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-primary, #2f6b3f);
+}
+
+@media screen and (max-width: 989px) {
+  .coiriva-reviews__grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .coiriva-reviews__summary {
+    width: 100%;
+    max-width: 680px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .coiriva-reviews {
+    padding: 44px 0 56px;
+  }
+
+  .coiriva-reviews__header {
+    text-align: left;
+    margin-bottom: 22px;
+  }
+
+  .coiriva-reviews__summary {
+    align-items: flex-start;
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .coiriva-reviews__divider {
+    display: none;
+  }
+
+  .coiriva-review-card {
+    padding: 22px;
+  }
+}

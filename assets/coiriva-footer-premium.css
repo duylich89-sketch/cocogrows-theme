@@ -1,0 +1,192 @@
+
+/* Coiriva Homepage Final A - Task 4: Footer Premium */
+.coiriva-footer-premium {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 2.8rem;
+  padding: clamp(2.4rem, 4vw, 4rem);
+  border-radius: var(--coiriva-radius-section, 28px);
+  background:
+    radial-gradient(circle at top left, rgba(216, 154, 61, .18), transparent 34%),
+    linear-gradient(135deg, #1f4d32 0%, #2f6b3f 58%, #274f36 100%);
+  color: #fff;
+  box-shadow: 0 18px 50px rgba(31, 77, 50, .18);
+}
+
+.coiriva-footer-premium::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -40% auto;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  pointer-events: none;
+}
+
+.coiriva-footer-premium__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.coiriva-footer-premium__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0 0 1rem;
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+  color: #f8e4b9;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.coiriva-footer-premium__title {
+  max-width: 720px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+
+.coiriva-footer-premium__text {
+  max-width: 650px;
+  margin: 1.25rem 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.coiriva-footer-premium__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 1.75rem;
+}
+
+.coiriva-footer-premium__button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 1.35rem;
+  font-weight: 850;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.coiriva-footer-premium__button--primary {
+  background: var(--coiriva-color-cta, #d89a3d);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(216,154,61,.28);
+}
+
+.coiriva-footer-premium__button--secondary {
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+}
+
+.coiriva-footer-premium__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(0,0,0,.2);
+}
+
+.coiriva-footer-premium__panel {
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.1);
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+}
+
+.coiriva-footer-premium__panel-title {
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.coiriva-footer-premium__chips {
+  display: grid;
+  gap: .75rem;
+}
+
+.coiriva-footer-premium__chip {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .85rem .95rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+}
+
+.footer.coiriva-footer-upgraded,
+.footer {
+  background: linear-gradient(180deg, #f7f3ea 0%, #fff 100%);
+}
+
+.footer .footer-block__heading {
+  color: var(--coiriva-color-primary, #2f6b3f);
+  font-weight: 850;
+  letter-spacing: -.01em;
+}
+
+.footer .link--text,
+.footer .list-menu__item--link,
+.footer .rte {
+  color: rgba(31, 42, 34, .72);
+}
+
+.footer .link--text:hover,
+.footer .list-menu__item--link:hover {
+  color: var(--coiriva-color-primary, #2f6b3f);
+}
+
+.footer .newsletter-form .field,
+.footer .field__input {
+  border-radius: 999px !important;
+}
+
+.footer .newsletter__solid-btn,
+.footer .newsletter-form__button {
+  border-radius: 999px !important;
+  background: var(--coiriva-color-cta, #d89a3d) !important;
+  color: #fff !important;
+}
+
+.footer__content-bottom {
+  border-top: 1px solid rgba(47,107,63,.12);
+}
+
+@media screen and (max-width: 749px) {
+  .coiriva-footer-premium {
+    margin-bottom: 1.5rem;
+    padding: 2rem 1.35rem;
+    border-radius: 22px;
+  }
+  .coiriva-footer-premium__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .coiriva-footer-premium__title {
+    font-size: clamp(2.25rem, 12vw, 3.4rem);
+  }
+  .coiriva-footer-premium__actions {
+    display: grid;
+  }
+  .coiriva-footer-premium__button {
+    width: 100%;
+  }
+}
