@@ -135,3 +135,70 @@ h1.title::after {
   .title-wrapper .title::after,
   h1.title::after { width: 56px; height: 4px; }
 }
+
+/* v2.7.6 Homepage CTA Button Visibility + Click Hotfix */
+.template-index .coiriva-hero-premium .banner__content,
+.template-index .coiriva-hero-premium .banner__box,
+.template-index .coiriva-hero-premium .banner__buttons,
+.template-index .coiriva-hero-premium .coiriva-hero__buttons,
+.template-index .coiriva-final-cta__content,
+.template-index .coiriva-final-cta__actions {
+  position: relative !important;
+  z-index: 50 !important;
+  pointer-events: auto !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero-visual,
+.template-index .coiriva-hero-premium .coiriva-hero-visual *,
+.template-index .coiriva-final-cta__visual,
+.template-index .coiriva-final-cta__visual * {
+  pointer-events: none !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button,
+.template-index .coiriva-final-cta__button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 60 !important;
+  cursor: pointer !important;
+  min-height: 56px;
+  border-radius: 16px !important;
+  transform: translateZ(0);
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button::before,
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button::after,
+.template-index .coiriva-final-cta__button::before,
+.template-index .coiriva-final-cta__button::after {
+  pointer-events: none !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button--primary,
+.template-index .coiriva-final-cta__button--primary {
+  background: linear-gradient(135deg,#e7c48a 0%,#d89a3d 100%) !important;
+  color: #fff !important;
+  border: 2px solid rgba(47,107,63,.58) !important;
+  box-shadow: 0 14px 34px rgba(216,154,61,.25) !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button--secondary,
+.template-index .coiriva-final-cta__button--secondary {
+  background: #fff !important;
+  color: #17472d !important;
+  border: 2px solid #2f6b3f !important;
+  box-shadow: 0 14px 34px rgba(31,77,50,.12) !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button:hover,
+.template-index .coiriva-final-cta__button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 18px 42px rgba(31,77,50,.18) !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button:active,
+.template-index .coiriva-final-cta__button:active {
+  transform: translateY(0) !important;
+}
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button[aria-disabled='true'],
+.template-index .coiriva-hero-premium .coiriva-hero__buttons .button.disabled,
+.template-index .coiriva-final-cta__button[aria-disabled='true'],
+.template-index .coiriva-final-cta__button.disabled {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
