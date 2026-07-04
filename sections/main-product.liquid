@@ -116,10 +116,12 @@
             {%- when 'text' -%}
               {% render 'text-with-icon-block', block: block, margins: true, block_attributes: true %}
             {%- when 'title' -%}
-              <div class="product__title" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
-                <h1 class="{{ block.settings.text_size }}{% if block.settings.uppercase_title %} product-title--uppercase{% endif %}{% if block.settings.title_alignment == 'center' %} center{% endif %}">
-                  {{ product.title }}
+              <div class="product__title coiriva-product-title" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
+                <p class="coiriva-product-title__eyebrow">Premium Garden Growing Medium</p>
+                <h1 class="coiriva-product-title__heading {{ block.settings.text_size }}{% if block.settings.uppercase_title %} product-title--uppercase{% endif %}{% if block.settings.title_alignment == 'center' %} center{% endif %}">
+                  Premium Organic Coco Coir Bricks
                 </h1>
+                <p class="coiriva-product-title__subheading">Expands 8–10× Into Rich, Airy Growing Medium</p>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title }}
@@ -148,6 +150,32 @@
                   price_second: price_second,
                   main_price: true
                 -%}
+                {%- liquid
+                  assign coiriva_selected_variant = product.selected_or_first_available_variant
+                  assign coiriva_price = coiriva_selected_variant.price
+                  assign coiriva_compare = coiriva_selected_variant.compare_at_price
+                  assign coiriva_save_amount = 0
+                  if coiriva_compare > coiriva_price
+                    assign coiriva_save_amount = coiriva_compare | minus: coiriva_price
+                  endif
+                -%}
+                <div class="coiriva-price-module" aria-label="Current offer and availability">
+                  <div class="coiriva-price-module__badges">
+                    {%- if coiriva_save_amount > 0 -%}
+                      <span class="coiriva-price-chip coiriva-price-chip--save">Save {{ coiriva_save_amount | money_without_trailing_zeros }} Today</span>
+                      <span class="coiriva-price-chip coiriva-price-chip--offer">Limited-Time Offer</span>
+                    {%- endif -%}
+                    {%- if coiriva_selected_variant.available -%}
+                      <span class="coiriva-price-chip coiriva-price-chip--stock">● In Stock</span>
+                    {%- endif -%}
+                  </div>
+                  <div class="coiriva-price-module__trust">
+                    <span>🚚 Ships from USA</span>
+                    <span>🌱 100% Natural Coconut Coir</span>
+                    <span>🛡️ 60-Day Guarantee</span>
+                  </div>
+                </div>
+                {% render 'product-trust-bar' %}
               </div>
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}

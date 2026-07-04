@@ -111,7 +111,7 @@
               id="ProductSubmitButton-{{ section_id }}"
               type="submit"
               name="add"
-              class="atc-button product-form__submit button button--full-width button--margin-x{% if main_product %} main-product-atc{% else %} featured-product-atc-{{ section.id }}{% endif %}{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
+              class="atc-button coiriva-premium-atc product-form__submit button button--full-width button--margin-x{% if main_product %} main-product-atc{% else %} featured-product-atc-{{ section.id }}{% endif %}{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
               {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                 disabled
                 data-unavailable="true"
@@ -136,7 +136,7 @@
                     {% if block.settings.atc_custom_label != blank %}
                       {{ block.settings.atc_custom_label }}
                     {% else %}
-                      {{ 'products.product.add_to_cart' | t }}
+                      Add To Cart — Ships Today
                     {%- endif -%}
                   {%- endif -%}
                 </span>
@@ -183,6 +183,14 @@
           {%- if block.settings.show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
+          <div class="coiriva-payment-trust" aria-label="Secure payment methods">
+            <span>🔒 Secure Checkout</span>
+            <span>Visa</span>
+            <span>Mastercard</span>
+            <span>Amex</span>
+            <span>PayPal</span>
+            <span>Shop Pay</span>
+          </div>
         </div>
       {%- endform -%}
     </product-form>
