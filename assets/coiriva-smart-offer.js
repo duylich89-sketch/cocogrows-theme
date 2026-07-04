@@ -94,7 +94,7 @@
   function initOffer(root) {
     if (!root || root.dataset.coirivaSmartOfferReady === 'true') return;
     var scope = root.closest('[data-coiriva-buybox-pro]') || document;
-    var bundleRoot = scope.querySelector('[data-coiriva-smart-bundle]');
+    var bundleRoot = (scope.matches && scope.matches('[data-coiriva-smart-bundle]')) ? scope : scope.querySelector('[data-coiriva-smart-bundle]');
     if (!bundleRoot) return;
     root.dataset.coirivaSmartOfferReady = 'true';
 
