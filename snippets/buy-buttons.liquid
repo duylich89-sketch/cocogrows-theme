@@ -183,14 +183,7 @@
           {%- if block.settings.show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
-          <div class="coiriva-payment-trust" aria-label="Secure payment methods">
-            <span>🔒 Secure Checkout</span>
-            <span>Visa</span>
-            <span>Mastercard</span>
-            <span>Amex</span>
-            <span>PayPal</span>
-            <span>Shop Pay</span>
-          </div>
+          {%- comment -%}Coiriva v2.5.4 Final: legacy payment trust row removed. Payment confidence now lives in coiriva-trust-layer below the CTA.{%- endcomment -%}
         </div>
       {%- endform -%}
     </product-form>
