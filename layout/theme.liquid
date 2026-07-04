@@ -451,24 +451,31 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+  {%- comment -%} Coiriva v2.6.0 — load conversion CSS only where it is used. {%- endcomment -%}
   {{ 'coiriva-tokens.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-epic11-hero.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-epic14-homepage-polish.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-homepage-final-a.css' | asset_url | stylesheet_tag }}
   {{ 'coiriva-footer-premium.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-product-buybox.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-gallery.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-gallery-performance.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-hero-performance.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-gallery-pro.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-gallery-motion.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-buybox-pro.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-smart-bundle.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-progress-engine.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-smart-offer.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-trust.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-mobile-cro.css' | asset_url | stylesheet_tag }}
-  {{ 'coiriva-luxury-polish.css' | asset_url | stylesheet_tag }}
+
+  {%- if request.page_type == 'index' -%}
+    {{ 'coiriva-epic11-hero.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-epic14-homepage-polish.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-homepage-final-a.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
+
+  {%- if request.page_type == 'product' -%}
+    {{ 'coiriva-product-buybox.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-gallery.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-gallery-performance.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-hero-performance.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-gallery-pro.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-gallery-motion.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-buybox-pro.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-smart-bundle.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-progress-engine.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-smart-offer.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-trust.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-mobile-cro.css' | asset_url | stylesheet_tag }}
+    {{ 'coiriva-luxury-polish.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
 </head>
 
   <!-- Coiriva Ultimate Epic 1.1: Hero Premium -->
@@ -656,14 +663,17 @@
         }, { passive: true });
       })();
     </script>
-    <script src="{{ 'coiriva-gallery-performance.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-gallery-motion.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-buybox-pro.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-smart-bundle.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-progress-engine.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-smart-offer.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'coiriva-trust.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-mobile-cro.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'coiriva-luxury-polish.js' | asset_url }}" defer="defer"></script>
+    {%- comment -%} Coiriva v2.6.0 — product-only scripts stay off home/collection pages. {%- endcomment -%}
+    {%- if request.page_type == 'product' -%}
+      <script src="{{ 'coiriva-gallery-performance.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-gallery-motion.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-buybox-pro.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-smart-bundle.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-progress-engine.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-smart-offer.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-trust.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-mobile-cro.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'coiriva-luxury-polish.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
 </body>
 </html>
