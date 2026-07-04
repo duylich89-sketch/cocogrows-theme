@@ -2875,5 +2875,38 @@
         "default": 150
       }
     ]
+  },
+  {
+    "name": "Coiriva Smart Offer Engine",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Smart bundle recommendations"
+      },
+      {
+        "type": "checkbox",
+        "id": "coiriva_offer_enable",
+        "label": "Enable Smart Offer Engine",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "coiriva_offer_eyebrow",
+        "label": "Offer eyebrow",
+        "default": "Smart recommendation"
+      },
+      {
+        "type": "checkbox",
+        "id": "coiriva_offer_show_savings",
+        "label": "Show savings chips",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "coiriva_offer_enable_upgrade_cta",
+        "label": "Enable upgrade CTA",
+        "default": true
+      }
+    ]
   }
 ]

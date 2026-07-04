@@ -37,6 +37,16 @@
     var qty = parseInt(selected.getAttribute('data-coiriva-qty'), 10) || 1;
     if (shouldSyncQuantity !== false) updateQuantity(qty);
     updateSummary(root, selected);
+    root.dispatchEvent(new CustomEvent('coiriva:bundle-change', {
+      bubbles: true,
+      detail: {
+        quantity: qty,
+        pack: selected.getAttribute('data-coiriva-pack') || '',
+        price: parseInt(selected.getAttribute('data-coiriva-price'), 10) || 0,
+        savings: parseInt(selected.getAttribute('data-coiriva-savings'), 10) || 0,
+        perBrick: parseInt(selected.getAttribute('data-coiriva-per-brick'), 10) || 0
+      }
+    }));
   }
 
   function initSmartBundle(root) {

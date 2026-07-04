@@ -70,6 +70,12 @@
           aria-checked="{% if qty == 4 %}true{% else %}false{% endif %}"
           data-coiriva-qty="{{ qty }}"
           data-coiriva-pack="{{ pack_name | escape }}"
+          data-coiriva-bricks="{{ brick_count }}"
+          data-coiriva-discount="{{ discount }}"
+          data-coiriva-price="{{ bundle_total }}"
+          data-coiriva-compare="{{ compare_total }}"
+          data-coiriva-savings="{{ save_total }}"
+          data-coiriva-per-brick="{{ per_brick }}"
         >
           {%- if pack_badge != blank -%}
             <span class="coiriva-smart-bundle__badge">{{ pack_badge }}</span>
@@ -99,6 +105,7 @@
   </div>
 
   {% render 'coiriva-progress-bar' %}
+  {% render 'coiriva-smart-offer', product: product %}
 
   <div class="coiriva-buybox-pro__trust" aria-label="Store guarantees">
     <span>🚚 Fast US Shipping</span>

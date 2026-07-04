@@ -1,0 +1,34 @@
+{%- comment -%}
+  Coiriva v2.5.3 CRO Ultimate | Smart Offer Engine
+  Context-aware upgrade recommendation connected to Smart Bundle + Progress Engine.
+{%- endcomment -%}
+{%- unless settings.coiriva_offer_enable == false -%}
+<div
+  class="coiriva-smart-offer"
+  data-coiriva-smart-offer
+  data-currency-symbol="{{ cart.currency.symbol | default: '$' }}"
+  aria-live="polite"
+>
+  <div class="coiriva-smart-offer__inner">
+    <div class="coiriva-smart-offer__icon" data-coiriva-offer-icon aria-hidden="true">⭐</div>
+    <div class="coiriva-smart-offer__content">
+      <span class="coiriva-smart-offer__eyebrow" data-coiriva-offer-eyebrow>
+        {{ settings.coiriva_offer_eyebrow | default: 'Smart recommendation' }}
+      </span>
+      <strong class="coiriva-smart-offer__title" data-coiriva-offer-title>
+        Best Value Pack selected
+      </strong>
+      <p class="coiriva-smart-offer__message" data-coiriva-offer-message>
+        You are getting our best price for bigger planting projects.
+      </p>
+      <div class="coiriva-smart-offer__metrics" data-coiriva-offer-metrics>
+        <span><b data-coiriva-offer-savings>$0</b> savings</span>
+        <span><b data-coiriva-offer-per-brick>$0</b> / brick</span>
+      </div>
+    </div>
+    <button class="coiriva-smart-offer__button" type="button" data-coiriva-offer-cta>
+      Add To Cart
+    </button>
+  </div>
+</div>
+{%- endunless -%}
