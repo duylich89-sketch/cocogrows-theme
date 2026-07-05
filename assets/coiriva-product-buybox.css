@@ -159,3 +159,35 @@ main .product-form__quantity .quantity.main-quantity .quantity__input::-webkit-i
     height: 56px !important;
   }
 }
+
+/* v3.1.3 — Hero Layout Polish
+   Reduce desktop top spacing after removing the duplicate floating rating badge.
+   Desktop only: mobile layout remains unchanged. */
+@media screen and (min-width: 750px) {
+  .main-product__info-container,
+  .product__info-container {
+    padding-top: 0 !important;
+  }
+
+  .main-product__info-container .coiriva-product-title,
+  .product__info-container .coiriva-product-title {
+    margin-top: 0 !important;
+  }
+
+  .main-product__info-container .coiriva-product-title__eyebrow,
+  .product__info-container .coiriva-product-title__eyebrow {
+    margin-top: 0 !important;
+    margin-bottom: 7px !important;
+  }
+
+  .main-product__info-container .coiriva-product-title__subheading,
+  .product__info-container .coiriva-product-title__subheading {
+    margin-top: 9px !important;
+  }
+
+  .main-product__info-container .coiriva-premium-rating,
+  .product__info-container .coiriva-premium-rating {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
